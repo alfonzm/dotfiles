@@ -111,19 +111,6 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 
 
-# ALIASES
-
-# Misc Directories
-alias unity-dir='cd ~/Documents/Dev/Unity'
-alias dev-dir='cd ~/Documents/Dev'
-alias work-dir='cd ~/Documents/Work'
-alias jekyll-dir='cd ~/Documents/Dev/Jekyll'
-alias flx-dir='cd ~/Documents/Dev/HaxeFlixel'
-
-alias dev-dir="cd ~/Documents/Dev"
-alias htdocs-dir="cd /Applications/MAMP/htdocs"
-alias choreographe-dir="cd ~/Documents/Dev/Choreographe"
-alias ssh-139="ssh alfonz@139.162.25.179"
-
-# Git
-alias gitlog="git log --oneline -n 10"
+# Include other dotfiles
+source ~/.functions
+source ~/.aliases

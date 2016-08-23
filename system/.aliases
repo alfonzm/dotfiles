@@ -1,0 +1,16 @@
+# Dev Project Directories
+alias unity-dir='cd ~/Documents/Dev/Unity'
+alias dev-dir='cd ~/Documents/Dev'
+alias work-dir='cd ~/Documents/Work'
+alias jekyll-dir='cd ~/Documents/Dev/Jekyll'
+alias flx-dir='cd ~/Documents/Dev/HaxeFlixel'
+
+alias dev-dir="cd ~/Documents/Dev"
+alias htdocs-dir="cd /Applications/MAMP/htdocs"
+alias choreographe-dir="cd ~/Documents/Dev/Choreographe"
+
+# Open current directory in Finder
+alias f='open -a Finder ./'
+
+# Git
+alias gitlog="git log --oneline -n 10"

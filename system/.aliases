@@ -4,6 +4,7 @@ alias dev-dir='cd ~/Documents/Dev'
 alias work-dir='cd ~/Documents/Work'
 alias jekyll-dir='cd ~/Documents/Dev/Jekyll'
 alias flx-dir='cd ~/Documents/Dev/HaxeFlixel'
+alias love-dir='cd ~/Documents/Dev/Love'
 
 alias dev-dir="cd ~/Documents/Dev"
 alias htdocs-dir="cd /Applications/MAMP/htdocs"
@@ -14,3 +15,6 @@ alias f='open -a Finder ./'
 
 # Git
 alias gitlog="git log --oneline -n 10"
+
+# Diskspace report
+alias diskspace_report="df -P -kHl"

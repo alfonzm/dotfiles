@@ -15,6 +15,7 @@ brew cask install atom
 brew cask install iterm2
 brew cask install mamp
 brew cask install mou
+brew cask install mysqlworkbench
 brew cask install sublime-text
 
 # Productivity / Utilities
@@ -23,6 +24,7 @@ brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install flux
 brew cask install google-drive
+brew cask install lastfm
 brew cask install limechat
 brew cask install rtv
 brew cask install thefuck

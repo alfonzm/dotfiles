@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -2573,11 +2575,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>630 584 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2175 410 918 495 1920 0 1920 1057 </string>
+	<string>2175 410 796 473 1920 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 473 592 584 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 50 1920 1007 1920 0 1920 1057 </string>
+	<string>1920 181 1920 876 1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>

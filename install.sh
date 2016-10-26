@@ -5,7 +5,7 @@ echo "⚡ (http://github.com/AlfonzM/dotfiles)"
 
 # Symlink dotfiles
 echo "\n⚡ Symlinking .gitconfig..."
-ln -svf ./git/.gitconfig ~
+ln -svf ~/.dotfiles/git/.gitconfig ~
 
 echo "\n⚡ Symlinking .aliases..."
 ln -svf ~/.dotfiles/system/.aliases ~/.aliases

@@ -18,3 +18,8 @@ alias gitlog="git log --oneline -n 10"
 
 # Diskspace report
 alias diskspace_report="df -P -kHl"
+
+# Run mongod
+alias startmongo="sudo mongod --fork --logpath /var/log/mongod.log"
+
+alias ssh-139="ssh alfonz@139.162.25.179"

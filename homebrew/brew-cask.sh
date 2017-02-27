@@ -6,6 +6,7 @@ brew tap caskroom/cask
 # Essentials / Daily use
 brew cask install bettertouchtool
 brew cask install firefox
+brew cask install franz
 brew cask install google-chrome
 brew cask install slack
 brew cask install spotify

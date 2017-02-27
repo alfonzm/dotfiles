@@ -47,6 +47,11 @@ export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 bindkey -v
 export KEYTIMEOUT=1
 
+# CLICOLOR for VIM color schemes
+
+export CLICOLOR=1
+export TERM=xterm-256color
+
 # Include other dotfiles
 source ~/.functions
 source ~/.aliases

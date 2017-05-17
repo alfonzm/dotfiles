@@ -7,7 +7,6 @@ alias love-dir='cd ~/Documents/Dev/Love'
 
 alias dev-dir="cd ~/Documents/Dev"
 alias htdocs-dir="cd /Applications/MAMP/htdocs"
-alias choreographe-dir="cd ~/Documents/Dev/Choreographe"
 
 # Open current directory in Finder
 alias f='open -a Finder ./'
@@ -20,5 +19,3 @@ alias diskspace_report="df -P -kHl"
 
 # Run mongod
 alias startmongo="sudo mongod --fork --logpath /var/log/mongod.log"
-
-alias ssh-139="ssh alfonz@139.162.25.179"

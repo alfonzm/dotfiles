@@ -11,6 +11,7 @@ Contains:
 - iTerm2 config
 - aliases
 - functions
+- sublime settings
 
 ## Installation
 
@@ -18,4 +19,13 @@ Contains:
 $ git clone https://github.com/AlfonzM/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ sh install.sh
+```
+
+## Custom scripts
+
+For more custom workstation-specific scripts/configs, create a `.custom` file in the home directory. This is automatically included in `.zshrc`.
+
+```
+$ touch ~/.custom
+$ vim ~/.custom
 ```

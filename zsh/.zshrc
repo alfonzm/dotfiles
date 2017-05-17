@@ -1,5 +1,4 @@
 # Path to your oh-my-zsh installation.
-
 export ZSH=~/.oh-my-zsh
 
 # Themes located in ~/.oh-my-zsh/themes/
@@ -27,16 +26,14 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 . `brew --prefix`/etc/profile.d/z.sh
 
-# Highlighters
+# ZSH Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
-PROMPT=$'\n''[%T] %{$fg[green]%}%~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} $ '
+# Terminal prompt
+PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%} $ '
 
-
-# Python SDK
-export PYTHONPATH=/Users/MacMini04/Documents/Dev/Python/SDK/pynaoqi-python2.7-2.1.4.13-mac64
-export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/Users/MacMini04/Documents/Dev/Python/SDK/pynaoqi-python2.7-2.1.4.13-mac64
+# Add to PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
@@ -48,10 +45,18 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # CLICOLOR for VIM color schemes
-
 export CLICOLOR=1
 export TERM=xterm-256color
 
 # Include other dotfiles
 source ~/.functions
 source ~/.aliases
+
+# Include custom scripts if exists
+if [ -f ~/.custom ]; then
+	source ~/.custom
+fi
+
+# Clear and show fortune everytime terminal window opens
+clear
+fortune -s | cowsay -f $(cowsay -l | sed "1 d" | tr ' ' '\n' | gshuf -n 1)

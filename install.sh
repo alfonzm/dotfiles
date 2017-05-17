@@ -21,6 +21,9 @@ echo "\n  ⚡ Symlinking .zshrc..."
 echo "    ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
+echo "\n  ⚡ Setting up zsh and oh-my-zsh"
+chsh -s `which zsh`
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Brew installs
 echo "\n  ⚡ Installing brew formulas"

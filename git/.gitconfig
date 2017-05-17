@@ -1,5 +1,8 @@
 [user]
-	name = alfonzm
+	name = Alfonz Montelibano
 	email = m.alfonz@gmail.com
+[core]
+	editor = vim
+	excludesfile = /Users/MacMini04/.gitignore
 [push]
 	default = matching

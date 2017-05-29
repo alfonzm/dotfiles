@@ -59,4 +59,3 @@ fi
 
 # Clear and show fortune everytime terminal window opens
 clear
-fortune -s | cowsay -f $(cowsay -l | sed "1 d" | tr ' ' '\n' | gshuf -n 1)

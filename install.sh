@@ -21,26 +21,31 @@ echo "\n  ⚡ Symlinking .zshrc..."
 echo "    ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
+echo "\n  ⚡ Symlinking tmux..."
+echo "    ln -sf ~/.tmux.conf ~/.tmux.conf"
+ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+
 echo "\n  ⚡ Setting up zsh and oh-my-zsh"
 chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/zsh-syntax-highlighting
 
 # Brew installs
 echo "\n  ⚡ Installing brew formulas"
 echo "    sh ./homebrew/brew.sh"
-#sh ./homebrew/brew.sh
+sh ./homebrew/brew.sh
 
 
 # Brew cask installs
 echo "\n  ⚡ Installing brew casks"
 echo "    sh ./homebrew/brew-cask.sh"
-#sh ./homebrew/brew-cask.sh
+sh ./homebrew/brew-cask.sh
 
 
 # Gem installs
 echo "\n  ⚡ Installing ruby gems"
 echo "    sh ./ruby/gems.sh"
-#sh ./ruby/gems.sh
+sh ./ruby/gems.sh
 
 
 # Symlink subl command

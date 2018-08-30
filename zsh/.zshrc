@@ -14,7 +14,7 @@ export UPDATE_ZSH_DAYS=13
 
 # Plugins found in ~/.oh-my-zsh/plugins/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git brew copydir gitignore github common-aliases laravel5)
+plugins=(git brew copydir gitignore github common-aliases laravel5 tmux)
 
 # Enable Z
 . ~/.oh-my-zsh/plugins/z/z.sh
@@ -59,3 +59,14 @@ fi
 
 # Clear and show fortune everytime terminal window opens
 clear
+
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /Users/alfonzm/.pgvm/pgvm_env

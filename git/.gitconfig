@@ -3,6 +3,12 @@
 	email = m.alfonz@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/MacMini04/.gitignore
+	excludesfile = /Users/alfonzm/.gitignore_global
 [push]
 	default = matching
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

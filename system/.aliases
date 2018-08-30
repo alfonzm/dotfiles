@@ -1,3 +1,9 @@
+# Restart zshrc config
+alias src-zsh='source ~/.zshrc'
+
+# Tmuxinator
+alias mux='tmuxinator'
+
 # Dev Project Directories
 alias unity-dir='cd ~/Documents/Dev/Unity'
 alias work-dir='cd ~/Documents/Work'

@@ -30,6 +30,9 @@ source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
+# Editor
+export EDITOR='vim'
+
 # Terminal prompt
 PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%} $ '
 
@@ -60,13 +63,16 @@ fi
 # Clear and show fortune everytime terminal window opens
 clear
 
+# Love2D
 alias love="/Applications/love.app/Contents/MacOS/love"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Postgres Version Manager
 source /Users/alfonzm/.pgvm/pgvm_env

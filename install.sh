@@ -24,6 +24,7 @@ ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
 echo "\n  ⚡ Symlinking tmux..."
 echo "    ln -sf ~/.tmux.conf ~/.tmux.conf"
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+cp ~/.dotfiles/tmux/reset ~/.tmux/
 
 echo "\n  ⚡ Setting up zsh and oh-my-zsh"
 chsh -s `which zsh`

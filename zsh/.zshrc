@@ -37,7 +37,7 @@ export EDITOR='vim'
 PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%} $ '
 
 # Add to PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Use PHP 7.0.0
@@ -76,3 +76,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Postgres Version Manager
 source /Users/alfonzm/.pgvm/pgvm_env
+
+# Run RVM
+source ~/.rvm/scripts/rvm

@@ -25,3 +25,12 @@ alias diskspace_report="df -P -kHl"
 
 # Run mongod
 alias startmongo="sudo mongod --fork --logpath /var/log/mongod.log"
+
+# Shutdown running PORT
+# e.g. shutup :9292
+function shutup() {
+   sudo kill -9 $(lsof -i $1 -t)
+}
+
+# Docker compose
+alias dc="docker-compose"

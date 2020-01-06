@@ -14,6 +14,8 @@ brew install lua
 brew install node
 brew install nvm
 brew install rbenv ruby-build rbenv-gem-rehash
+brew install tmux
+brew install tmuxinator
 brew install yarn
 
 # ZSH

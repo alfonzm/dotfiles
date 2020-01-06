@@ -32,6 +32,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/zsh-syntax-highlighting
 
 # Brew installs
+
+echo "\n  ⚡️ Installing Homebrew"
+echo "    /usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 echo "\n  ⚡ Installing brew formulas"
 echo "    sh ./homebrew/brew.sh"
 sh ./homebrew/brew.sh

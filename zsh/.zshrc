@@ -60,14 +60,11 @@ if [ -f ~/.custom ]; then
 	source ~/.custom
 fi
 
-# Clear and show fortune everytime terminal window opens
-clear
-
 # Love2D
 alias love="/Applications/love.app/Contents/MacOS/love"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
@@ -78,4 +75,9 @@ export NVM_DIR="$HOME/.nvm"
 source /Users/alfonzm/.pgvm/pgvm_env
 
 # Run RVM
-source ~/.rvm/scripts/rvm
+# source ~/.rvm/scripts/rvm
+HISTFILESIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.zsh_history
+setopt inc_append_history
+setopt share_history

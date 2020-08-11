@@ -40,8 +40,8 @@ PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color
 # export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Use PHP 7.0.0
-export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
+# Use MAMP PHP 7.0.0
+# export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 
 # Use Vim keybindings
 bindkey -v
@@ -61,7 +61,7 @@ if [ -f ~/.custom ]; then
 fi
 
 # Love2D
-alias love="/Applications/love.app/Contents/MacOS/love"
+# alias love="/Applications/love.app/Contents/MacOS/love"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
@@ -72,10 +72,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Postgres Version Manager
-source /Users/alfonzm/.pgvm/pgvm_env
+# source /Users/alfonzm/.pgvm/pgvm_env
 
 # Run RVM
 # source ~/.rvm/scripts/rvm
+
+# History
 HISTFILESIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history

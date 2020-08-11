@@ -27,15 +27,15 @@ ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 cp ~/.dotfiles/tmux/reset ~/.tmux/
 
 echo "\n  ⚡ Setting up zsh and oh-my-zsh"
-chsh -s `which zsh`
+# chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/zsh-syntax-highlighting
 
 # Brew installs
 
 echo "\n  ⚡️ Installing Homebrew"
-echo "    /usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)""
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "\n  ⚡ Installing brew formulas"
 echo "    sh ./homebrew/brew.sh"

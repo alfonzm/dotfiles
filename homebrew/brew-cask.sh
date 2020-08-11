@@ -5,18 +5,22 @@ brew tap caskroom/cask
 
 # Essentials / Daily use
 brew cask install bettertouchtool
+brew cask install itsycal
+brew cask install figma
 brew cask install firefox
 brew cask install franz
 brew cask install google-chrome
 brew cask install slack
+brew cask install steam
 brew cask install spotify
 
 # Development
-brew cask install atom
+brew cask install docker
 brew cask install iterm2
-brew cask install mamp
-brew cask install mou
 brew cask install mysqlworkbench
+brew cask install postman
+brew cask install sequel-pro
+brew cask install sourcetree
 brew cask install sublime-text
 
 # Productivity / Utilities
@@ -26,8 +30,6 @@ brew cask install dropbox
 brew cask install flux
 brew cask install google-drive
 brew cask install lastfm
-brew cask install limechat
-brew cask install rtv
 brew cask install thefuck
 brew cask install trash
 brew cask install transmission

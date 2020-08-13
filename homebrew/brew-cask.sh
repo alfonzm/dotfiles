@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Tap caskroom/cask
-brew tap caskroom/cask
+# Tap homebrew/cask-cask
+brew tap homebrew/cask-cask
 
 # Essentials / Daily use
 brew cask install bettertouchtool

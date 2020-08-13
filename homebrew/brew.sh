@@ -9,17 +9,16 @@ brew update
 brew upgrade
 
 # Development
-brew install heroku
 brew install lua
 brew install node
 brew install nvm
-brew install rbenv ruby-build rbenv-gem-rehash
+brew install rbenv ruby-build
 brew install tmux
 brew install tmuxinator
 brew install yarn
 
-# ZSH
-brew install zsh
+# ZSH -- commented because macOS now uses zsh by default
+# brew install zsh
 brew install z
 
 # Utilities

@@ -25,6 +25,7 @@ brew install z
 brew install coreutils
 brew install ffmpeg --with-libvpx
 brew install imagemagick --with-webp
+brew install mas-cli/tap/mas
 brew install peco
 brew install pv
 brew install ranger

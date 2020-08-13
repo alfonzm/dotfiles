@@ -46,6 +46,10 @@ echo "\n  ⚡ Installing brew casks"
 echo "    sh ./homebrew/brew-cask.sh"
 sh ./homebrew/brew-cask.sh
 
+# Mac App Store installs
+echo "\n  ⚡ Installing Mac App Store apps"
+echo "    sh ./mas/mas.sh"
+sh ./mas/mas.sh
 
 # Gem installs
 echo "\n  ⚡ Installing ruby gems"

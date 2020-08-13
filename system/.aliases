@@ -37,3 +37,6 @@ alias dc="docker-compose"
 
 # PNG2jpg
 alias png2jpg="mogrify -format jpg *.png; mogrify -format jpg *.PNG; trash *.png; trash *.PNG"
+
+# Desktime
+alias desktime="node ~/Documents/Dev/Web/appetiser-asst/index.js"

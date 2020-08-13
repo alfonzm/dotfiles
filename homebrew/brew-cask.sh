@@ -13,6 +13,7 @@ brew cask install google-chrome
 brew cask install slack
 brew cask install steam
 brew cask install spotify
+brew cask install zoom
 
 # Development
 brew cask install docker

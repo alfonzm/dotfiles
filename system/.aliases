@@ -40,3 +40,8 @@ alias png2jpg="mogrify -format jpg *.png; mogrify -format jpg *.PNG; trash *.png
 
 # Desktime
 alias desktime="node ~/Documents/Dev/Web/appetiser-asst/index.js"
+
+# NPM shortcuts
+alias nrd="npm run dev"
+alias nrs="npm run serve"
+alias ni="npm install"

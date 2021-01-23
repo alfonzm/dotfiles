@@ -24,7 +24,8 @@ ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
 echo "\n  ⚡ Symlinking tmux..."
 echo "    ln -sf ~/.tmux.conf ~/.tmux.conf"
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
-cp ~/.dotfiles/tmux/reset ~/.tmux/
+mkdir ~/.tmux
+ln -sf ~/.dotfiles/tmux/reset ~/.tmux/reset
 
 echo "\n  ⚡ Setting up zsh and oh-my-zsh"
 # chsh -s `which zsh`
@@ -62,7 +63,7 @@ echo "\n  ⚡ Symlinking subl command"
 echo "    ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl"
 ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-# Symlink Sublime User packages 
+# Symlink Sublime User packages
 echo "\n  ⚡ Symlinking Sublime User packages"
 echo "    ln -sf ~/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User_backup

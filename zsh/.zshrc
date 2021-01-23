@@ -23,8 +23,10 @@ plugins=(git brew copydir gitignore github common-aliases laravel5 tmux)
 source $ZSH/oh-my-zsh.sh
 
 # Enable oh my zsh Syntax Highlighting
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-. `brew --prefix`/etc/profile.d/z.sh
+# source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# . `brew --prefix`/etc/profile.d/z.sh
 
 # ZSH Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)

@@ -9,6 +9,7 @@ brew update
 brew upgrade
 
 # Development
+brew install hub
 brew install lua
 brew install node
 brew install nvm

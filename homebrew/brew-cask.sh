@@ -1,40 +1,42 @@
 #!/bin/bash
 
+# Update May 2021: Cask is now built-in in Homebrew.
+
 # Tap homebrew/cask-cask
-brew tap homebrew/cask-cask
+# brew tap homebrew/cask-cask
 
 # Essentials / Daily use
-brew cask install bettertouchtool
-brew cask install itsycal
-brew cask install figma
-brew cask install firefox
-brew cask install franz
-brew cask install google-chrome
-brew cask install slack
-brew cask install steam
-brew cask install spotify
-brew cask install zoom
+brew install --cask bettertouchtool
+brew install --cask itsycal
+brew install --cask figma
+brew install --caskinstall firefox
+brew install --cask franz
+brew install --cask google-chrome
+brew install --cask slack
+brew install --cask steam
+brew install --cask spotify
+brew install --cask zoom
 
 # Development
-brew cask install docker
-brew cask install iterm2
-brew cask install mysqlworkbench
-brew cask install postman
-brew cask install sequel-pro
-brew cask install sourcetree
-brew cask install sublime-text
+brew install --cask docker
+brew install --cask iterm2
+brew install --cask mysqlworkbench
+brew install --cask postman
+brew install --cask sequel-pro
+brew install --cask sourcetree
+brew install --cask sublime-text
 
 # Productivity / Utilities
-brew cask install caffeine
-brew cask install disk-inventory-x
-brew cask install dropbox
-brew cask install flux
-brew cask install google-drive
-brew cask install lastfm
-brew cask install thefuck
-brew cask install trash
-brew cask install transmission
-brew cask install vlc
+brew install --cask caffeine
+brew install --cask disk-inventory-x
+brew install --cask dropbox
+brew install --cask flux
+brew install --cask google-drive
+brew install --cask lastfm
+brew install --cask thefuck
+brew install --cask trash
+brew install --cask transmission
+brew install --cask vlc
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

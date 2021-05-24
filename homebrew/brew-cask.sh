@@ -7,6 +7,7 @@
 
 # Essentials / Daily use
 brew install --cask bettertouchtool
+brew install --cask brave-browser
 brew install --cask itsycal
 brew install --cask figma
 brew install --cask firefox
@@ -22,6 +23,7 @@ brew install --cask docker
 brew install --cask iterm2
 brew install --cask mysqlworkbench
 brew install --cask postman
+brew install --cask sequel-ace
 brew install --cask sequel-pro
 brew install --cask sourcetree
 brew install --cask sublime-text

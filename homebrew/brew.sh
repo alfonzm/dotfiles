@@ -30,8 +30,8 @@ brew install mas-cli/tap/mas
 brew install peco
 brew install pv
 brew install ranger
-brew tap iveney/mocha
-brew install realpath
+# brew tap iveney/mocha
+# brew install realpath
 brew install speedtest-cli
 brew install terminal-notifier
 brew install tree

@@ -28,6 +28,7 @@ $ sh install.sh
 3. Setup BetterTouchTool license key (check email)
 4. Setup Logi Options for MX Master 3
 5. Setup ObinsKit for Anne Pro 2 keyboard (see keyboards directory)
+6. Setup Sublime Text [SyncSettings](https://packagecontrol.io/packages/Sync%20Settings) and download settings from Gist
 
 ## Custom scripts
 

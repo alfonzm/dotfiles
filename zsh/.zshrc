@@ -14,19 +14,24 @@ export UPDATE_ZSH_DAYS=13
 
 # Plugins found in ~/.oh-my-zsh/plugins/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git brew copydir gitignore github common-aliases laravel5 tmux)
+plugins=(
+	brew
+	common-aliases
+	copydir
+	git
+	github
+	gitignore
+	laravel5
+	tmux
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
 
 # Enable Z
 . ~/.oh-my-zsh/plugins/z/z.sh
 
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
-
-# Enable oh my zsh Syntax Highlighting
-# source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# . `brew --prefix`/etc/profile.d/z.sh
 
 # ZSH Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)

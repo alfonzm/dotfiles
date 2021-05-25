@@ -71,6 +71,10 @@ mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Appli
 ln -snf ~/.dotfiles/sublime ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
 
+# Download Powerline fonts for coding and terminal
+curl -L https://github.com/powerline/fonts/archive/refs/heads/master.zip -o ~/Downloads/Powerline\ Fonts.zip
+
+
 # Done!
 echo "\n"
 echo "  DONE! One last thing, run:  \n\n  $ source ~/.zshrc  " | cowsay -f dragon | lolcat -a

@@ -3,8 +3,6 @@ export ZSH=~/.oh-my-zsh
 
 # Themes located in ~/.oh-my-zsh/themes/
 ZSH_THEME="simple"
-# ZSH_THEME="minimal"
-# ZSH_THEME="mh"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -46,9 +44,6 @@ PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color
 # Add to PATH
 # export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-
-# Use MAMP PHP 7.0.0
-# export PATH=/Applications/MAMP/bin/php/php7.0.0/bin:$PATH
 
 # Use Vim keybindings
 bindkey -v

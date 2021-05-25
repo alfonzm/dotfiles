@@ -35,6 +35,7 @@ brew install --cask dropbox
 brew install --cask flux
 brew install --cask google-drive
 brew install --cask lastfm
+brew install --cask stats
 brew install --cask thefuck
 brew install --cask trash
 brew install --cask transmission

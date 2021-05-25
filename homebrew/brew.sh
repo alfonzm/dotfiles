@@ -34,6 +34,7 @@ brew install ranger
 # brew install realpath
 brew install speedtest-cli
 brew install terminal-notifier
+brew install trash
 brew install tree
 brew install wget
 brew install youtube-dl

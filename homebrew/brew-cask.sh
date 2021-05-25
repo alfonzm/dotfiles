@@ -29,6 +29,7 @@ brew install --cask sourcetree
 brew install --cask sublime-text
 
 # Productivity / Utilities
+brew install --cask alfred
 brew install --cask caffeine
 brew install --cask disk-inventory-x
 brew install --cask dropbox

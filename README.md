@@ -30,6 +30,12 @@ $ sh install.sh
 5. Setup ObinsKit for Anne Pro 2 keyboard (see keyboards directory)
 6. Setup Sublime Text [SyncSettings](https://packagecontrol.io/packages/Sync%20Settings) and download settings from Gist
 
+### How to install Boxy Theme manually for Sublime Text 4
+
+1. Copy `sublime/Boxy/Packages/User/Boxy Theme` to `~/Library/Application Support/Sublime Text/Packages/User`.
+2. Copy `sublime/Installed Packages/Boxy Theme.sublime-package` file to `~/Library/Application Support/Sublime Text/Installed Packages`.
+3. Edit `~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings` and add `Boxy Theme` to `installed_packages` array.
+
 ## Custom scripts
 
 For more custom workstation-specific scripts/configs, create a `.custom` file in the home directory. This is automatically included in `.zshrc`.

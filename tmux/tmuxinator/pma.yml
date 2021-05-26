@@ -1,0 +1,18 @@
+# ~/.tmuxinator/pma.yml
+
+name: pma
+root: ~/Appetiser/play-my-audio-api
+
+windows:
+  - server:
+    layout: main-vertical
+    panes:
+      - 
+      - 
+  - cms:
+    root: ~/Appetiser/play-my-audio-cms
+    layout: main-vertical
+    panes:
+      -
+      -
+  - queue: pwd

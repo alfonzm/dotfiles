@@ -1,0 +1,24 @@
+# ~/.tmuxinator/pma.yml
+
+name: ons
+root: ~/Appetiser/out-and-seek-backend
+
+windows:
+  - server:
+    layout: main-vertical
+    panes:
+      - 
+      - 
+  - cms:
+    root: ~/Appetiser/out-and-seek-admin-cms
+    layout: main-vertical
+    panes:
+      -
+      - 
+  - webapp:
+    root: ~/Appetiser/out-and-seek-web-app
+    layout: main-vertical
+    panes:
+      -
+      -
+  - ssh: pwd

@@ -20,6 +20,7 @@ brew install --cask zoom
 
 # Development
 brew install --cask docker
+brew install --cask gh
 brew install --cask iterm2
 brew install --cask mysqlworkbench
 brew install --cask postman
@@ -36,6 +37,7 @@ brew install --cask dropbox
 brew install --cask flux
 brew install --cask google-drive
 brew install --cask lastfm
+brew install --cask notion
 brew install --cask stats
 brew install --cask thefuck
 brew install --cask trash

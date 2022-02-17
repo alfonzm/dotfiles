@@ -9,6 +9,7 @@ brew update
 brew upgrade
 
 # Development
+brew install alacritty
 brew install hub
 brew install lua
 brew install node
@@ -30,6 +31,7 @@ brew install mas-cli/tap/mas
 brew install peco
 brew install pv
 brew install ranger
+brew install ripgrep
 # brew tap iveney/mocha
 # brew install realpath
 brew install speedtest-cli

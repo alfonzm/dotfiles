@@ -35,17 +35,23 @@ function shutup() {
 # Docker compose
 alias dc="docker-compose"
 
+# Laravel sail
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
 # PNG2jpg
 alias png2jpg="mogrify -format jpg *.png; mogrify -format jpg *.PNG; trash *.png; trash *.PNG"
 
-# Desktime
+# Work
 alias desktime="node ~/Documents/Dev/Web/appetiser-asst/index.js"
 alias dt="desktime"
+alias active="sh ~/Work/active.sh"
 
 # NPM shortcuts
+alias ns="npm start"
 alias nrd="npm run dev"
 alias nrs="npm run serve"
 alias nrw="npm run watch"
+alias nrb="npm run build"
 alias ni="npm install"
 
 # Vapor
@@ -54,3 +60,6 @@ alias vp="php vendor/bin/vapor"
 
 # Love2D
 alias love="/Applications/love.app/Contents/MacOS/love"
+
+# Edit vimrc
+alias vimrc="vim ~/.vimrc"

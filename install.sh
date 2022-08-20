@@ -59,11 +59,6 @@ echo "\n⚡ Installing Mac App Store apps"
 echo "    sh ./mas/mas.sh"
 sh ./mas/mas.sh
 
-# Gem installs
-echo "\n⚡ Installing ruby gems"
-echo "    sh ./ruby/gems.sh"
-sh ./ruby/gems.sh
-
 # Symlink subl command
 echo "\n⚡ Symlinking subl command"
 echo "ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl"

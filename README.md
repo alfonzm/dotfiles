@@ -7,11 +7,12 @@
 Contains:
 
 - zsh config
-- brew installs (and cask apps)
-- iTerm2 config
 - aliases
 - functions
-- sublime settings
+- Vim config
+- Homebrew installs and cask apps
+- Alacritty config
+- Sublime Text settings
 
 ## Installation
 

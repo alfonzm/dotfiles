@@ -28,7 +28,8 @@ $ sh install.sh
 
 #### Productivity Tools
 1. Setup BetterTouchTool license key (check email)
-1. Setup Alfred license key (check email) and sync Alfred preferences
+1. Setup Alfred license key (check email)
+1. Go to Alfred > Preferences > Advanced > Set preferences folder to `~/.dotfiles/alfred`
 
 #### Peripherals
 1. Setup [macOS](/macos) Trackpad and Keyboard settings

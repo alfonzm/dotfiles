@@ -12,6 +12,7 @@ brew upgrade
 brew install alacritty
 brew install hub
 brew install lua
+brew install neovim
 brew install node
 brew install nvm
 brew install rbenv ruby-build
@@ -32,8 +33,6 @@ brew install peco
 brew install pv
 brew install ranger
 brew install ripgrep
-# brew tap iveney/mocha
-# brew install realpath
 brew install speedtest-cli
 brew install terminal-notifier
 brew install trash
@@ -43,6 +42,7 @@ brew install youtube-dl
 
 # Fun stuff
 brew install cowsay
+brew install neofetch
 
 # Remove outdated versions from the cellar
 brew cleanup

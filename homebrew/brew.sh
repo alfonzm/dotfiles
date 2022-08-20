@@ -42,6 +42,7 @@ brew install youtube-dl
 
 # Fun stuff
 brew install cowsay
+brew install lolcat
 brew install neofetch
 
 # Remove outdated versions from the cellar

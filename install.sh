@@ -78,4 +78,4 @@ curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e6229
 
 # Done!
 echo "\n"
-echo "  DONE! One last thing, run:  \n\n  $ source ~/.zshrc  " | cowsay -f dragon | lolcat -a
+echo "DONE! One last thing, run: \n\n $ source ~/.zshrc " | cowsay | lolcat

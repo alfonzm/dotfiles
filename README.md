@@ -33,7 +33,7 @@ $ sh install.sh
 #### Peripherals
 1. Setup [macOS](/macos) Trackpad and Keyboard settings
 1. Setup [Logi Options](/mouse) for MX Master 3
-1. Setup [Anne Pro 2](/annepro2) keyboard
+1. Setup [Anne Pro 2](/keyboards/annepro2) keyboard
 
 #### Sublime Text
 1. Setup Sublime Text [SyncSettings](https://packagecontrol.io/packages/Sync%20Settings) and download settings from Gist

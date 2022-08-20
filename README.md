@@ -23,12 +23,19 @@ $ sh install.sh
 
 ### Other Steps
 
+#### MySQL
 1. Setup MySQL servers on Docker
-1. Setup macOS Trackpad and Keyboard settings
+
+#### Productivity Tools
 1. Setup BetterTouchTool license key (check email)
 1. Setup Alfred license key (check email) and sync Alfred preferences (see `alfred` directory)
+
+#### Peripherals
+1. Setup macOS Trackpad and Keyboard settings
 1. Setup Logi Options for MX Master 3
 1. Setup ObinsKit for Anne Pro 2 keyboard (see `keyboards` directory)
+
+#### Sublime Text
 1. Setup Sublime Text [SyncSettings](https://packagecontrol.io/packages/Sync%20Settings) and download settings from Gist
 
 ### How to install Boxy Theme manually for Sublime Text 4

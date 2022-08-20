@@ -72,6 +72,11 @@ echo "\n⚡ Symlinking Alacritty config"
 echo "ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml"
 ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+# Symlink neovim
+echo "\n⚡ Symlinking Neovim config"
+echo "ln -sf ~/.dotfiles/nvim ~/.config/nvim"
+ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+
 # Test truecolor
 echo "⚡ Truecolor test:"
 curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh | bash

@@ -6,7 +6,7 @@ alias mux='tmuxinator'
 
 # Vim
 alias vim='nvim'
-alias vimorig='vim'
+alias vimorig='/usr/bin/vim'
 
 # Dev Project Directories
 alias unity-dir='cd ~/Documents/Dev/Unity'

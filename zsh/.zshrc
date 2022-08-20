@@ -40,7 +40,8 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 export EDITOR='vim'
 
 # Terminal prompt
-PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%} $ '
+NEWLINE=$'\n'
+PROMPT=$'\n\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
 
 # Add to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -68,9 +69,9 @@ fi
 # alias love="/Applications/love.app/Contents/MacOS/love"
 
 # Node version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# https://github.com/nvm-sh/nvm#install--update-script
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # History
 HISTFILESIZE=5000
@@ -83,4 +84,4 @@ setopt share_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Use ripgrep for FZF, including hidden files
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{node_modules/*,.git/*}"'
+export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor/*,node_modules/*,.git/*}"'

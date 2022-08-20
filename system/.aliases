@@ -38,6 +38,11 @@ alias dc="docker-compose"
 # Laravel sail
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
+# Laravel
+alias la="php artisan"
+alias pa="php artisan"
+alias a="php artisan"
+
 # PNG2jpg
 alias png2jpg="mogrify -format jpg *.png; mogrify -format jpg *.PNG; trash *.png; trash *.PNG"
 
@@ -53,6 +58,14 @@ alias nrs="npm run serve"
 alias nrw="npm run watch"
 alias nrb="npm run build"
 alias ni="npm install"
+
+# Yarn shortcuts
+alias y="yarn"
+alias yi="yarn install"
+alias yd="yarn dev"
+alias yw="yarn watch"
+alias yb="yarn build"
+alias ys="yarn start"
 
 # Vapor
 alias vapor="php vendor/bin/vapor"

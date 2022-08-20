@@ -29,7 +29,7 @@ echo "\n⚡ Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "\n⚡ Symlinking tmux..."
-echo "ln -sf ~/.tmux.conf ~/.tmux.conf"
+echo "ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf"
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 mkdir ~/.tmux
 ln -sf ~/.dotfiles/tmux/reset ~/.tmux/reset
@@ -66,6 +66,11 @@ ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
 
 # Download Powerline fonts for coding and terminal
 curl -L https://github.com/powerline/fonts/archive/refs/heads/master.zip -o ~/Downloads/Powerline\ Fonts.zip
+
+# Symlink Alacritty config
+echo "\n⚡ Symlinking Alacritty config"
+echo "ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml"
+ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # Test truecolor
 echo "⚡ Truecolor test:"

@@ -4,8 +4,8 @@ env:
 
 window:
   padding:
-    x: 0
-    y: 0
+    x: 15
+    y: 15
 
   # Startup Mode (changes require restart)
   # startup_mode: Fullscreen
@@ -13,17 +13,23 @@ window:
   # Remove title bar and borders in macOS
   decorations: none
 
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 500
+
 font:
   normal:
-    family: Inconsolata NF
+    family: Dank Mono
     style: Regular
 
   bold:
-    family: Inconsolata NF
+    family: Dank Mono
     style: Bold
 
   italic:
-    family: Inconsolata NF
+    family: Dank Mono
     style: Italic
 
   size: 14.0

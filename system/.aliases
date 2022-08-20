@@ -4,6 +4,10 @@ alias src-zsh='source ~/.zshrc'
 # Tmuxinator
 alias mux='tmuxinator'
 
+# Vim
+alias vim='nvim'
+alias vimorig='vim'
+
 # Dev Project Directories
 alias unity-dir='cd ~/Documents/Dev/Unity'
 alias work-dir='cd ~/Documents/Work'

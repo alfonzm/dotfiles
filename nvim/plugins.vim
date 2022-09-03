@@ -89,8 +89,6 @@ hi GitGutterDelete       ctermbg=235
 hi GitGutterChangeDelete ctermbg=235
 set updatetime=250
 
-" let g:gitgutter_set_sign_backgrounds = 1
-
 " Lightline Theme
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'

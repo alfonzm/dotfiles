@@ -54,9 +54,13 @@
 				<string>open "/Applications/Time Doctor 2.app"
 open "/Applications/Docker.app"
 open "/Applications/Sequel Ace.app"
-open "/Applications/Brave.app"
 open "/Applications/Slack.app"
 open "/Applications/Google Chrome.app"
+open "/Applications/Sublime Text.app"
+open "/Applications/Sublime Merge.app"
+
+killall iCanHazShortcut
+quit "Parallels Desktop"
 
 /usr/local/bin/defaultbrowser chrome</string>
 				<key>scriptargtype</key>

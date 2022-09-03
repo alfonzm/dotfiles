@@ -57,11 +57,12 @@ alias active="sh ~/Work/active.sh"
 
 # NPM shortcuts
 alias ns="npm start"
+alias ni="npm install"
 alias nrd="npm run dev"
-alias nrs="npm run serve"
 alias nrw="npm run watch"
 alias nrb="npm run build"
-alias ni="npm install"
+alias nrs="npm run serve"
+alias nrt="npm run test"
 
 # Yarn shortcuts
 alias y="yarn"
@@ -70,6 +71,7 @@ alias yd="yarn dev"
 alias yw="yarn watch"
 alias yb="yarn build"
 alias ys="yarn start"
+alias yt="yarn test"
 
 # Vapor
 alias vapor="php vendor/bin/vapor"

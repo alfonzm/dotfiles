@@ -62,3 +62,13 @@ set t_Co=256
 " https://akrabat.com/using-vimrc-for-project-specific-settings/
 set exrc
 set secure
+
+" Enable true colors
+set background=dark
+set termguicolors
+
+" Enable italics, make sure this is immediately after colorscheme
+" https://stackoverflow.com/questions/3494435/vimrc-make-comments-italic
+highlight Comment cterm=italic gui=italic
+set t_ZH=[3m
+set t_ZR=[23m

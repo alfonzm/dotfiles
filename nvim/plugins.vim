@@ -38,7 +38,7 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'jistr/vim-nerdtree-tabs'
+  " Plug 'jistr/vim-nerdtree-tabs'
 
   " Icons
   Plug 'kyazdani42/nvim-web-devicons'
@@ -69,6 +69,12 @@ call plug#end()
 " # Plugins Config
 " ------------------------------------------------------------------------------
 
+" Gruvbox
+let g:gruvbox_invert_selection=0
+let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_italic=1
+colorscheme gruvbox
+
 " Bufferline
 lua << EOF
 require("bufferline").setup{}
@@ -76,7 +82,6 @@ EOF
 
 " GitGutter
 let g:gitgutter_override_sign_column_highlight = 1
-let g:gitgutter_set_sign_backgrounds = 1
 highlight clear SignColumn
 hi GitGutterAdd          ctermbg=235
 hi GitGutterChange       ctermbg=235
@@ -84,23 +89,21 @@ hi GitGutterDelete       ctermbg=235
 hi GitGutterChangeDelete ctermbg=235
 set updatetime=250
 
+" let g:gitgutter_set_sign_backgrounds = 1
+
 " Lightline Theme
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 
-" Gruvbox
-let g:gruvbox_invert_selection=0
-let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_italic=1
-colorscheme gruvbox
-
 " NERDTreeTabs
-let g:nerdtree_tabs_open_on_new_tab = 1
-let g:nerdtree_tabs_open_on_gui_startup = 1
-let g:nerdtree_tabs_focus_on_files = 1
-let g:nerdtree_tabs_open_on_new_tab = 1
+" let g:nerdtree_tabs_open_on_new_tab = 1
+" let g:nerdtree_tabs_open_on_gui_startup = 1
+" let g:nerdtree_tabs_focus_on_files = 1
+" let g:nerdtree_tabs_open_on_new_tab = 1
+" nnoremap <C-t> :NERDTreeTabsToggle<CR>
 
-autocmd VimEnter * NERDTree
+" NERDTree
+autocmd VimEnter * NERDTree | wincmd p
 let NERDTreeShowHidden=1
 let g:NERDTreeIgnore = ['^node_modules$', '^vendor$']
 let g:NERDTreeStatusline = '%#NonText#'
@@ -109,8 +112,10 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize=40
-nnoremap <C-t> :NERDTreeTabsToggle<CR>
-" autocmd VimEnter * NERDTree | wincmd p
+
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -119,7 +124,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Open the existing NERDTree on each new tab.
-" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+" autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+"     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ 'Modified'  :'✹',

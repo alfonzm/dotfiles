@@ -48,3 +48,7 @@ noremap <Leader>s :update<CR>
 
 " Quick close buffer
 nnoremap <Leader>q :Bdelete<CR>
+
+" Add line below
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k

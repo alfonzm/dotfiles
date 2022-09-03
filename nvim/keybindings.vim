@@ -1,3 +1,6 @@
+" Set leader to comma
+let mapleader = ","
+
 " Move through panes with Ctrl+hjkl
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -39,3 +42,9 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Quick save
+noremap <Leader>s :update<CR>
+
+" Quick close buffer
+nnoremap <Leader>q :Bdelete<CR>

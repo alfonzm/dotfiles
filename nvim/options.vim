@@ -36,8 +36,11 @@ set ignorecase
 set incsearch
 set nohlsearch
 
+" Highlight current line
+:set cursorline
+
 " Utf8 standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -54,3 +57,8 @@ set colorcolumn=80
 set signcolumn=yes
 
 set t_Co=256
+
+" Enable vimrc for specific projects
+" https://akrabat.com/using-vimrc-for-project-specific-settings/
+set exrc
+set secure

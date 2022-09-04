@@ -6,6 +6,19 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>00C94754-B49B-46F9-BF5A-878005EE8481</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4CE0630C-BA29-4C21-9980-7E0E20E88016</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>271F13A6-3A3F-4D4D-B588-34284086F3A0</key>
 		<array>
 			<dict>
@@ -180,6 +193,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>28738246-FBA3-40FC-A87B-A76A3548964C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9F4F2034-1D91-4992-ADBD-F538B8CCA3B0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5A068767-6AD3-47DE-8A5C-0045229ABBA0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -974,6 +1000,50 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
+				<string>glassbead</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Glass Bead lhz_in02 38 145</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>00C94754-B49B-46F9-BF5A-878005EE8481</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "@warp lhz_in02 38 145" | tr -d '\n' | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4CE0630C-BA29-4C21-9980-7E0E20E88016</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
 				<string>eddga</string>
 				<key>subtext</key>
 				<string></string>
@@ -1059,6 +1129,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>memento</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Memento nif_in 145 23</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9F4F2034-1D91-4992-ADBD-F538B8CCA3B0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "@warp nif_in 145 23" | tr -d '\n' | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5A068767-6AD3-47DE-8A5C-0045229ABBA0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1105,6 +1219,13 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>00C94754-B49B-46F9-BF5A-878005EE8481</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1060</integer>
+			<key>ypos</key>
+			<integer>620</integer>
+		</dict>
 		<key>0130DAE8-1FFC-48B4-895E-A04250EE5616</key>
 		<dict>
 			<key>xpos</key>
@@ -1196,6 +1317,20 @@
 			<key>ypos</key>
 			<integer>735</integer>
 		</dict>
+		<key>4CE0630C-BA29-4C21-9980-7E0E20E88016</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1265</integer>
+			<key>ypos</key>
+			<integer>620</integer>
+		</dict>
+		<key>5A068767-6AD3-47DE-8A5C-0045229ABBA0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1260</integer>
+			<key>ypos</key>
+			<integer>740</integer>
+		</dict>
 		<key>5D042E7C-2727-41F4-B02C-30B6F5AA0DDF</key>
 		<dict>
 			<key>xpos</key>
@@ -1286,6 +1421,13 @@
 			<integer>1070</integer>
 			<key>ypos</key>
 			<integer>475</integer>
+		</dict>
+		<key>9F4F2034-1D91-4992-ADBD-F538B8CCA3B0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1055</integer>
+			<key>ypos</key>
+			<integer>740</integer>
 		</dict>
 		<key>9FF65219-F9D5-4528-BF9E-F0A9F8D452DB</key>
 		<dict>

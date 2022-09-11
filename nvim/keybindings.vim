@@ -1,5 +1,5 @@
 " Set leader to comma
-let mapleader = ","
+let mapleader = " "
 
 " Move through panes with Ctrl+hjkl
 map <C-h> <C-w>h
@@ -8,8 +8,12 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Shift tabs left/right with Shift+h or Shift+l
-nnoremap H gT
-nnoremap L gt
+" Ideally, use <Leader>l (see below)
+nnoremap H :bp<CR>
+nnoremap L :bn<CR>
+
+" See buffer list + go to buffer id
+nnoremap <Leader>l :ls<CR>:b<space>
 
 " Ctrl+P opens fzf
 nnoremap <silent> <C-p> :FZF<CR>

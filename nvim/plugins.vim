@@ -11,6 +11,7 @@ endif
 
 call plug#begin()
   " Utilities
+  Plug 'jesseleite/vim-sourcery'
   Plug 'vim-utils/vim-man'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'preservim/nerdcommenter'
@@ -96,97 +97,6 @@ let g:gruvbox_material_foreground = 'original'
 let g:gruvbox_material_better_performance = 1
 colorscheme gruvbox-material
 
-" Treesitter
-lua << EOF
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "yaml",
-    "markdown",
-    "comment",
-    "css",
-    "html",
-    "javascript",
-    "json",
-    "lua",
-    "php",
-    "regex",
-    "typescript",
-    "scss",
-    "vim",
-    "vue",
-    },
-  highlight = {
-    enable = true,
-    disable = { "html" },
-    },
-  indent = {
-    enable = true,
-    },
-  }
-EOF
-
-lua << EOF
-require('bufferline').setup {
-  highlights = {
-    background = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'LineNr' },
-      },
-    fill = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
-      },
-    offset_separator = {
-      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      },
-    numbers = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
-      },
-    numbers_visible = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
-      },
-    indicator_visible = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
-    },
-    buffer_visible = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      fg = { attribute = 'fg', highlight = 'LineNr' },
-      },
-    modified = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      },
-    modified_visible = {
-      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
-      },
-  },
-  options = {
-    indicator = { style = 'none' },
-    show_buffer_icons = false,
-    show_buffer_close_icons = false,
-    numbers = 'buffer_id',
-    separator_style = { "", "" },
-    offsets = {
-      { filetype = "NvimTree", text = "File Explorer", text_align = "left", offset = 1 }
-    },
-  },
-}
-EOF
-
-" Gitsigns
-lua << EOF
-require('gitsigns').setup {
-  signs = {
-    -- Align with bufferline's vertical line text
-    add = { text = '▎' },
-    change = { text = '▎' },
-  }
-}
-EOF
-
 " GitGutter
 let g:gitgutter_override_sign_column_highlight = 1
 highlight clear SignColumn
@@ -209,9 +119,6 @@ let g:lightline.colorscheme = 'gruvbox'
 
 " Nvim Tree
 nnoremap <C-t> :NvimTreeToggle<CR>
-lua << EOF
-require("nvim-tree").setup()
-EOF
 
 " NERDTree
 " autocmd VimEnter * NERDTree | wincmd p
@@ -287,14 +194,4 @@ let g:goyo_width = 100
 let g:goyo_linenr = 1
 
 " Indent Blankline
-lua << EOF
-require("indent_blankline").setup {
-    show_current_context = true,
-    indent_blankline_use_treesitter = true,
-    indent_blankline_show_current_context = true,
-
-    -- Align with bufferline and gitsigns
-    indent_blankline_context_char = '▎',
-}
-EOF
 highlight IndentBlanklineChar guifg=#363636

@@ -1,3 +1,8 @@
+" ------------------------------------------------------------------------------
+" # Keymappings
+" ------------------------------------------------------------------------------
+" This file is automatically included in init.vim by the plugin Sourcery
+
 " Set leader to comma
 let mapleader = " "
 

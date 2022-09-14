@@ -5,6 +5,9 @@ syntax on
 set number
 set relativenumber
 
+" Allow switching of unsaved buffers
+set hidden
+
 " No sound on errors
 set noerrorbells
 
@@ -50,11 +53,14 @@ set splitbelow
 set splitright
 
 " # of lines padding when scrolling
-set scrolloff=8
+set scrolloff=12
 
 " Add marker at column position to prevent long lines of code
 set colorcolumn=80
 set signcolumn=yes
+
+" Remove vertical split character
+set fillchars+=vert:\ 
 
 set t_Co=256
 

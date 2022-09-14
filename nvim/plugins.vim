@@ -14,7 +14,8 @@ call plug#begin()
   Plug 'vim-utils/vim-man'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'preservim/nerdcommenter'
-  Plug 'airblade/vim-gitgutter'
+  " Plug 'airblade/vim-gitgutter'
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'terryma/vim-multiple-cursors'
@@ -23,6 +24,13 @@ call plug#begin()
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'APZelos/blamer.nvim'
   Plug 'junegunn/goyo.vim'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+
+  " LSP
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " lightline
   " Plug 'itchyny/lightline.vim'
@@ -34,8 +42,9 @@ call plug#begin()
   " Vim Sourcery
   Plug 'jesseleite/vim-sourcery'
 
-  " NERDTree
-  Plug 'preservim/nerdtree'
+  " File Explorer tab
+  Plug 'kyazdani42/nvim-tree.lua'
+  " Plug 'preservim/nerdtree'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   " Plug 'jistr/vim-nerdtree-tabs'
@@ -56,6 +65,9 @@ call plug#begin()
 
   " Color schemes
   Plug 'morhetz/gruvbox'
+  Plug 'sainnhe/gruvbox-material'
+  Plug 'eddyekofo94/gruvbox-flat.nvim'
+  Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
   " Prettier
   " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -70,14 +82,109 @@ call plug#end()
 " ------------------------------------------------------------------------------
 
 " Gruvbox
-let g:gruvbox_invert_selection=0
+let g:gruvbox_invert_selection=1
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
-colorscheme gruvbox
+" colorscheme gruvbox
 
-" Bufferline
+" Gruvbox flat
+" colorscheme gruvbox-flat
+
+" Gruvbox material
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_foreground = 'original'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
+
+" Treesitter
 lua << EOF
-require("bufferline").setup{}
+require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    "yaml",
+    "markdown",
+    "comment",
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "php",
+    "regex",
+    "typescript",
+    "scss",
+    "vim",
+    "vue",
+    },
+  highlight = {
+    enable = true,
+    disable = { "html" },
+    },
+  indent = {
+    enable = true,
+    },
+  }
+EOF
+
+lua << EOF
+require('bufferline').setup {
+  highlights = {
+    background = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'LineNr' },
+      },
+    fill = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      },
+    offset_separator = {
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      },
+    numbers = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      },
+    numbers_visible = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      },
+    indicator_visible = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+    },
+    buffer_visible = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'LineNr' },
+      },
+    modified = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      },
+    modified_visible = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      },
+  },
+  options = {
+    indicator = { style = 'none' },
+    show_buffer_icons = false,
+    show_buffer_close_icons = false,
+    numbers = 'buffer_id',
+    separator_style = { "", "" },
+    offsets = {
+      { filetype = "NvimTree", text = "File Explorer", text_align = "left", offset = 1 }
+    },
+  },
+}
+EOF
+
+" Gitsigns
+lua << EOF
+require('gitsigns').setup {
+  signs = {
+    -- Align with bufferline's vertical line text
+    add = { text = '▎' },
+    change = { text = '▎' },
+  }
+}
 EOF
 
 " GitGutter
@@ -100,33 +207,38 @@ let g:lightline.colorscheme = 'gruvbox'
 " let g:nerdtree_tabs_open_on_new_tab = 1
 " nnoremap <C-t> :NERDTreeTabsToggle<CR>
 
+" Nvim Tree
+nnoremap <C-t> :NvimTreeToggle<CR>
+lua << EOF
+require("nvim-tree").setup()
+EOF
+
 " NERDTree
-autocmd VimEnter * NERDTree | wincmd p
-let NERDTreeShowHidden=1
-let g:NERDTreeIgnore = ['^node_modules$', '^vendor$']
-let g:NERDTreeStatusline = '%#NonText#'
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize=40
+" autocmd VimEnter * NERDTree | wincmd p
+" let NERDTreeShowHidden=1
+" let g:NERDTreeIgnore = ['^node_modules$', '^vendor$']
+" let g:NERDTreeStatusline = '%#NonText#'
+" let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
+" let g:NERDTreeWinPos = "left"
+" let g:NERDTreeWinSize=40
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" " Exit Vim if NERDTree is the only window remaining in the only tab.
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" " Close the tab if NERDTree is the only window remaining in it.
+" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" " Open the existing NERDTree on each new tab.
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-" autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-"     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+" " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+" " autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+" "     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ 'Modified'  :'✹',
@@ -157,7 +269,7 @@ let g:user_emmet_expandabbr_key='<Tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Vim Markdown
-let g:vim_markdown_folding_disabled = 0
+let g:vim_markdown_folding_disabled = 1
 
 " Autorun PHP CS Fixer on save
 " autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
@@ -168,10 +280,21 @@ let g:blamer_delay = 500
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
 let g:blamer_template = '<committer>, <committer-time> • <summary> <commit-short>'
-let bufferline = get(g:, 'bufferline', {})
-let bufferline.icons = v:true
 highlight Blamer guifg=#7c6f64 " Gruvbox bg4
 
 " Goyo
 let g:goyo_width = 100
 let g:goyo_linenr = 1
+
+" Indent Blankline
+lua << EOF
+require("indent_blankline").setup {
+    show_current_context = true,
+    indent_blankline_use_treesitter = true,
+    indent_blankline_show_current_context = true,
+
+    -- Align with bufferline and gitsigns
+    indent_blankline_context_char = '▎',
+}
+EOF
+highlight IndentBlanklineChar guifg=#363636

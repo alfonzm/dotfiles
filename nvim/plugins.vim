@@ -110,56 +110,6 @@ set updatetime=250
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 
-" NERDTreeTabs
-" let g:nerdtree_tabs_open_on_new_tab = 1
-" let g:nerdtree_tabs_open_on_gui_startup = 1
-" let g:nerdtree_tabs_focus_on_files = 1
-" let g:nerdtree_tabs_open_on_new_tab = 1
-" nnoremap <C-t> :NERDTreeTabsToggle<CR>
-
-" Nvim Tree
-nnoremap <C-t> :NvimTreeToggle<CR>
-
-" NERDTree
-" autocmd VimEnter * NERDTree | wincmd p
-" let NERDTreeShowHidden=1
-" let g:NERDTreeIgnore = ['^node_modules$', '^vendor$']
-" let g:NERDTreeStatusline = '%#NonText#'
-" let g:NERDTreeMinimalUI = 1
-" let g:NERDTreeDirArrowExpandable = ''
-" let g:NERDTreeDirArrowCollapsible = ''
-" let g:NERDTreeWinPos = "left"
-" let g:NERDTreeWinSize=40
-" nnoremap <C-n> :NERDTree<CR>
-" nnoremap <C-t> :NERDTreeToggle<CR>
-" nnoremap <C-f> :NERDTreeFind<CR>
-
-" " Exit Vim if NERDTree is the only window remaining in the only tab.
-" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" " Close the tab if NERDTree is the only window remaining in it.
-" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" " Open the existing NERDTree on each new tab.
-" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-" " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-" " autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-" "     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-      \ 'Modified'  :'✹',
-      \ 'Staged'    :'✚',
-      \ 'Untracked' :'✭',
-      \ 'Renamed'   :'➜',
-      \ 'Unmerged'  :'═',
-      \ 'Deleted'   :'✖',
-      \ 'Dirty'     :'~',
-      \ 'Ignored'   :'☒',
-      \ 'Clean'     :'✔︎',
-      \ 'Unknown'   :'?',
-      \ }
-
 " Prettier
 " Enable autoformat on save if config file is present
 " https://github.com/prettier/vim-prettier/issues/191#issuecomment-614280489

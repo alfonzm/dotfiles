@@ -15,5 +15,5 @@ call plug#begin()
 call plug#end()
 
 call sourcery#source_path('set.vim')
-
+call sourcery#source_defer('config/indent-blankline.lua')
 call sourcery#init()

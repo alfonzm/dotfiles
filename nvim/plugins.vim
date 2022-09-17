@@ -21,6 +21,7 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'stephpy/vim-php-cs-fixer'
+
   Plug 'moll/vim-bbye'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'APZelos/blamer.nvim'
@@ -65,10 +66,10 @@ call plug#begin()
   Plug 'StanAngeloff/php.vim'
 
   " Color schemes
-  Plug 'morhetz/gruvbox'
+  " Plug 'morhetz/gruvbox'
   Plug 'sainnhe/gruvbox-material'
-  Plug 'eddyekofo94/gruvbox-flat.nvim'
-  Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+  " Plug 'eddyekofo94/gruvbox-flat.nvim'
+  " Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
   " Prettier
   " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -83,9 +84,9 @@ call plug#end()
 " ------------------------------------------------------------------------------
 
 " Gruvbox
-let g:gruvbox_invert_selection=1
-let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_italic=1
+" let g:gruvbox_invert_selection=1
+" let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_italic=1
 " colorscheme gruvbox
 
 " Gruvbox flat
@@ -142,6 +143,3 @@ highlight Blamer guifg=#7c6f64 " Gruvbox bg4
 " Goyo
 let g:goyo_width = 100
 let g:goyo_linenr = 1
-
-" Indent Blankline
-highlight IndentBlanklineChar guifg=#363636

@@ -44,11 +44,11 @@ call plug#begin()
   " Vim Sourcery
   Plug 'jesseleite/vim-sourcery'
 
-  " File Explorer tab
+  " File Tree
   Plug 'kyazdani42/nvim-tree.lua'
   " Plug 'preservim/nerdtree'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
+  " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  " Plug 'Xuyuanp/nerdtree-git-plugin'
   " Plug 'jistr/vim-nerdtree-tabs'
 
   " Icons

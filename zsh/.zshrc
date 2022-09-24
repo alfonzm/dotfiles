@@ -41,7 +41,7 @@ export EDITOR='vim'
 
 # Terminal prompt
 NEWLINE=$'\n'
-PROMPT=$'\n\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
+PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
 
 # Add to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"

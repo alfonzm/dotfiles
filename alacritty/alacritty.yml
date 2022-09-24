@@ -16,27 +16,34 @@ window:
 cursor:
   style:
     shape: Block
-    blinking: Always
-  blink_interval: 500
+    # blinking: Always
+  # blink_interval: 500
 
 font:
+  # normal:
+  #   family: FiraCode Nerd Font
+  #   style: Regular
+  # bold:
+  #   family: FiraCode Nerd Font
+  #   style: Regular
+  # italic:
+  #   family: FiraCode Nerd Font
+  #   style: Italic
   normal:
-    family: Dank Mono
-    style: Regular
-
+    family: BlexMono Nerd Font
+    style: Book
   bold:
-    family: Dank Mono
-    style: Bold
-
+    family: BlexMono Nerd Font
+    style: Medium
   italic:
-    family: Dank Mono
+    family: BlexMono Nerd Font
     style: Italic
 
-  size: 14.0
+  size: 13.0
 
   offset:
    x: 0
-   y: 3
+   y: 4
 
   # Requires restart
   glyph_offset:
@@ -45,7 +52,7 @@ font:
 
   use_thin_strokes: true
 
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

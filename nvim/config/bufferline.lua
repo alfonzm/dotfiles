@@ -28,6 +28,9 @@ require('bufferline').setup {
       bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
       fg = { attribute = 'fg', highlight = 'LineNr' },
     },
+    buffer_selected = {
+      italic = false,
+    },
     modified = {
       bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
     },

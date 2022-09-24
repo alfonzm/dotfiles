@@ -1,8 +1,8 @@
 " Install vim-plug if it is not already installed
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " ------------------------------------------------------------------------------
@@ -34,7 +34,8 @@ call plug#begin()
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-  " lightline
+  " Status Line
+  Plug 'nvim-lualine/lualine.nvim'
   " Plug 'itchyny/lightline.vim'
   " Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -131,14 +132,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " Autorun PHP CS Fixer on save
 " autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
-
-" Git blamer
-let g:blamer_enabled = 1
-let g:blamer_delay = 500
-let g:blamer_show_in_visual_modes = 0
-let g:blamer_show_in_insert_modes = 0
-let g:blamer_template = '<committer>, <committer-time> • <summary> <commit-short>'
-highlight Blamer guifg=#7c6f64 " Gruvbox bg4
 
 " Goyo
 let g:goyo_width = 100

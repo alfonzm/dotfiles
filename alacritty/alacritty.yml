@@ -34,10 +34,10 @@ font:
     style: Book
   bold:
     family: BlexMono Nerd Font
-    style: Medium
+    style: Book
   italic:
-    family: BlexMono Nerd Font
-    style: Italic
+    family: CartographCF Nerd Font
+    style: Light Italic
 
   size: 13.0
 
@@ -50,7 +50,7 @@ font:
    x: 0
    y: 2
 
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 draw_bold_text_with_bright_colors: false
 

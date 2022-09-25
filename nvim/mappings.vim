@@ -58,6 +58,9 @@ noremap <Leader>w :update<CR>
 " Quick close buffer
 nnoremap <Leader>q :Bdelete<CR>
 
+" Source nvim config
+nnoremap <Leader>s :source ~/.config/nvim/init.vim<CR>
+
 " Add line below
 nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k

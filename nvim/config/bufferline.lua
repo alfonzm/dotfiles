@@ -20,6 +20,9 @@ require('bufferline').setup {
       bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
       fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
     },
+    numbers_selected = {
+      italic = false
+    },
     indicator_visible = {
       bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
       fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
@@ -41,6 +44,7 @@ require('bufferline').setup {
   options = {
     indicator = { style = 'none' },
     show_buffer_icons = false,
+    show_close_icon = false,
     show_buffer_close_icons = false,
     numbers = 'buffer_id',
     separator_style = { "", "" },

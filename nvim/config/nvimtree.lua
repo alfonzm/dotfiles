@@ -1,6 +1,10 @@
 require("nvim-tree").setup({
+  hijack_cursor = true,
+  auto_reload_on_write = false,
+  update_focused_file = {
+    enable = true
+  },
   renderer = {
-    highlight_opened_files = "all",
     icons = {
       show = {
         folder_arrow = false

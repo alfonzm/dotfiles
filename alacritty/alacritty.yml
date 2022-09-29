@@ -4,8 +4,8 @@ env:
 
 window:
   padding:
-    x: 15
-    y: 15
+    x: 24
+    y: 24
 
   # Startup Mode (changes require restart)
   # startup_mode: Fullscreen
@@ -52,7 +52,7 @@ font:
 
   use_thin_strokes: false
 
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

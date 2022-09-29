@@ -5,8 +5,12 @@ alias src-zsh='source ~/.zshrc'
 alias mux='tmuxinator'
 
 # Vim
+alias v='nvim'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
+
+# Subl
+alias s='subl'
 
 # Dev Project Directories
 alias unity-dir='cd ~/Documents/Dev/Unity'
@@ -43,8 +47,8 @@ alias dc="docker-compose"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Laravel
-alias la="php artisan"
-alias pa="php artisan"
+# alias la="php artisan"
+# alias pa="php artisan"
 alias a="php artisan"
 
 # PNG2jpg
@@ -63,6 +67,9 @@ alias nrw="npm run watch"
 alias nrb="npm run build"
 alias nrs="npm run serve"
 alias nrt="npm run test"
+
+# NVM shortcuts
+alias nu="nvm use"
 
 # Yarn shortcuts
 alias y="yarn"

@@ -62,5 +62,5 @@ nnoremap <Leader>q :Bdelete<CR>
 nnoremap <Leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Add line below
-nmap <S-Enter> O<Esc>j
-nmap <CR> o<Esc>k
+" nmap <S-Enter> O<Esc>j
+" nmap <CR> o<Esc>k

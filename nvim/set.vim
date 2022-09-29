@@ -15,6 +15,9 @@ set hidden
 " No sound on errors
 set noerrorbells
 
+" Suggested by coc
+set updatetime=300
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -82,3 +85,6 @@ set termguicolors
 highlight Comment cterm=italic gui=italic
 set t_ZH=[3m
 set t_ZR=[23m
+
+" Disable continuing comment when adding newline from comment line
+set formatoptions-=cro

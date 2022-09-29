@@ -14,7 +14,7 @@ call plug#begin()
   Plug 'jesseleite/vim-sourcery'
   Plug 'vim-utils/vim-man'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'preservim/nerdcommenter'
+  " Plug 'preservim/nerdcommenter'
   " Plug 'airblade/vim-gitgutter'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'editorconfig/editorconfig-vim'
@@ -28,8 +28,8 @@ call plug#begin()
   Plug 'junegunn/goyo.vim'
   Plug 'lukas-reineke/indent-blankline.nvim'
 
-  " LSP
-  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Completion
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -123,9 +123,9 @@ filetype plugin on
 let g:NERDSpaceDelims = 1
 
 " Emmet
-let g:user_emmet_leader_key=','
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" let g:user_emmet_leader_key=''
+" let g:user_emmet_expandabbr_key=''
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Vim Markdown
 let g:vim_markdown_folding_disabled = 1
@@ -136,3 +136,5 @@ let g:vim_markdown_folding_disabled = 1
 " Goyo
 let g:goyo_width = 100
 let g:goyo_linenr = 1
+
+

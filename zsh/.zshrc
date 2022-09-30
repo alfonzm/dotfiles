@@ -10,16 +10,20 @@ DISABLE_AUTO_UPDATE="true"
 # How often to auto-update (in days)
 export UPDATE_ZSH_DAYS=13
 
+# zsh-nvm settings https://github.com/lukechilds/zsh-nvm
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+
 # Plugins found in ~/.oh-my-zsh/plugins/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
+  zsh-nvm
 	brew
 	common-aliases
 	copydir
 	git
 	github
 	gitignore
-	laravel5
 	tmux
 	vi-mode
 	zsh-autosuggestions
@@ -34,14 +38,14 @@ source $ZSH/oh-my-zsh.sh
 
 # ZSH Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
 
 # Editor
 export EDITOR='vim'
 
 # Terminal prompt
 NEWLINE=$'\n'
-PROMPT=$'\n''%{$fg[green]%}%~%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
+PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
 
 # Add to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -67,11 +71,6 @@ fi
 
 # Love2D
 # alias love="/Applications/love.app/Contents/MacOS/love"
-
-# Node version manager
-# https://github.com/nvm-sh/nvm#install--update-script
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # History
 HISTFILESIZE=5000

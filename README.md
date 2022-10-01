@@ -54,3 +54,7 @@ For more custom workstation-specific scripts/configs, create a `.custom` file in
 $ touch ~/.custom
 $ vim ~/.custom
 ```
+
+## TODO
+
+- Run `python3 -m pip install pynvim` which may be required for some nvim plugins

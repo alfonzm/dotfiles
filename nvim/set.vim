@@ -67,7 +67,7 @@ set colorcolumn=80
 set signcolumn=yes
 
 " Remove vertical split character
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 set t_Co=256
 
@@ -85,6 +85,3 @@ set termguicolors
 highlight Comment cterm=italic gui=italic
 set t_ZH=[3m
 set t_ZR=[23m
-
-" Disable continuing comment when adding newline from comment line
-set formatoptions-=cro

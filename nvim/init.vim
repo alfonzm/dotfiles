@@ -37,3 +37,6 @@ highlight Blamer guifg=#504945 " Gruvbox bg2
 " Removes the 1 cell w different color when using lualine
 highlight StatusLine guibg=#282828
 highlight StatusLineNC guibg=#282828
+
+" Disable continuing comment when adding newline from comment line
+set formatoptions-=cro

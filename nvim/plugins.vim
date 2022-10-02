@@ -16,11 +16,11 @@ call plug#begin()
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   " Plug 'preservim/nerdcommenter'
   " Plug 'airblade/vim-gitgutter'
-  Plug 'lewis6991/gitsigns.nvim'
   Plug 'editorconfig/editorconfig-vim'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'lewis6991/gitsigns.nvim'
+  " Plug 'jiangmiao/auto-pairs'
+  Plug 'windwp/nvim-autopairs'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'stephpy/vim-php-cs-fixer'
 
   Plug 'moll/vim-bbye'
   Plug 'christoomey/vim-tmux-navigator'
@@ -29,7 +29,17 @@ call plug#begin()
   Plug 'lukas-reineke/indent-blankline.nvim'
 
   " Completion
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'ncm2/ncm2'
+  Plug 'roxma/nvim-yarp'
+  " Plug 'ncm2/ncm2-path'
+  Plug 'ncm2/ncm2-bufword'
+
+  " PHP
+  Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+  Plug 'phpactor/ncm2-phpactor'
+  Plug 'stephpy/vim-php-cs-fixer'
+  Plug 'StanAngeloff/php.vim'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -64,7 +74,6 @@ call plug#begin()
   Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'mattn/emmet-vim'
   Plug 'plasticboy/vim-markdown'
-  Plug 'StanAngeloff/php.vim'
 
   " Color schemes
   " Plug 'morhetz/gruvbox'
@@ -137,4 +146,35 @@ let g:vim_markdown_folding_disabled = 1
 let g:goyo_width = 100
 let g:goyo_linenr = 1
 
+" NCM2
 
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
+set shortmess+=c
+
+" enable ncm2 for all buffers
+" augroup ncm2
+"   au!
+"   autocmd BufEnter * call ncm2#enable_for_buffer()
+"   au User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
+"   au User Ncm2PopupClose set completeopt=menuone
+" augroup END
+
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" When the <Enter> key is pressed while the popup menu is visible, it only
+" hides the menu. Use this mapping to close the menu and also start a new
+" line.
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
+
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+let g:ncm2#complete_length = [[1,1], [7,2]]
+
+" Auto Pairs

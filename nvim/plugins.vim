@@ -19,7 +19,6 @@ call plug#begin()
   " Plug 'airblade/vim-gitgutter'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'lewis6991/gitsigns.nvim'
-  " Plug 'jiangmiao/auto-pairs'
   Plug 'windwp/nvim-autopairs'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-surround'

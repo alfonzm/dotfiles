@@ -23,6 +23,21 @@ require('bufferline').setup {
     numbers_selected = {
       italic = false
     },
+    duplicate = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      italic = false,
+    },
+    duplicate_selected = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'Normal' },
+      italic = false,
+    },
+    duplicate_visible = {
+      bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
+      fg = { attribute = 'fg', highlight = 'EndOfBuffer' },
+      italic = false,
+    },
     indicator_visible = {
       bg = { attribute = 'bg', highlight = 'EndOfBuffer' },
       fg = { attribute = 'fg', highlight = 'EndOfBuffer' },

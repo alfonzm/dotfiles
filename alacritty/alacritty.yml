@@ -125,7 +125,7 @@ schemes:
       blue:    '#458588'
       magenta: '#b16286'
       cyan:    '#689d6a'
-      white:   '#a89984'
+      white:   '#ebdbb2'
     dim:
       black:   '#32302f'
       red:     '#9d0006'

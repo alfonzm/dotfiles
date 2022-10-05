@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'jesseleite/vim-sourcery'
   Plug 'vim-utils/vim-man'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   " Plug 'preservim/nerdcommenter'
   " Plug 'airblade/vim-gitgutter'
   Plug 'editorconfig/editorconfig-vim'
@@ -21,6 +22,7 @@ call plug#begin()
   " Plug 'jiangmiao/auto-pairs'
   Plug 'windwp/nvim-autopairs'
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-surround'
 
   Plug 'moll/vim-bbye'
   Plug 'christoomey/vim-tmux-navigator'
@@ -39,7 +41,6 @@ call plug#begin()
   Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
   Plug 'phpactor/ncm2-phpactor'
   Plug 'stephpy/vim-php-cs-fixer'
-  Plug 'StanAngeloff/php.vim'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -86,6 +87,9 @@ call plug#begin()
   Plug 'prettier/vim-prettier', {
     \ 'do': 'yarn install --frozen-lockfile --production',
     \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+  " Plug 'StanAngeloff/php.vim'
+  Plug 'StanAngeloff/php.vim', {'for': 'php'}
 call plug#end()
 
 
@@ -146,35 +150,5 @@ let g:vim_markdown_folding_disabled = 1
 let g:goyo_width = 100
 let g:goyo_linenr = 1
 
-" NCM2
-
-" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" found' messages
-set shortmess+=c
-
-" enable ncm2 for all buffers
-" augroup ncm2
-"   au!
-"   autocmd BufEnter * call ncm2#enable_for_buffer()
-"   au User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
-"   au User Ncm2PopupClose set completeopt=menuone
-" augroup END
-
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-
-" When the <Enter> key is pressed while the popup menu is visible, it only
-" hides the menu. Use this mapping to close the menu and also start a new
-" line.
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>" : "\<CR>")
-
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-let g:ncm2#complete_length = [[1,1], [7,2]]
-
-" Auto Pairs
+" StanAngeloff/PHP
+let g:php_var_selector_is_identifier=1

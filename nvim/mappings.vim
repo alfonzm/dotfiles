@@ -3,7 +3,7 @@
 " ------------------------------------------------------------------------------
 " This file is automatically included in init.vim by the plugin Sourcery
 
-" Set leader to comma
+" Set leader to space
 let mapleader = " "
 
 " Move through panes with Ctrl+hjkl
@@ -12,7 +12,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Shift tabs left/right with Shift+h or Shift+l
+" Move buffers left/right with Shift+h or Shift+l
 " Ideally, use <Leader>l (see below)
 nnoremap H :bp<CR>
 nnoremap L :bn<CR>
@@ -21,7 +21,10 @@ nnoremap L :bn<CR>
 nnoremap <Leader>l :ls<CR>:b<space>
 
 " Ctrl+P opens fzf
-nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-p> :Files<CR>
+
+" Ctrl+F opens Ag (find in files)
+nnoremap <silent> <C-f> :Ag<CR>
 
 " Copy rest of line starting from cursor
 nnoremap Y y$
@@ -29,6 +32,14 @@ nnoremap Y y$
 " Keep cursor centered when going next/prev
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" Keep cursor centered when going next/prev
+nnoremap <C-d> <C-d>z.
+nnoremap <C-u> <C-u>z.
+
+" Keep cursor centered when doing { or }
+nnoremap { {zz
+nnoremap } }zz
 
 " Undo breakpoints
 inoremap , ,<c-g>u
@@ -45,12 +56,15 @@ nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " Move lines up or down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+" ∆ = Alt + j
+" ˚ = Alt + k
+" https://stackoverflow.com/q/7501092
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
 
 " Quick save
 noremap <Leader>w :update<CR>

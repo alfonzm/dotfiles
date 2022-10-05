@@ -26,6 +26,7 @@ brew install yarn
 brew install z
 
 # Utilities
+brew install bat
 brew install coreutils
 brew install ffmpeg
 brew install imagemagick
@@ -36,6 +37,7 @@ brew install ranger
 brew install ripgrep
 brew install speedtest-cli
 brew install terminal-notifier
+brew install the_silver_searcher
 brew install trash
 brew install tree
 brew install wget

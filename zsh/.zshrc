@@ -83,4 +83,6 @@ setopt share_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Use ripgrep for FZF, including hidden files
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor/*,node_modules/*,.git/*}"'
+export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor,node_modules,.git,public}/*"'
+
+export BAT_THEME="gruvbox-dark"

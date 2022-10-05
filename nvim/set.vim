@@ -67,7 +67,7 @@ set colorcolumn=80
 set signcolumn=yes
 
 " Remove vertical split character
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 
 set t_Co=256
 

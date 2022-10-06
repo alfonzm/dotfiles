@@ -10,6 +10,12 @@ alias v.='nvim .'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 
+# Edit vimrc
+alias vimrc="vim ~/.vimrc"
+
+# Vim dotfiles
+alias dot="vim ~/.dotfiles"
+
 # Subl
 alias s='subl'
 
@@ -19,7 +25,6 @@ alias work-dir='cd ~/Documents/Work'
 alias jekyll-dir='cd ~/Documents/Dev/Jekyll'
 alias flx-dir='cd ~/Documents/Dev/HaxeFlixel'
 alias love-dir='cd ~/Documents/Dev/Love'
-
 alias dev-dir="cd ~/Documents/Dev"
 alias htdocs-dir="cd /Applications/MAMP/htdocs"
 
@@ -87,6 +92,3 @@ alias vp="php vendor/bin/vapor"
 
 # Love2D
 alias love="/Applications/love.app/Contents/MacOS/love"
-
-# Edit vimrc
-alias vimrc="vim ~/.vimrc"

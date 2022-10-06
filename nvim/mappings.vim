@@ -20,12 +20,6 @@ nnoremap L :bn<CR>
 " See buffer list + go to buffer id
 nnoremap <Leader>l :ls<CR>:b<space>
 
-" Ctrl+P opens fzf
-nnoremap <silent> <C-p> :Files<CR>
-
-" Ctrl+F opens Ag (find in files)
-nnoremap <silent> <C-f> :Ag<CR>
-
 " Copy rest of line starting from cursor
 nnoremap Y y$
 
@@ -40,6 +34,8 @@ nnoremap <C-u> <C-u>z.
 " Keep cursor centered when doing { or }
 nnoremap { {zz
 nnoremap } }zz
+
+xnoremap <Leader>p "_dP
 
 " Undo breakpoints
 inoremap , ,<c-g>u

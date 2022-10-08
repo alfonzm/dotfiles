@@ -38,7 +38,11 @@ nnoremap <C-u> <C-u>z.
 nnoremap { {zz
 nnoremap } }zz
 
+" Paste without overriding paste register
 xnoremap <Leader>p "_dP
+
+" Indent right away after pasting
+nnoremap p p==
 
 " Undo breakpoints
 inoremap , ,<c-g>u
@@ -73,6 +77,9 @@ nnoremap <Leader>q :Bdelete<CR>
 
 " Source nvim config
 nnoremap <Leader>s :source ~/.config/nvim/init.vim<CR>
+
+" PlugInstall shortcut
+nnoremap <Leader>p :PlugInstall<CR>
 
 " Add line below
 " nmap <S-Enter> O<Esc>j

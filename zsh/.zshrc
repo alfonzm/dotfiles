@@ -53,8 +53,9 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '(%b)'
 
 NEWLINE=$'\n'
-PROMPT_SYMBOL=$'〉'
-PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
+PROMPT_SYMBOL=$'$ '
+# PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
+PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
 
 # Add to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"

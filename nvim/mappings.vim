@@ -12,6 +12,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Exclude whitespace when doing $
+vnoremap $ $h
+
 " Move buffers left/right with Shift+h or Shift+l
 " Ideally, use <Leader>l (see below)
 nnoremap H :bp<CR>

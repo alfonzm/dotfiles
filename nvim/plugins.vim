@@ -32,6 +32,12 @@ call plug#begin()
   " Plug 'roxma/nvim-yarp'
   " Plug 'ncm2/ncm2-path'
   " Plug 'ncm2/ncm2-bufword'
+  Plug 'hrsh7th/nvim-cmp' " Main autocompletion plugin
+  Plug 'hrsh7th/cmp-buffer' " Source for buffer words
+  Plug 'hrsh7th/cmp-nvim-lsp' " Dependency of nvim-cmp
+  Plug 'L3MON4D3/LuaSnip' " Autocomplete snippets
+  Plug 'saadparwaiz1/cmp_luasnip' " Snippet completion source
+  Plug 'onsails/lspkind-nvim' " Autocompletion icons/formatting
 
   " PHP
   " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}

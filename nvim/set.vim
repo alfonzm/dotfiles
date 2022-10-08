@@ -16,12 +16,12 @@ set hidden
 set noerrorbells
 
 " Suggested by coc
-set updatetime=300
+" set updatetime=300
 
 " Use spaces instead of tabs
 set expandtab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 

@@ -44,8 +44,17 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
 export EDITOR='vim'
 
 # Terminal prompt
+#
+# load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# format vcs_info variable
+zstyle ':vcs_info:git:*' formats '(%b)'
+
 NEWLINE=$'\n'
-PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} $(git_prompt_info)%{$reset_color%}${NEWLINE}$ '
+PROMPT_SYMBOL=$'〉'
+PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
 
 # Add to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"

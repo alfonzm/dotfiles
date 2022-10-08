@@ -38,11 +38,14 @@ call plug#begin()
   " Plug 'phpactor/ncm2-phpactor'
   " Plug 'stephpy/vim-php-cs-fixer'
 
+  " LSP
+  Plug 'neovim/nvim-lspconfig'
+
   " Treesitter
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " Status Line
-  " Plug 'nvim-lualine/lualine.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   " Plug 'itchyny/lightline.vim'
   " Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -63,10 +66,12 @@ call plug#begin()
   " Plug 'posva/vim-vue'
   " Plug 'pangloss/vim-javascript'
   " Plug 'cakebaker/scss-syntax.vim'
-  Plug 'tpope/vim-commentary'
   " Plug 'MaxMEllon/vim-jsx-pretty'
   " Plug 'mattn/emmet-vim'
   " Plug 'plasticboy/vim-markdown'
+
+  " Comments
+  Plug 'tpope/vim-commentary'
 
   " Color schemes
   " Plug 'morhetz/gruvbox'

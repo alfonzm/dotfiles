@@ -75,7 +75,7 @@ ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 # Symlink neovim
 echo "\n⚡ Symlinking Neovim config"
 echo "ln -sf ~/.dotfiles/nvim ~/.config/nvim"
-ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/.dotfiles/nvim ~/.config/nvim
 
 # Test truecolor
 echo "⚡ Truecolor test:"

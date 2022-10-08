@@ -1,7 +1,17 @@
 -- lspconfig
 -- https://www.jakewiesler.com/blog/getting-started-with-vim#lspconfig
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver' }
+local servers = {
+  'tsserver',
+  'intelephense'
+}
+
+-- nvim-cmp supports additional completion capabilities
+-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end

@@ -74,7 +74,7 @@ return require('packer').startup({ function(use)
         'neovim/nvim-lspconfig',
         event = 'BufRead',
         config = function()
-            require('alfonzm.plugins.lsp')
+            require('alfonzm.plugins.lspconfig')
         end,
         requires = {
             {

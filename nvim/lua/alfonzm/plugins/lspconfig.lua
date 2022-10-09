@@ -1,15 +1,15 @@
--- lspconfig
--- https://www.jakewiesler.com/blog/getting-started-with-vim#lspconfig
 local nvim_lsp = require('lspconfig')
-local servers = {
-  'tsserver',
-  'intelephense'
-}
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+local luasnip = require('luasnip')
+
+-- better autocompletion experience
+vim.o.completeopt = 'menuone,noselect'
 
 -- Configure lsp autocompletion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+-- Keymaps
 vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -37,59 +37,58 @@ local on_attach = function(client, bufnr)
     -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+local servers = {
+    'tsserver',
+    'intelephense'
+}
+
 for _, lsp in ipairs(servers) do
-	nvim_lsp[lsp].setup {
-		on_attach = on_attach,
-    capabilities = capabilities,
-	}
+    nvim_lsp[lsp].setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
 end
 
--- nvim-cmp
-local cmp = require('cmp')
-local lspkind = require('lspkind')
-local luasnip = require('luasnip')
-
--- better autocompletion experience
-vim.o.completeopt = 'menuone,noselect'
-
 cmp.setup {
-  -- Format the autocomplete menu
-  formatting = {
-    format = lspkind.cmp_format()
-  },
-  mapping = {
-    -- Use Tab and shift-Tab to navigate autocomplete menu
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end,
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+    -- Format the autocomplete menu
+    formatting = {
+        format = lspkind.cmp_format()
     },
-  },
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end
-  },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'buffer' },
-  },
+    mapping = {
+        -- Use Tab and shift-Tab to navigate autocomplete menu
+        ['<Tab>'] = function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
+        end,
+        ['<S-Tab>'] = function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end,
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        },
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+    },
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+        { name = 'buffer' },
+    },
 }

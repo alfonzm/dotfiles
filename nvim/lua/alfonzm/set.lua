@@ -95,3 +95,7 @@ o.termguicolors = true
 
 o.t_ZH = '[3m'
 o.t_ZR = '[23m'
+
+vim.opt.formatoptions:remove('c')
+vim.opt.formatoptions:remove('r')
+vim.opt.formatoptions:remove('o')

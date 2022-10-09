@@ -46,7 +46,7 @@ return require('packer').startup({ function(use)
     use 'kyazdani42/nvim-web-devicons'
 
     -- Color schemes
-    use 'morhetz/gruvbox'
+    -- use 'morhetz/gruvbox'
     use 'sainnhe/gruvbox-material'
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
@@ -77,7 +77,6 @@ return require('packer').startup({ function(use)
     -- Indent blankline
     use({
       'lukas-reineke/indent-blankline.nvim',
-      after = 'gruvbox-material',
       config = function()
         require('alfonzm.plugins.indent-blankline')
       end,
@@ -95,7 +94,6 @@ return require('packer').startup({ function(use)
     use({
       'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
-      after = 'gruvbox-material',
       config = function()
         require('alfonzm.plugins.bufferline')
       end,

@@ -81,10 +81,8 @@ _G.packer_plugins = {
   },
   ["bufferline.nvim"] = {
     config = { "\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31alfonzm.plugins.bufferline\frequire\0" },
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/bufferline.nvim",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
@@ -119,11 +117,6 @@ _G.packer_plugins = {
     path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
-  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/gruvbox-material",
@@ -131,10 +124,8 @@ _G.packer_plugins = {
   },
   ["indent-blankline.nvim"] = {
     config = { "\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%alfonzm.plugins.indent-blankline\frequire\0" },
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/indent-blankline.nvim",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind-nvim"] = {
@@ -207,36 +198,30 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30alfonzm.plugins.nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
--- Config for: fzf.vim
-time([[Config for fzf.vim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf.vim")
-time([[Config for fzf.vim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28alfonzm.plugins.lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
 -- Config for: fzf
 time([[Config for fzf]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf")
 time([[Config for fzf]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd gruvbox-material ]]
-vim.cmd [[ packadd bufferline.nvim ]]
-
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30alfonzm.plugins.nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28alfonzm.plugins.lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 -- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31alfonzm.plugins.bufferline\frequire\0", "config", "bufferline.nvim")
-
-vim.cmd [[ packadd indent-blankline.nvim ]]
-
+time([[Config for bufferline.nvim]], false)
+-- Config for: fzf.vim
+time([[Config for fzf.vim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf.vim")
+time([[Config for fzf.vim]], false)
 -- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%alfonzm.plugins.indent-blankline\frequire\0", "config", "indent-blankline.nvim")
-
-time([[Sequenced loading]], false)
+time([[Config for indent-blankline.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

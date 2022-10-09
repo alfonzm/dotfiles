@@ -12,9 +12,9 @@ end
 local packer_bootstrap = ensure_packer()
 
 vim.api.nvim_create_autocmd('BufWritePost', {
-  group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
-  pattern = 'plugins.lua',
-  command = 'source <afile> | PackerCompile',
+    group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
+    pattern = 'plugins.lua',
+    command = 'source <afile> | PackerCompile',
 })
 
 return require('packer').startup({ function(use)
@@ -43,8 +43,8 @@ return require('packer').startup({ function(use)
 
     -- Fuzzy File Finder
     use({
-        "junegunn/fzf",
-        run = ":call fzf#install()",
+        'junegunn/fzf',
+        run = ':call fzf#install()',
         config = function()
             require('alfonzm.plugins.fzf')
         end,
@@ -66,96 +66,87 @@ return require('packer').startup({ function(use)
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
-    -- Color Highlighter
-    -- use 'skammer/vim-css-color'
-
     -- LSP
     use({
         'neovim/nvim-lspconfig',
-        event = 'BufRead',
+        -- event = 'BufRead',
         config = function()
-            require('alfonzm.plugins.lspconfig')
+            require('alfonzm.plugins.lsp.lspconfig')
         end,
-        requires = {
-            {
-                -- Cannot lazy load this
-                'hrsh7th/cmp-nvim-lsp',
-            },
-        },
+        -- requires = {
+        --     {
+        --         -- Cannot lazy load this
+        --         'hrsh7th/cmp-nvim-lsp',
+        --     },
+        -- },
     })
 
-    -- Auto completion
     use({
-        {
-            'hrsh7th/nvim-cmp',
-            -- event = 'InsertEnter',
-            -- config = function()
-            --     require('alfonzm.plugins.lsp.nvim-cmp')
-            -- end,
-            requires = {
-                {
-                    'L3MON4D3/LuaSnip',
-                    -- event = 'InsertEnter',
-                    -- config = function()
-                    --     require('alfonzm.plugins.lsp.luasnip')
-                    -- end,
-                    -- requires = {
-                    --     {
-                    --         'rafamadriz/friendly-snippets',
-                    --         event = 'CursorHold',
-                    --     },
-                    -- },
-                },
-            },
+        'L3MON4D3/LuaSnip',
+        -- config = function()
+        --     require('user.plugins.luasnip')
+        -- end,
+    })
+
+    use({
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-buffer',
+            -- 'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-nvim-lsp',
+            -- 'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-nvim-lua',
+            -- 'jessarcher/cmp-path',
+            'onsails/lspkind-nvim',
+            'saadparwaiz1/cmp_luasnip',
         },
-        { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' }, -- Snippet completion source
-        { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
-        { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
-        { 'L3MON4D3/LuaSnip', after = 'nvim-cmp' }, -- Autocomplete snippets
-        { 'onsails/lspkind-nvim', after = 'nvim-cmp' }, -- Autocompletion icons/formatting
+        config = function()
+            require('alfonzm.plugins.lsp.cmp')
+        end,
     })
 
     -- Status Line
     use({
-      'nvim-lualine/lualine.nvim',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = function()
-        require('alfonzm.plugins.lualine')
-      end,
+        'nvim-lualine/lualine.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('alfonzm.plugins.lualine')
+        end,
     })
 
     -- Indent blankline
     use({
-      'lukas-reineke/indent-blankline.nvim',
-      config = function()
-        require('alfonzm.plugins.indent-blankline')
-      end,
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('alfonzm.plugins.indent-blankline')
+        end,
     })
 
     -- Autopairs
     use({
-      'windwp/nvim-autopairs',
-      config = function()
-        require('nvim-autopairs').setup()
-      end,
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup()
+        end,
     })
 
     -- Bufferline
     use({
-      'akinsho/bufferline.nvim',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = function()
-        require('alfonzm.plugins.bufferline')
-      end,
+        'akinsho/bufferline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('alfonzm.plugins.bufferline')
+        end,
     })
 
     -- File Tree
     use({
-      'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = function()
-        require('alfonzm.plugins.nvim-tree')
-      end,
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('alfonzm.plugins.nvim-tree')
+        end,
     })
 
     -- Automatically set up your configuration after cloning packer.nvim
@@ -165,9 +156,9 @@ return require('packer').startup({ function(use)
     end
 end,
 config = {
-  display = {
-    open_fn = require('packer.util').float,
-  }
+    display = {
+        open_fn = require('packer.util').float,
+    }
 }})
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated

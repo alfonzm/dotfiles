@@ -75,10 +75,8 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
-    load_after = {},
     loaded = true,
-    needs_bufread = true,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/LuaSnip",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["blamer.nvim"] = {
@@ -94,11 +92,8 @@ _G.packer_plugins = {
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
-    after_files = { "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
@@ -106,20 +101,14 @@ _G.packer_plugins = {
     path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-path"] = {
-    after_files = { "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
-    load_after = {},
+  ["cmp-nvim-lua"] = {
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   cmp_luasnip = {
-    after_files = { "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   fzf = {
@@ -152,10 +141,8 @@ _G.packer_plugins = {
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind-nvim"] = {
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/lspkind-nvim",
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lualine.nvim"] = {
@@ -171,16 +158,15 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28alfonzm.plugins.lsp.cmp\frequire\0" },
     loaded = true,
     path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30alfonzm.plugins.lspconfig\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
+    config = { "\27LJ\2\n=\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\"alfonzm.plugins.lsp.lspconfig\frequire\0" },
+    loaded = true,
+    path = "/Users/alfonzm/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
@@ -222,14 +208,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: blamer.nvim
 time([[Config for blamer.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27alfonzm.plugins.blamer\frequire\0", "config", "blamer.nvim")
 time([[Config for blamer.nvim]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31alfonzm.plugins.bufferline\frequire\0", "config", "bufferline.nvim")
-time([[Config for bufferline.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%alfonzm.plugins.indent-blankline\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\"alfonzm.plugins.lsp.lspconfig\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: fzf
 time([[Config for fzf]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf")
@@ -238,42 +232,26 @@ time([[Config for fzf]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31alfonzm.plugins.bufferline\frequire\0", "config", "bufferline.nvim")
+time([[Config for bufferline.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28alfonzm.plugins.lsp.cmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30alfonzm.plugins.nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
--- Config for: fzf.vim
-time([[Config for fzf.vim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf.vim")
-time([[Config for fzf.vim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28alfonzm.plugins.lualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%alfonzm.plugins.indent-blankline\frequire\0", "config", "indent-blankline.nvim")
-time([[Config for indent-blankline.nvim]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-cmp ]]
-vim.cmd [[ packadd cmp-path ]]
-vim.cmd [[ packadd cmp-buffer ]]
-vim.cmd [[ packadd LuaSnip ]]
-vim.cmd [[ packadd cmp_luasnip ]]
-vim.cmd [[ packadd lspkind-nvim ]]
-time([[Sequenced loading]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-lspconfig'}, { event = "BufRead *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
+-- Config for: fzf.vim
+time([[Config for fzf.vim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24alfonzm.plugins.fzf\frequire\0", "config", "fzf.vim")
+time([[Config for fzf.vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

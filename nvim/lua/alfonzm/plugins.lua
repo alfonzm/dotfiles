@@ -21,11 +21,17 @@ return require('packer').startup({ function(use)
     -- General Plugins
     use 'wbthomason/packer.nvim'
     -- use 'editorconfig/editorconfig-vim'
-    use 'lewis6991/gitsigns.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth'
     use 'moll/vim-bbye'
+
+    use({
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    })
 
     -- Fuzzy File Finder
     use({

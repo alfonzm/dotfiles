@@ -48,6 +48,7 @@ o.ignorecase = true
 
 -- Highlighted + incremental search (jump while typing)
 o.incsearch = true
+o.hlsearch = false
 
 -- Highlight current line
 o.cursorline = true
@@ -70,8 +71,9 @@ o.colorcolumn = 80
 o.signcolumn = 'yes'
 
 -- Remove vertical split character
--- TODO
--- o.fillchars+ = 'vert:\ '
+vim.opt.fillchars = {
+  vert = " "
+}
 
 -- Set 256 color
 o.t_Co = 256

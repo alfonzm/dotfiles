@@ -77,7 +77,7 @@ map('n', '<Leader>w', ':update<CR>')
 map('n', '<Leader>q', ':Bdelete<CR>')
 
 -- Source nvim config
-map('n', '<Leader>s', ':source ~/.config/nvim/init.vim<CR>')
+map('n', '<Leader>s', ':source ~/.config/nvim/init.lua<CR>')
 
 -- PlugInstall shortcut
 map('n', '<Leader>p', ':PlugInstall<CR>')

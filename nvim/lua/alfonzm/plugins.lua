@@ -11,20 +11,48 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+vim.api.nvim_create_autocmd('BufWritePost', {
+  group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
+  pattern = 'plugins.lua',
+  command = 'source <afile> | PackerCompile',
+})
+
 return require('packer').startup({ function(use)
+    -- General Plugins
     use 'wbthomason/packer.nvim'
+    -- use 'editorconfig/editorconfig-vim'
+    use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-sleuth'
+    use 'moll/vim-bbye'
+
+    -- Fuzzy File Finder
+    use({
+        "junegunn/fzf",
+        run = ":call fzf#install()",
+        config = function()
+            require('alfonzm.plugins.fzf')
+        end,
+    })
+    use({
+        'junegunn/fzf.vim',
+        config = function()
+            require('alfonzm.plugins.fzf')
+        end,
+    })
+
+    -- Icons
+    use 'kyazdani42/nvim-web-devicons'
+
+    -- Color schemes
     use 'morhetz/gruvbox'
     use 'sainnhe/gruvbox-material'
-    -- use 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    use { "junegunn/fzf", run = ":call fzf#install()" }
-    use 'junegunn/fzf.vim'
-    use 'editorconfig/editorconfig-vim'
-    use 'lewis6991/gitsigns.nvim'
-    use 'windwp/nvim-autopairs'
-    use 'tpope/vim-surround'
+    -- use 'eddyekofo94/gruvbox-flat.nvim'
+    -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
-    use 'moll/vim-bbye'
-    use 'lukas-reineke/indent-blankline.nvim'
+    -- Color Highlighter
+    -- use 'skammer/vim-css-color'
 
     -- Completion
     use 'hrsh7th/nvim-cmp' -- Main autocompletion plugin
@@ -38,28 +66,49 @@ return require('packer').startup({ function(use)
     use 'neovim/nvim-lspconfig'
 
     -- Status Line
-    use 'nvim-lualine/lualine.nvim'
+    use({
+      'nvim-lualine/lualine.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function()
+        require('alfonzm.plugins.lualine')
+      end,
+    })
+
+    -- Indent blankline
+    use({
+      'lukas-reineke/indent-blankline.nvim',
+      after = 'gruvbox-material',
+      config = function()
+        require('alfonzm.plugins.indent-blankline')
+      end,
+    })
+
+    -- Autopairs
+    use({
+      'windwp/nvim-autopairs',
+      config = function()
+        require('nvim-autopairs').setup()
+      end,
+    })
 
     -- Bufferline
-    use { 'akinsho/bufferline.nvim', tag = 'v2.*' }
+    use({
+      'akinsho/bufferline.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+      after = 'gruvbox-material',
+      config = function()
+        require('alfonzm.plugins.bufferline')
+      end,
+    })
 
     -- File Tree
-    use 'kyazdani42/nvim-tree.lua'
-
-    -- Icons
-    use 'kyazdani42/nvim-web-devicons'
-
-    -- Comments
-    use 'tpope/vim-commentary'
-
-    -- Color schemes
-    use 'morhetz/gruvbox'
-    use 'sainnhe/gruvbox-material'
-    -- use 'eddyekofo94/gruvbox-flat.nvim'
-    -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
-
-    -- Color Highlighter
-    -- use 'skammer/vim-css-color'
+    use({
+      'kyazdani42/nvim-tree.lua',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function()
+        require('alfonzm.plugins.nvim-tree')
+      end,
+    })
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
@@ -72,6 +121,7 @@ config = {
     open_fn = require('packer.util').float,
   }
 }})
+
 -- Automatically run :PackerCompile whenever plugins.lua is updated
 -- vim.cmd([[
 --     augroup packer_user_config
@@ -79,8 +129,4 @@ config = {
 --     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 --     augroup end
 -- ]])
--- vim.api.nvim_create_autocmd('BufWritePost', {
---     group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
---     pattern = 'plugins.lua',
---     command = 'source <afile> | PackerCompile',
--- })
+

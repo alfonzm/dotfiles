@@ -69,16 +69,51 @@ return require('packer').startup({ function(use)
     -- Color Highlighter
     -- use 'skammer/vim-css-color'
 
-    -- Completion
-    use 'hrsh7th/nvim-cmp' -- Main autocompletion plugin
-    use 'hrsh7th/cmp-buffer' -- Source for buffer words
-    use 'hrsh7th/cmp-nvim-lsp' -- Dependency of nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Autocomplete snippets
-    use 'saadparwaiz1/cmp_luasnip' -- Snippet completion source
-    use 'onsails/lspkind-nvim' -- Autocompletion icons/formatting
-
     -- LSP
-    use 'neovim/nvim-lspconfig'
+    use({
+        'neovim/nvim-lspconfig',
+        event = 'BufRead',
+        config = function()
+            require('alfonzm.plugins.lsp')
+        end,
+        requires = {
+            {
+                -- Cannot lazy load this
+                'hrsh7th/cmp-nvim-lsp',
+            },
+        },
+    })
+
+    -- Auto completion
+    use({
+        {
+            'hrsh7th/nvim-cmp',
+            -- event = 'InsertEnter',
+            -- config = function()
+            --     require('alfonzm.plugins.lsp.nvim-cmp')
+            -- end,
+            requires = {
+                {
+                    'L3MON4D3/LuaSnip',
+                    -- event = 'InsertEnter',
+                    -- config = function()
+                    --     require('alfonzm.plugins.lsp.luasnip')
+                    -- end,
+                    -- requires = {
+                    --     {
+                    --         'rafamadriz/friendly-snippets',
+                    --         event = 'CursorHold',
+                    --     },
+                    -- },
+                },
+            },
+        },
+        { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' }, -- Snippet completion source
+        { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
+        { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
+        { 'L3MON4D3/LuaSnip', after = 'nvim-cmp' }, -- Autocomplete snippets
+        { 'onsails/lspkind-nvim', after = 'nvim-cmp' }, -- Autocompletion icons/formatting
+    })
 
     -- Status Line
     use({

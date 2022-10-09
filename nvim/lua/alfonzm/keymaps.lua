@@ -12,7 +12,6 @@ map('v', '<C-j>', '<C-w>j')
 map('v', '<C-k>', '<C-w>k')
 map('v', '<C-l>', '<C-w>l')
 
-
 -- Exclude whitespace when doing $
 map('v', '$', '$h')
 

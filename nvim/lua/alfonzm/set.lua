@@ -1,4 +1,9 @@
+local g = vim.g
 local o = vim.o
+
+-- Map <leader> to space
+g.mapleader = ' '
+g.maplocalleader = ' '
 
 -- Syntax highlighting
 vim.cmd('syntax on')

@@ -20,16 +20,24 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 return require('packer').startup({ function(use)
     -- General Plugins
     use 'wbthomason/packer.nvim'
-    -- use 'editorconfig/editorconfig-vim'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
     use 'tpope/vim-sleuth'
     use 'moll/vim-bbye'
 
+    -- Git Signs
     use({
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup()
+        end
+    })
+
+    -- Git Blamer
+    use({
+        'APZelos/blamer.nvim',
+        config = function()
+            require('alfonzm.plugins.blamer')
         end
     })
 
@@ -41,6 +49,7 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.fzf')
         end,
     })
+
     use({
         'junegunn/fzf.vim',
         config = function()

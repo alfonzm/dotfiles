@@ -25,6 +25,13 @@ return require('packer').startup({ function(use)
     use 'tpope/vim-sleuth'
     use 'moll/vim-bbye'
 
+    -- Git Fugitive
+    use({
+        'tpope/vim-fugitive',
+        requires = 'tpope/vim-rhubarb',
+        cmd = 'G',
+    })
+
     -- Git Signs
     use({
         'lewis6991/gitsigns.nvim',

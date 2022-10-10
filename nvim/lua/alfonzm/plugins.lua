@@ -169,6 +169,14 @@ return require('packer').startup({ function(use)
         end,
     })
 
+    -- Color Highlighter
+    use({
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup()
+        end
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

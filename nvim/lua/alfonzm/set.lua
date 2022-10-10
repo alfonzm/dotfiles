@@ -54,7 +54,7 @@ o.hlsearch = false
 o.cursorline = true
 
 -- Utf8 standard encoding and en_US as the standard language
--- o.encoding = 'utf-8'
+o.encoding = 'utf-8'
 
 -- Use Unix as the standard file type
 -- o.ffs = 'unix,dos,mac'

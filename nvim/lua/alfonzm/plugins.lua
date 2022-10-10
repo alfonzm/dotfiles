@@ -22,8 +22,11 @@ return require('packer').startup({ function(use)
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
-    use 'tpope/vim-sleuth'
     use 'moll/vim-bbye'
+
+    -- Editorconfig (order is impt here, sleuth is only fallback)
+    use 'tpope/vim-sleuth'
+    use 'editorconfig/editorconfig-vim'
 
     -- Git Fugitive
     use({

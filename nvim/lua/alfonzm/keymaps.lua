@@ -75,11 +75,15 @@ map('n', '<Leader>w', ':update<CR>')
 -- Quick close buffer
 map('n', '<Leader>q', ':Bdelete<CR>')
 
+-- Quick close window
+map('n', '<Leader>Q', ':q<CR>')
+
 -- Source nvim config
 map('n', '<Leader>s', ':source ~/.config/nvim/init.lua<CR>')
 
--- PlugInstall shortcut
-map('n', '<Leader>p', ':PlugInstall<CR>')
+-- PackerCompile shortcut
+map('n', '<Leader>p', ':PackerCompile<CR>')
+map('n', '<Leader>pi', ':PackerInstall<CR>')
 
 -- Add line below
 -- nmap <S-Enter> O<Esc>j

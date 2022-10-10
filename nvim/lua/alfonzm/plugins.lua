@@ -82,12 +82,19 @@ return require('packer').startup({ function(use)
     })
 
     use({
+        'weilbith/nvim-code-action-menu',
+        cmd = 'CodeActionMenu',
+    })
+
+    -- Snippets
+    use({
         'L3MON4D3/LuaSnip',
         -- config = function()
         --     require('user.plugins.luasnip')
         -- end,
     })
 
+    -- Completion
     use({
         'hrsh7th/nvim-cmp',
         requires = {

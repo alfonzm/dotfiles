@@ -73,12 +73,11 @@ return require('packer').startup({ function(use)
         config = function()
             require('alfonzm.plugins.lsp.lspconfig')
         end,
-        -- requires = {
-        --     {
-        --         -- Cannot lazy load this
-        --         'hrsh7th/cmp-nvim-lsp',
-        --     },
-        -- },
+        requires = {
+            {
+                'folke/lsp-colors.nvim'
+            },
+        },
     })
 
     use({

@@ -61,7 +61,7 @@ return require('packer').startup({ function(use)
     use 'kyazdani42/nvim-web-devicons'
 
     -- Color schemes
-    -- use 'morhetz/gruvbox'
+    use 'morhetz/gruvbox'
     use 'sainnhe/gruvbox-material'
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
@@ -85,15 +85,15 @@ return require('packer').startup({ function(use)
         cmd = 'CodeActionMenu',
     })
 
-    -- Snippets
+    -- LSP Snippets
     use({
         'L3MON4D3/LuaSnip',
-        -- config = function()
-        --     require('user.plugins.luasnip')
-        -- end,
+        config = function()
+            require('alfonzm.plugins.luasnip')
+        end,
     })
 
-    -- Completion
+    -- LSP Completion
     use({
         'hrsh7th/nvim-cmp',
         requires = {
@@ -110,6 +110,20 @@ return require('packer').startup({ function(use)
         config = function()
             require('alfonzm.plugins.lsp.cmp')
         end,
+    })
+
+    use({
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        requires = {
+            'nvim-treesitter/playground',
+            -- 'nvim-treesitter/nvim-treesitter-textobjects',
+            -- 'JoosepAlviste/nvim-ts-context-commentstring',
+        },
+        -- config = function()
+        --     require('alfonzm.plugins.treesitter')
+        --     -- require('nvim-treesitter').setup()
+        -- end,
     })
 
     -- Status Line

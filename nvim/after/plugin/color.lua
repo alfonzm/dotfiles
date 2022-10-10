@@ -22,6 +22,11 @@ vim.api.nvim_exec(
     let g:gruvbox_material_diagnostic_virtual_text   = 1
 ]], false)
 vim.cmd('colorscheme gruvbox-material')
+-- vim.cmd('colorscheme gruvbox')
 
 vim.cmd[[highlight IndentBlanklineChar guifg=#333333]]
 vim.cmd[[highlight Blamer guifg=#504945]] -- Gruvbox bg2
+
+-- Remove 1 cell to the left of lualine
+vim.cmd[[highlight StatusLine guibg=#282828]]
+vim.cmd[[highlight StatusLineNC guibg=#282828]]

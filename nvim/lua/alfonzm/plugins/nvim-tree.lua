@@ -1,5 +1,6 @@
 require("nvim-tree").setup({
   hijack_cursor = true,
+  open_on_setup = true,
   auto_reload_on_write = false,
   update_focused_file = {
     enable = true

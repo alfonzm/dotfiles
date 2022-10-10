@@ -9,7 +9,14 @@ local cmp = require('cmp')
 cmp.setup {
     -- Format the autocomplete menu
     formatting = {
-        format = lspkind.cmp_format()
+        format = lspkind.cmp_format({
+            with_text = true,
+            menu = {
+                nvim_lsp = '[LSP]',
+                nvim_lua = '[Lua]',
+                buffer = '[Buf]'
+            } 
+        })
     },
     snippet = {
         expand = function(args)
@@ -40,6 +47,8 @@ cmp.setup {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
     },

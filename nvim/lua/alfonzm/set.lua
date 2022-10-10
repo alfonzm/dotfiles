@@ -96,6 +96,5 @@ o.termguicolors = true
 o.t_ZH = '[3m'
 o.t_ZR = '[23m'
 
-vim.opt.formatoptions:remove('c')
-vim.opt.formatoptions:remove('r')
-vim.opt.formatoptions:remove('o')
+-- Disable continuation of comment on next line
+vim.cmd[[autocmd BufNewFile,BufRead * setlocal formatoptions-=cro]]

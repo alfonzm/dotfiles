@@ -119,6 +119,18 @@ return require('packer').startup({ function(use)
         end,
     })
 
+    -- PHP
+    use({
+        'phpactor/phpactor',
+        branch = 'master',
+        ft = 'php',
+        run = 'composer install --no-dev -o',
+        config = function()
+            require('alfonzm.plugins.phpactor')
+        end,
+    })
+
+    --  Treesitter
     use({
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',

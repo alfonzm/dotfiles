@@ -4,7 +4,6 @@ local cmp = require('cmp')
 
 -- better autocompletion experience
 -- vim.o.completeopt = 'menuone,noselect'
--- vim.o.completeopt = 'menuone,longest,preview'
 
 cmp.setup {
     -- Format the autocomplete menu
@@ -15,7 +14,7 @@ cmp.setup {
                 nvim_lsp = '[LSP]',
                 nvim_lua = '[Lua]',
                 buffer = '[Buf]'
-            } 
+            }
         })
     },
     snippet = {
@@ -47,14 +46,19 @@ cmp.setup {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
     },
     sources = {
         { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'nvim_lua' },
         { name = 'luasnip' },
+        { name = 'path' },
         { name = 'buffer' },
     },
 }

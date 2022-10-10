@@ -11,8 +11,8 @@ require("nvim-tree").setup({
   },
   filters = {
     custom = {
-      '.git', 'node_modules', 'vendor'
-    }
+      '^\\.git$', 'node_modules', 'vendor'
+    },
   },
   renderer = {
     icons = {

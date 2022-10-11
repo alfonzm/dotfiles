@@ -5,8 +5,7 @@ alias src-zsh='source ~/.zshrc'
 alias mux='tmuxinator'
 
 # Vim
-alias v='nvim'
-alias v.='nvim .'
+alias v='nvim .'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 
@@ -14,7 +13,7 @@ alias vimorig='/usr/bin/vim'
 alias vimrc="vim ~/.vimrc"
 
 # Vim dotfiles
-alias dot="vim ~/.dotfiles"
+alias dot="cd ~/.dotfiles && vim ~/.dotfiles"
 
 # Subl
 alias s='subl'
@@ -31,8 +30,12 @@ alias htdocs-dir="cd /Applications/MAMP/htdocs"
 # Open current directory in Finder
 alias f='open -a Finder ./'
 
+# GH CLI
+alias ghpr="gh pr create --web"
+alias ghb="gh browse --web"
+
 # Git
-alias gitlog="git log --oneline -n 10"
+alias grsh="git reset --soft HEAD~1"
 
 # Diskspace report
 alias diskspace_report="df -P -kHl"

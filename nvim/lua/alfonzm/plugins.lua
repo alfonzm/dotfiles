@@ -21,8 +21,16 @@ return require('packer').startup({ function(use)
     -- General Plugins
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-surround'
-    use 'tpope/vim-commentary'
+    -- use 'tpope/vim-commentary'
     use 'moll/vim-bbye'
+
+    -- Comments
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
     -- Editorconfig (order is impt here, sleuth is only fallback)
     use 'tpope/vim-sleuth'

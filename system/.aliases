@@ -32,7 +32,7 @@ alias f='open -a Finder ./'
 
 # GH CLI
 alias ghpr="gh pr create --web"
-alias ghb="gh browse --web"
+alias ghb="gh browse"
 
 # Git
 alias grsh="git reset --soft HEAD~1"

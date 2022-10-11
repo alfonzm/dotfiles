@@ -5,6 +5,9 @@
 " Syntax highlighting
 syntax on
 
+" Set cursor to always be block
+set guicursor=""
+
 " Show line numbers + relative
 set number
 set relativenumber

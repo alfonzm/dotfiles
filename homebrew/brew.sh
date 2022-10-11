@@ -21,8 +21,10 @@ brew install tmux
 brew install tmuxinator
 brew install yarn
 
-# ZSH -- commented because macOS now uses zsh by default
-# brew install zsh
+# Language Server (for nvim)
+brew install lua-language-server
+
+# ZSH z util
 brew install z
 
 # Utilities

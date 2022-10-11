@@ -97,4 +97,4 @@ o.t_ZH = '[3m'
 o.t_ZR = '[23m'
 
 -- Disable continuation of comment on next line
-vim.cmd[[autocmd BufNewFile,BufRead * setlocal formatoptions-=cro]]
+vim.cmd[[autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro]]

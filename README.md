@@ -1,5 +1,7 @@
 # AlfonzM's dotfiles
 
+![An image of Alfonz's workspace including a laptop and an external monitor that's showing code on Vim — the vastly superior code editor. :wink:](img/dotfiles.jpg)
+
 ⚡️ Dotfiles for when my laptop gets stolen, or I get a new computer — hopefully it's the latter.
 
 ## Overview

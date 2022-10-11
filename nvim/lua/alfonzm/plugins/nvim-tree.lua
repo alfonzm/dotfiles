@@ -5,10 +5,10 @@ require("nvim-tree").setup({
   update_focused_file = {
     enable = true
   },
-  git = {
-    enable = false,
-    -- timeout = 1000
-  },
+  -- git = {
+  --   enable = false,
+  --   timeout = 1000
+  -- },
   filters = {
     custom = {
       '^\\.git$', 'node_modules', 'vendor'

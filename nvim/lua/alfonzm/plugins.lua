@@ -21,14 +21,13 @@ return require('packer').startup({ function(use)
     -- General Plugins
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-surround'
-    -- use 'tpope/vim-commentary'
     use 'moll/vim-bbye'
 
     -- Comments
     use {
         'numToStr/Comment.nvim',
         config = function()
-            require('Comment').setup()
+            require('alfonzm.plugins.comment')
         end
     }
 

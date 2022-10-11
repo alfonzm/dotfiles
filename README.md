@@ -59,4 +59,7 @@ $ vim ~/.custom
 
 ## TODO
 
-- Run `python3 -m pip install pynvim` which may be required for some nvim plugins
+- Script for installing npm default-packages (see nvm directory)
+- Script for installing pip plugins. For now, manually install the ff:
+  - `python3 -m pip install pynvim` — required for some nvim plugins
+  - `pip install lookatme`

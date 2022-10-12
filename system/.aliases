@@ -31,7 +31,8 @@ alias htdocs-dir="cd /Applications/MAMP/htdocs"
 alias f='open -a Finder ./'
 
 # GH CLI
-alias ghpr="gh pr create --web"
+alias ghprc="gh pr create --web"
+alias ghprv="gh pr view --web"
 alias ghb="gh browse"
 
 # Git
@@ -95,3 +96,9 @@ alias vp="php vendor/bin/vapor"
 
 # Love2D
 alias love="/Applications/love.app/Contents/MacOS/love"
+
+mkcd ()
+{
+  mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}

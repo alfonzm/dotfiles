@@ -58,6 +58,10 @@ return require('packer').startup({ function(use)
         end
     })
 
+    -- Git diffs
+    use 'TimUntersberger/neogit'
+    use 'sindrets/diffview.nvim'
+
     -- Fuzzy File Finder
     use({
         'junegunn/fzf',

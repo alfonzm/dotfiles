@@ -101,3 +101,6 @@ vim.cmd[[autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro]]
 
 -- Sync system and vim clipboard
 o.clipboard = "unnamedplus"
+
+-- Read file updates automatically, can undo with u
+o.autoread = true

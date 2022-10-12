@@ -145,14 +145,15 @@ return require('packer').startup({ function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         requires = {
+            'windwp/nvim-ts-autotag',
             'nvim-treesitter/playground',
             -- 'nvim-treesitter/nvim-treesitter-textobjects',
-            -- 'JoosepAlviste/nvim-ts-context-commentstring',
+            'JoosepAlviste/nvim-ts-context-commentstring',
         },
-        -- config = function()
-        --     require('alfonzm.plugins.treesitter')
-        --     -- require('nvim-treesitter').setup()
-        -- end,
+        config = function()
+            require('alfonzm.plugins.treesitter')
+            -- require('nvim-treesitter').setup()
+        end,
     })
 
     -- Status Line
@@ -219,6 +220,10 @@ return require('packer').startup({ function(use)
         'iamcco/markdown-preview.nvim',
         run = function() vim.fn['mkdp#util#install']() end,
     })
+
+    -- Syntax Highlighters
+    use 'HerringtonDarkholme/yats.vim'
+    use 'MaxMEllon/vim-jsx-pretty'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -11,13 +11,21 @@ require('nvim-treesitter.configs').setup {
         'yaml',
     },
     highlight = {
-        enable = true,
-        disable = { 'NvimTree' },
+        enable = false,
+        disable = {
+            'NvimTree',
+        },
         additional_vim_regex_highlighting = false,
     },
     indent = {
         enable = true
     },
+    autotag = {
+        enable = true
+    },
+    context_commentstring = {
+        enable = true
+    }
     -- playground = { enable = true }
 }
 

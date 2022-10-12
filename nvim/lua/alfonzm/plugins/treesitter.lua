@@ -1,15 +1,24 @@
 -- Prime
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'php' },
     sync_install = false, -- install asynchronously
-    -- ignore_install = {''}, -- parsers to ignore
+    ensure_installed = {
+        'php',
+        'tsx',
+        'json',
+        'html',
+        'css',
+        'lua',
+        'yaml',
+    },
     highlight = {
         enable = true,
-        -- disable = {''}, -- languages to disable
+        disable = { 'NvimTree' },
         additional_vim_regex_highlighting = false,
     },
-    indent = { enable = true },
-    playground = { enable = true }
+    indent = {
+        enable = true
+    },
+    -- playground = { enable = true }
 }
 
 -- jessarcher

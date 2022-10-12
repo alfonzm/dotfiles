@@ -206,6 +206,20 @@ return require('packer').startup({ function(use)
         end
     })
 
+    -- Markdown
+    use 'godlygeek/tabular'
+    use({
+        'preservim/vim-markdown',
+        config = function()
+            vim.g.vim_markdown_folding_disabled = 1
+        end
+    })
+
+    use({
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

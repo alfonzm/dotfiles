@@ -98,3 +98,6 @@ o.t_ZR = '[23m'
 
 -- Disable continuation of comment on next line
 vim.cmd[[autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro]]
+
+-- Sync system and vim clipboard
+o.clipboard = "unnamedplus"

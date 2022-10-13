@@ -30,3 +30,6 @@ vim.cmd[[highlight Blamer guifg=#504945]] -- Gruvbox bg2
 -- Remove 1 cell to the left of lualine
 vim.cmd[[highlight StatusLine guibg=#282828]]
 vim.cmd[[highlight StatusLineNC guibg=#282828]]
+
+-- Change search hit/yanked selection
+vim.cmd[[highlight IncSearch guifg=#282828 guibg=#fabd2f]]

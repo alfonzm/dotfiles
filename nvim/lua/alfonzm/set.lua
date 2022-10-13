@@ -106,4 +106,4 @@ o.clipboard = "unnamedplus"
 o.autoread = true
 
 -- Highlight yanked selection for 60ms
-vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=60}]]
+vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]

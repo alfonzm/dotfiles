@@ -104,3 +104,6 @@ o.clipboard = "unnamedplus"
 
 -- Read file updates automatically, can undo with u
 o.autoread = true
+
+-- Highlight yanked selection for 60ms
+vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=60}]]

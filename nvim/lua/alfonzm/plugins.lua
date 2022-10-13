@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 return require('packer').startup({ function(use)
     -- General Plugins
     use 'wbthomason/packer.nvim'
+    use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-surround'
     use 'moll/vim-bbye'
 
@@ -59,8 +60,18 @@ return require('packer').startup({ function(use)
     })
 
     -- Git diffs
-    use 'TimUntersberger/neogit'
-    use 'sindrets/diffview.nvim'
+    use({
+        'TimUntersberger/neogit',
+        config = function()
+            require('alfonzm.plugins.neogit')
+        end
+    })
+    use({
+        'sindrets/diffview.nvim',
+        config = function()
+            require('alfonzm.plugins.diffview')
+        end
+    })
 
     -- Fuzzy File Finder
     use({

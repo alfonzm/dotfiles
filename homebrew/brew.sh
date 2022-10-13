@@ -11,6 +11,7 @@ brew upgrade
 # Development
 brew install alacritty
 brew install ctags
+brew install git
 brew install hub
 brew install lua
 brew install neovim

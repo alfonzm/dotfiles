@@ -12,7 +12,6 @@ brew upgrade
 brew install alacritty
 brew install ctags
 brew install git
-brew install hub
 brew install lua
 brew install neovim
 brew install node

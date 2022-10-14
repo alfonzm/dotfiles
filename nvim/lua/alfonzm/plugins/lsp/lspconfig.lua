@@ -28,6 +28,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
     -- Not yet sure how these work so commenting them out for now
     -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
@@ -39,7 +40,6 @@ local on_attach = function(_, bufnr)
     -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
     -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    -- vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 -- List of LSP servers

@@ -18,3 +18,5 @@ end
 create_command_alias('gst', 'G status')
 create_command_alias('gd', 'G diff')
 create_command_alias('gaa', 'G add .')
+create_command_alias('gcam', 'G commit -m')
+create_command_alias('glo', 'G log --oneline --decorate')

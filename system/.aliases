@@ -5,7 +5,7 @@ alias src-zsh='source ~/.zshrc'
 alias mux='tmuxinator'
 
 # Vim
-alias v='nvim .'
+alias v='nvim'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 

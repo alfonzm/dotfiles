@@ -10,7 +10,7 @@ vim.fn.sign_define("DiagnosticSignInfo", { text='•', texthl='gray', linehl='',
 vim.api.nvim_exec(
 [[
     augroup-theme-overrides
-    autocmd!
+        autocmd!
         autocmd ColorScheme gruvbox-material highlight Folded ctermfg=LightGray guifg=#918d88
         autocmd ColorScheme gruvbox-material highlight Folded ctermbg=235 guibg=#282828
         autocmd ColorScheme gruvbox-material highlight Folded cterm=italic gui=italic

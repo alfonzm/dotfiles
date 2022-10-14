@@ -79,6 +79,8 @@ vim.opt.fillchars = {
     vertright = " ",
     vertleft = " ",
     verthoriz = "─",
+    horizdown = "─",
+    horizup = "─",
 }
 
 -- Set 256 color

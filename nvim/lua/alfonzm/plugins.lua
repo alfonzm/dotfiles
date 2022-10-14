@@ -23,6 +23,7 @@ return require('packer').startup({ function(use)
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-surround'
     use 'moll/vim-bbye'
+    use 'mbbill/undotree'
 
     -- Comments
     use {
@@ -40,8 +41,9 @@ return require('packer').startup({ function(use)
     use({
         'tpope/vim-fugitive',
         requires = 'tpope/vim-rhubarb',
-        cmd = 'G',
     })
+
+    use 'junegunn/gv.vim'
 
     -- Git Signs
     use({

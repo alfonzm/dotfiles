@@ -8,6 +8,9 @@ g.maplocalleader = ' '
 -- Syntax highlighting
 vim.cmd('syntax on')
 
+-- Single global status line
+o.laststatus = 3
+
 -- Set cursor to always be block
 o.guicursor = ""
 
@@ -72,7 +75,10 @@ o.signcolumn = 'yes'
 
 -- Remove vertical split character
 vim.opt.fillchars = {
-  vert = " "
+    vert = " ",
+    vertright = " ",
+    vertleft = " ",
+    verthoriz = "─",
 }
 
 -- Set 256 color

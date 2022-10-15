@@ -16,6 +16,7 @@ brew install lua
 brew install neovim
 brew install node
 brew install nvm
+brew install prettierd
 brew install rbenv ruby-build
 brew install tmux
 brew install tmuxinator

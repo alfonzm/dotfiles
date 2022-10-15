@@ -1,7 +1,9 @@
 local lspconfig = require('lspconfig')
+local lsp_status = require('lsp-status')
 
 -- Configure lsp autocompletion
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
 
 -- Keymaps
 local opts = { noremap = true, silent = true }
@@ -14,7 +16,10 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
+    -- Setup lsp_status
+    lsp_status.on_attach(client)
+
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -45,8 +50,8 @@ end
 -- List of LSP servers
 -- Only add here if it doesn't require custom configurations
 -- other than on_attach and capabilities.
+-- TODO: Refactor to allow servers with custom config
 local servers = {
-    -- 'tsserver',
     'intelephense',
 }
 

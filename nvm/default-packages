@@ -1,4 +1,6 @@
 # Nvim LSPs
+eslint_d
+vscode-langservers-extracted
 intelephense
 typescript
 typescript-language-server

@@ -1,8 +1,13 @@
+local lsp_status = require('lsp-status')
+
+-- Register the progress handler
+lsp_status.register_progress()
+
 require('lualine').setup({
     options = {
         theme = 'gruvbox',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = { 'vim-plug', 'NvimTree' },
     },
     sections = {
@@ -13,7 +18,7 @@ require('lualine').setup({
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {},
+        lualine_z = { "require'lsp-status'.status()" },
     },
     inactive_sections = {
         lualine_a = {},
@@ -23,6 +28,6 @@ require('lualine').setup({
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {},
     }
 })

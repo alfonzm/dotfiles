@@ -114,6 +114,20 @@ return require('packer').startup({ function(use)
         },
     })
 
+    -- Null LS
+    use({
+        'jose-elias-alvarez/null-ls.nvim',
+        config = function()
+            require('alfonzm.plugins.null-ls')
+        end
+    })
+    use({
+        'MunifTanjim/prettier.nvim',
+        config = function()
+            require('alfonzm.plugins.prettier')
+        end
+    })
+
     -- Code Action Menu
     use({
         'weilbith/nvim-code-action-menu',
@@ -177,7 +191,10 @@ return require('packer').startup({ function(use)
     -- Status Line
     use({
         'nvim-lualine/lualine.nvim',
-        requires = 'kyazdani42/nvim-web-devicons',
+        requires = {
+            'kyazdani42/nvim-web-devicons',
+            'nvim-lua/lsp-status.nvim',
+        },
         config = function()
             require('alfonzm.plugins.lualine')
         end,

@@ -97,3 +97,7 @@ map('n', '<Leader>pi', ':PackerInstall<CR>')
 -- Add line below
 -- nmap <S-Enter> O<Esc>j
 -- nmap <CR> o<Esc>k
+
+-- Move up/down quick fix list
+-- map('n', '<C-j>', '<cmd>cnext<CR>zz')
+-- map('n', '<C-k>', '<cmd>cprev<CR>zz')

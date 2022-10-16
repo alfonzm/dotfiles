@@ -43,6 +43,7 @@ return require('packer').startup({ function(use)
         requires = 'tpope/vim-rhubarb',
     })
 
+    -- Git commit browser (:GV)
     use 'junegunn/gv.vim'
 
     -- Git Signs
@@ -73,6 +74,14 @@ return require('packer').startup({ function(use)
         config = function()
             require('alfonzm.plugins.diffview')
         end
+    })
+
+    -- Vim Test
+    use({
+        'vim-test/vim-test',
+        config = function()
+            require('alfonzm.plugins.vim-test')
+        end,
     })
 
     -- Fuzzy File Finder
@@ -256,7 +265,7 @@ return require('packer').startup({ function(use)
     })
 
     -- Syntax Highlighters
-    use 'HerringtonDarkholme/yats.vim'
+    -- use 'HerringtonDarkholme/yats.vim'
     use 'MaxMEllon/vim-jsx-pretty'
 
     -- Goyo (focus mode)

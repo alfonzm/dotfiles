@@ -52,6 +52,10 @@ end
 -- other than on_attach and capabilities.
 -- TODO: Refactor to allow servers with custom config
 local servers = {
+    'emmet_ls',
+    'html',
+    'volar',
+    'tailwindcss',
     'intelephense',
 }
 

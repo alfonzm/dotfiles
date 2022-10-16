@@ -1,4 +1,7 @@
 # Nvim LSPs
+@tailwindcss/language-server
+vscode-langservers-extracted
+emmet-ls
 eslint_d
 vscode-langservers-extracted
 intelephense

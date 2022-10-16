@@ -10,7 +10,6 @@ require('nvim-treesitter.configs').setup {
         'css',
         'lua',
         'yaml',
-        'query',
     },
     highlight = {
         enable = true,

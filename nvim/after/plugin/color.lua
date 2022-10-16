@@ -4,8 +4,8 @@ vim.g.gruvbox_material_better_performance = 1
 
 vim.fn.sign_define("DiagnosticSignError", { text = '•', texthl = 'red', linehl = '', numhl = '' })
 vim.fn.sign_define("DiagnosticSignWarn", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
-vim.fn.sign_define("DiagnosticSignHint", { text = '•', texthl = 'green', linehl = '', numhl = '' })
-vim.fn.sign_define("DiagnosticSignInfo", { text = '•', texthl = 'gray', linehl = '', numhl = '' })
+vim.fn.sign_define("DiagnosticSignHint", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
+vim.fn.sign_define("DiagnosticSignInfo", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
 
 vim.api.nvim_exec(
     [[
@@ -21,15 +21,22 @@ vim.api.nvim_exec(
     let g:gruvbox_material_diagnostic_line_highlight = 1
     let g:gruvbox_material_diagnostic_virtual_text   = 1
 ]]   , false)
-vim.cmd('colorscheme gruvbox-material')
--- vim.cmd('colorscheme gruvbox')
 
+-- Color scheme
+vim.cmd('colorscheme gruvbox-material')
+
+-- Custom highlights
 vim.cmd [[highlight IndentBlanklineChar guifg=#333333]]
 vim.cmd [[highlight Blamer guifg=#504945]] -- Gruvbox bg2
 
--- Remove 1 cell to the left of lualine
+-- Change search hit/yanked selection
+vim.cmd [[highlight IncSearch guifg=#282828 guibg=#fabd2f]]
+
+-- Removes 1 cell to the left of lualine
 vim.cmd [[highlight StatusLine guibg=#282828]]
 vim.cmd [[highlight StatusLineNC guibg=#282828]]
 
--- Change search hit/yanked selection
-vim.cmd [[highlight IncSearch guifg=#282828 guibg=#fabd2f]]
+-- Change NvimTree folder colors, not yet working (TODO)
+-- vim.cmd [[highlight  NvimTreeFolderName guifg=#fabd2f]]
+-- vim.cmd [[highlight  NvimTreeOpenedFolderName guifg=#fabd2f]]
+-- vim.cmd [[highlight  NvimTreeEmptyFolderName guifg=#fabd2f]]

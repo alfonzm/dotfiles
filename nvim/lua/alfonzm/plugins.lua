@@ -267,6 +267,7 @@ return require('packer').startup({ function(use)
     -- Syntax Highlighters
     -- use 'HerringtonDarkholme/yats.vim'
     use 'MaxMEllon/vim-jsx-pretty'
+    use 'styled-components/vim-styled-components'
 
     -- Goyo (focus mode)
     use({

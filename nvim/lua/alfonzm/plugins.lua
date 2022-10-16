@@ -104,7 +104,7 @@ return require('packer').startup({ function(use)
     use 'kyazdani42/nvim-web-devicons'
 
     -- Color schemes
-    use 'morhetz/gruvbox'
+    -- use 'morhetz/gruvbox'
     use 'sainnhe/gruvbox-material'
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}

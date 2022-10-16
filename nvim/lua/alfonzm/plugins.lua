@@ -76,6 +76,14 @@ return require('packer').startup({ function(use)
         end
     })
 
+    -- Session
+    use ({
+        'rmagatti/auto-session',
+        config =function ()
+            require('alfonzm.plugins.auto-session')
+        end
+    })
+
     -- Vim Test
     use({
         'vim-test/vim-test',

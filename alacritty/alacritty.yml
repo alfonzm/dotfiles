@@ -12,6 +12,7 @@ window:
 
   # Remove title bar and borders in macOS
   decorations: none
+  opacity: 1
 
 cursor:
   style:
@@ -77,9 +78,9 @@ schemes:
   gruvbox256: &gruvbox256
     # Colors (Gruvbox dark)
     primary:
-      # hard contrast background - '#1d2021'
+      # background:        '#1d2021' # hard contrast
       background:        &gruvbox_dark_bg '#282828'
-      # soft contrast background - '#32302f'
+      # background:        '#32302f' # soft contrast
       foreground:        '#ebdbb2'
       bright_foreground: '#fbf1c7'
       dim_foreground:    '#a89984'

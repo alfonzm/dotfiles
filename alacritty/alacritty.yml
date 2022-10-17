@@ -138,3 +138,27 @@ schemes:
       white:   '#928374'
 
 colors: *gruvbox256
+
+key_bindings:
+  # Tmux Keybindings using hex codes
+  # Cmd+T - new tmux window
+  - { key: T, mods: Command, chars: "\x01\x63" }
+  # Cmd+W - close current tmux window
+  - { key: W, mods: Command, chars: "\x01\x78" }
+  # Cmd+[ - move to prev tmux window
+  - { key: LBracket, mods: Command, chars: "\x01\x70" }
+  # Cmd+] - move to next tmux window
+  - { key: RBracket, mods: Command, chars: "\x01\x6e" }
+  # Cmd+, - rename window
+  - { key: Comma, mods: Command, chars: "\x01\x2c" }
+  # Cmd+N to go to Nth window
+  - { key: Key0, mods: Command, chars: "\x01\x30" }
+  - { key: Key1, mods: Command, chars: "\x01\x31" }
+  - { key: Key2, mods: Command, chars: "\x01\x32" }
+  - { key: Key3, mods: Command, chars: "\x01\x33" }
+  - { key: Key4, mods: Command, chars: "\x01\x34" }
+  - { key: Key5, mods: Command, chars: "\x01\x35" }
+  - { key: Key6, mods: Command, chars: "\x01\x36" }
+  - { key: Key7, mods: Command, chars: "\x01\x37" }
+  - { key: Key8, mods: Command, chars: "\x01\x38" }
+  - { key: Key9, mods: Command, chars: "\x01\x39" }

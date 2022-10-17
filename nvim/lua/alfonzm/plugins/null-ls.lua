@@ -9,14 +9,14 @@ null_ls.setup({
             vim.cmd('autocmd BufWritePost <buffer> lua vim.lsp.buf.format()')
         end
 
-        if client.server_capabilities.documentRangeFormattingProvider then
-            vim.cmd('xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>')
-        end
+        -- if client.server_capabilities.documentRangeFormattingProvider then
+        --     vim.cmd('xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>')
+        -- end
     end,
-    sources = {
+    -- sources = {
         -- null_ls.builtins.formatting.prettierd,
         -- null_ls.builtins.diagnostics.eslint_d.with({
         --     diagnostics_format = '[eslint] #{m} (#{c})'
         -- }),
-    }
+    -- }
 })

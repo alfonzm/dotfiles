@@ -1,5 +1,6 @@
 # Restart zshrc config
 alias src-zsh='source ~/.zshrc'
+alias sz='source ~/.zshrc'
 
 # Tmuxinator
 alias mux='tmuxinator'
@@ -9,23 +10,11 @@ alias v='nvim'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 
-# Edit vimrc
-alias vimrc="vim ~/.vimrc"
-
 # Vim dotfiles
 alias dot="cd ~/.dotfiles && nvim ."
 
 # Subl
 alias s='subl'
-
-# Dev Project Directories
-alias unity-dir='cd ~/Documents/Dev/Unity'
-alias work-dir='cd ~/Documents/Work'
-alias jekyll-dir='cd ~/Documents/Dev/Jekyll'
-alias flx-dir='cd ~/Documents/Dev/HaxeFlixel'
-alias love-dir='cd ~/Documents/Dev/Love'
-alias dev-dir="cd ~/Documents/Dev"
-alias htdocs-dir="cd /Applications/MAMP/htdocs"
 
 # Open current directory in Finder
 alias f='open -a Finder ./'
@@ -38,6 +27,7 @@ alias prc="gh pr create --web"
 alias prv="gh pr view --web"
 
 # Git
+alias lg="lazygit"
 alias grsh="git reset --soft HEAD~1"
 
 # Diskspace report

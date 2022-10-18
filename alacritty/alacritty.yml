@@ -147,8 +147,10 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x01\x78" }
   # Cmd+[ - move to prev tmux window
   - { key: LBracket, mods: Command, chars: "\x01\x70" }
+  - { key: H, mods: 'Command|Shift', chars: "\x01\x70" }
   # Cmd+] - move to next tmux window
   - { key: RBracket, mods: Command, chars: "\x01\x6e" }
+  - { key: L, mods: 'Command|Shift', chars: "\x01\x6e" }
   # Cmd+, - rename window
   - { key: Comma, mods: Command, chars: "\x01\x2c" }
   # Cmd+N to go to Nth window

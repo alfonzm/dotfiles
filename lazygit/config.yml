@@ -1,0 +1,18 @@
+gui:
+  scrollPastBottom: true
+  theme:
+    selectedLineBgColor:
+      - '#3c3836' # Gruvbox b1
+    activeBorderColor:
+      - yellow
+      - bold
+    inactiveBorderColor:
+      - '#504945' # Gruvbox bg2
+  showFileTree: false
+  showCommandLog: false
+  showListFooter: false
+  showRandomTip: false
+  showBottomLine: false
+  showIcons: false
+os:
+  editCommand: 'nvim'

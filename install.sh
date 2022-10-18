@@ -87,6 +87,11 @@ echo "\n⚡ Symlinking lf config"
 echo "ln -sf ~/.dotfiles/lf ~/.config/lf"
 ln -sf ~/.dotfiles/lf ~/.config/lf
 
+# Symlink lazygit
+echo "\n⚡ Symlinking lazygit config"
+echo "ln -sf ~/.dotfiles/lazygit ~/.config/lazygit"
+ln -sf ~/.dotfiles/lazygit ~/.config/lazygit
+
 # Test truecolor
 echo "⚡ Truecolor test:"
 curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh | bash

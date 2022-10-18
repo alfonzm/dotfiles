@@ -1,3 +1,6 @@
+# Simulate XDG_CONFIG_HOME path
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 

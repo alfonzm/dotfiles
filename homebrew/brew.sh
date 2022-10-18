@@ -12,6 +12,8 @@ brew upgrade
 brew install alacritty
 brew install ctags
 brew install git
+brew install lazydocker
+brew install lazygit
 brew install lua
 brew install neovim
 brew install node
@@ -21,6 +23,10 @@ brew install rbenv ruby-build
 brew install tmux
 brew install tmuxinator
 brew install yarn
+
+# Productivity
+brew install koekeishiya/formulae/yabai
+brew install lf
 
 # Language Server (for nvim)
 brew install lua-language-server

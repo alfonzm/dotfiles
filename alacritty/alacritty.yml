@@ -119,13 +119,14 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
     normal:
+      # Always use bright colors even for normal
       black:   *gruvbox_dark_bg
-      red:     '#fb4934' # Use bright red
-      green:   '#b8bb26' # Use bright green always
-      yellow:  '#d79921'
-      blue:    '#458588'
-      magenta: '#b16286'
-      cyan:    '#689d6a'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
       white:   '#ebdbb2'
     dim:
       black:   '#32302f'

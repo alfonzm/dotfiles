@@ -30,9 +30,17 @@ $ sh install.sh
 1. Setup MySQL servers on Docker
 
 #### Productivity Tools
+
+BetterTouchTool
+
 1. Setup BetterTouchTool license key (check email)
 1. Setup Alfred license key (check email)
 1. Go to Alfred > Preferences > Advanced > Set preferences folder to `~/.dotfiles/alfred`
+
+Yabai
+
+1. After brew installing yabai, run `brew services start yabai`.
+1. Setup permissions in System Preferences after starting the service. ([Guide](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)))
 
 #### Peripherals
 1. Setup [macOS](/macos) Trackpad and Keyboard settings

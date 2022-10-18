@@ -1,0 +1,11 @@
+set hidden true
+set ignorecase true
+set icons true
+set scrolloff 12
+
+map D delete
+map <enter> open
+
+map gd cd ~/Documents
+map gv ~/Documents/Dev/
+map gD cd ~/Downloads

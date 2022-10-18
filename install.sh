@@ -77,6 +77,16 @@ echo "\n⚡ Symlinking Neovim config"
 echo "ln -sf ~/.dotfiles/nvim ~/.config/nvim"
 ln -sf ~/.dotfiles/nvim ~/.config/nvim
 
+# Symlink yabai
+echo "\n⚡ Symlinking Yabai config"
+echo "ln -sf ~/.dotfiles/yabai ~/.config/yabai"
+ln -sf ~/.dotfiles/yabai ~/.config/yabai
+
+# Symlink lf
+echo "\n⚡ Symlinking lf config"
+echo "ln -sf ~/.dotfiles/lf ~/.config/lf"
+ln -sf ~/.dotfiles/lf ~/.config/lf
+
 # Test truecolor
 echo "⚡ Truecolor test:"
 curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh | bash

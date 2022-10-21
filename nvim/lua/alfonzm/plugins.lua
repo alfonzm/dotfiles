@@ -242,7 +242,7 @@ return require('packer').startup({ function(use)
         end,
     })
 
-    -- File Tree
+    -- Nvim Tree
     use({
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
@@ -265,6 +265,7 @@ return require('packer').startup({ function(use)
         'preservim/vim-markdown',
         config = function()
             vim.g.vim_markdown_folding_disabled = 1
+            vim.g.vim_markdown_auto_insert_bullets = 1
         end
     })
     use({
@@ -280,10 +281,19 @@ return require('packer').startup({ function(use)
     -- Goyo (focus mode)
     use({
         'junegunn/goyo.vim',
-        -- config = function()
-        --     require('alfonzm.plugins.goyo')
-        -- end
+        config = function()
+            require('alfonzm.plugins.goyo')
+        end
     })
+
+    -- use({
+    --     'glepnir/dashboard-nvim',
+    --     config = function ()
+    --         require('alfonzm.plugins.dashboard-nvim')
+    --     end
+    -- })
+
+    -- use 'mhinz/vim-startify'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

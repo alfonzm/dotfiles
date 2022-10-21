@@ -34,11 +34,11 @@ plugins=(
   globalias
 )
 
-# Enable Z
-. ~/.oh-my-zsh/plugins/z/z.sh
-
 # Enable oh my zsh
 source $ZSH/oh-my-zsh.sh
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
 
 # ZSH Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
@@ -56,12 +56,13 @@ precmd() { vcs_info }
 # format vcs_info variable
 zstyle ':vcs_info:git:*' formats '(%b)'
 
+# Prompt
 NEWLINE=$'\n'
 PROMPT_SYMBOL=$'$ '
 # PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
 PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
 
-# Add to PATH
+# Add composer to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Use Vim keybindings

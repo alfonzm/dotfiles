@@ -1,0 +1,27 @@
+# ~/.tmuxinator/co.yml
+
+name: contactout
+
+windows:
+    - server:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
+        layout: main-vertical
+        panes:
+            -
+            - nvm use 14
+    - vim:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
+    - extension_app:
+        root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
+        layout: main-vertical
+        panes:
+            -
+            - nvm use 14
+    - chrome_extension:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
+        layout: main-vertical
+        panes:
+            -
+            - nvm use 14
+    - zsh:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/

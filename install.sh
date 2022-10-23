@@ -1,6 +1,3 @@
-#!/bin/bash
-
-echo "\n"
 echo "⚡ Running AlfonzM's dotfiles..."
 echo "⚡ http://github.com/alfonzm/dotfiles"
 
@@ -13,6 +10,9 @@ stow zsh
 
 echo "\n⚡ Stowing nvim..."
 stow nvim
+
+echo "\n⚡ Stowing tmux..."
+stow tmux
 
 echo "\n⚡ Stowing yabai..."
 stow yabai
@@ -29,12 +29,6 @@ ln -sf ~/.dotfiles/alacritty ~/.config
 
 echo "\n⚡ Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-echo "\n⚡ Symlinking tmux..."
-echo "ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf"
-ln -sf ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
-mkdir ~/.tmux
-ln -sf ~/.dotfiles/tmux/reset ~/.tmux/reset
 
 echo "\n⚡ Setting up zsh and oh-my-zsh"
 # chsh -s `which zsh`

@@ -23,9 +23,8 @@ stow lf
 echo "\n⚡ Stowing lazygit..."
 stow lazygit
 
-echo "\n⚡ Symlinking alacritty.yml..."
-echo "ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"
-ln -sf ~/.dotfiles/alacritty ~/.config
+echo "\n⚡ Stowing alacritty..."
+stow alacritty
 
 echo "\n⚡ Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

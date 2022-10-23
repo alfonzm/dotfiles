@@ -31,20 +31,20 @@ font:
   #   family: FiraCode Nerd Font
   #   style: Italic
   normal:
-    family: BlexMono Nerd Font
-    style: Book
+    family: DankMono Nerd Font
+    style: Regular
   bold:
-    family: BlexMono Nerd Font
-    style: Book
+    family: DankMono Nerd Font
+    style: Regular
   italic:
-    family: CartographCF Nerd Font
-    style: Light Italic
+    family: DankMono Nerd Font
+    style: Italic
 
-  size: 13.0
+  size: 14.0
 
   offset:
    x: 0
-   y: 4
+   y: 7
 
   # Requires restart
   glyph_offset:
@@ -155,7 +155,7 @@ key_bindings:
   # Cmd+, - rename window
   - { key: Comma, mods: Command, chars: "\x01\x2c" }
   # Cmd+N to go to Nth window
-  - { key: Key0, mods: Command, chars: "\x01\x30" }
+  # - { key: Key0, mods: Command, chars: "\x01\x30" }
   - { key: Key1, mods: Command, chars: "\x01\x31" }
   - { key: Key2, mods: Command, chars: "\x01\x32" }
   - { key: Key3, mods: Command, chars: "\x01\x33" }

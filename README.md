@@ -10,11 +10,14 @@ Contains:
 
 - zsh config
 - aliases
-- functions
-- Vim config
-- Homebrew installs and cask apps
+- Neovim config
+- tmux config
+- lf, lazygit, lazydocker config
+- Homebrew installs
 - Alacritty config
-- Sublime Text settings
+- macOS System Preferences
+- Alfred workflows
+- BetterTouchTool settings
 
 ## Installation
 
@@ -67,6 +70,7 @@ $ vim ~/.custom
 
 ## TODO
 
+- Ansible
 - Script for installing npm default-packages (see nvm directory)
 - Script for installing pip plugins. For now, manually install the ff:
   - `python3 -m pip install pynvim` — required for some nvim plugins

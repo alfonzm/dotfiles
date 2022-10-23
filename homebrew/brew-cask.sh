@@ -19,13 +19,10 @@ brew install --cask zoom
 # Development
 brew install --cask docker
 brew install --cask gh
-brew install --cask iterm2
 brew install --cask postman
 brew install --cask sequel-ace
-brew install --cask sequel-pro
 brew install --cask sublime-merge
 brew install --cask sublime-text
-brew install --cask tableplus
 
 # Productivity / Utilities
 brew install --cask alfred
@@ -35,7 +32,6 @@ brew install --cask dropbox
 brew install --cask flux
 brew install --cask notion
 brew install --cask stats
-brew install --cask thefuck
 brew install --cask trash
 brew install --cask transmission
 brew install --cask vlc

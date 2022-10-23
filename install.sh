@@ -1,6 +1,9 @@
 echo "⚡ Running AlfonzM's dotfiles..."
 echo "⚡ http://github.com/alfonzm/dotfiles"
 
+echo "\n⚡ Install Command Line Tools for Xcode"
+sudo xcode-select --install
+
 echo "\n⚡ Setting up zsh and oh-my-zsh"
 # chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

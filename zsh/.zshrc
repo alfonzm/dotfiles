@@ -1,10 +1,22 @@
 # Load compinit
-autoload -Uz compinit
+autoload -Uz compinit vcs_info
 compinit
 
 # load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
+zstyle ':vcs_info:git*' formats "(%b)"
+
+precmd() {
+  vcs_info
+
+  # Prompt
+  NEWLINE=$'\n'
+  PROMPT_SYMBOL=$'$ '
+  # PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
+  PROMPT="${NEWLINE}%B%F{yellow}%~%f%b %F{cyan}${vcs_info_msg_0_}%f${NEWLINE}${PROMPT_SYMBOL}"
+
+}
+
+setopt prompt_subst
 
 # Include other dotfiles
 source ~/.functions
@@ -24,15 +36,6 @@ eval "$(zoxide init zsh)"
 
 # Editor
 export EDITOR='nvim'
-
-# format vcs_info variable
-zstyle ':vcs_info:git:*' formats '(%b)'
-
-# Prompt
-NEWLINE=$'\n'
-PROMPT_SYMBOL=$'$ '
-# PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
-PROMPT="${NEWLINE}%B%F{yellow}%~%f%b %F{cyan}${vcs_info_msg_0_}%f${NEWLINE}${PROMPT_SYMBOL}"
 
 # Add composer to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"

@@ -2,14 +2,26 @@
 
 echo "\n"
 echo "⚡ Running AlfonzM's dotfiles..."
-echo "⚡ http://github.com/AlfonzM/dotfiles"
+echo "⚡ http://github.com/alfonzm/dotfiles"
 
-# Symlink dotfiles
+# Stow dotfiles
 echo "\n⚡ Stowing git..."
 stow git
 
 echo "\n⚡ Stowing zsh..."
 stow zsh
+
+echo "\n⚡ Stowing nvim..."
+stow nvim
+
+echo "\n⚡ Stowing yabai..."
+stow yabai
+
+echo "\n⚡ Stowing lf..."
+stow lf
+
+echo "\n⚡ Stowing lazygit..."
+stow lazygit
 
 echo "\n⚡ Symlinking alacritty.yml..."
 echo "ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"
@@ -62,25 +74,6 @@ echo "\n⚡ Symlinking Alacritty config"
 echo "ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml"
 ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-# Symlink neovim
-echo "\n⚡ Symlinking Neovim config"
-echo "ln -sf ~/.dotfiles/nvim ~/.config/nvim"
-ln -sf ~/.dotfiles/nvim ~/.config/nvim
-
-# Symlink yabai
-echo "\n⚡ Symlinking Yabai config"
-echo "ln -sf ~/.dotfiles/yabai ~/.config/yabai"
-ln -sf ~/.dotfiles/yabai ~/.config/yabai
-
-# Symlink lf
-echo "\n⚡ Symlinking lf config"
-echo "ln -sf ~/.dotfiles/lf ~/.config/lf"
-ln -sf ~/.dotfiles/lf ~/.config/lf
-
-# Symlink lazygit
-echo "\n⚡ Symlinking lazygit config"
-echo "ln -sf ~/.dotfiles/lazygit ~/.config/lazygit"
-ln -sf ~/.dotfiles/lazygit ~/.config/lazygit
 
 # Test truecolor
 echo "⚡ Truecolor test:"

@@ -10,7 +10,6 @@ brew upgrade
 
 # Development
 brew install alacritty
-brew install ctags
 brew install git
 brew install lazydocker
 brew install lazygit

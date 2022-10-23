@@ -2,10 +2,10 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# export ZSH=~/.oh-my-zsh
 
 # Themes located in ~/.oh-my-zsh/themes/
-ZSH_THEME="simple"
+# ZSH_THEME="simple"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -29,13 +29,13 @@ plugins=(
 	gitignore
 	tmux
 	vi-mode
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+	# zsh-autosuggestions
+	# zsh-syntax-highlighting
   globalias
 )
 
 # Enable oh my zsh
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
@@ -47,8 +47,6 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
 # Editor
 export EDITOR='nvim'
 
-# Terminal prompt
-#
 # load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -59,8 +57,8 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 # Prompt
 NEWLINE=$'\n'
 PROMPT_SYMBOL=$'$ '
-# PROMPT=$'\n''%{$fg_bold[yellow]%}%1d%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
-PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
+# PROMPT=$'\n''%{$fg_bold[yellow]%}%~%{$fg_bold[cyan]%} ${vcs_info_msg_0_}%{$reset_color%}${NEWLINE}${PROMPT_SYMBOL}'
+PROMPT="${NEWLINE}%B%F{yellow}%~%f%b %F{cyan}${vcs_info_msg_0_}%f${NEWLINE}${PROMPT_SYMBOL}"
 
 # Add composer to PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -79,14 +77,6 @@ source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 source ~/.functions
 source ~/.aliases
 
-# # Include custom scripts if exists
-# if [ -f ~/.custom ]; then
-# 	source ~/.custom
-# fi
-
-# Love2D
-# alias love="/Applications/love.app/Contents/MacOS/love"
-
 # History
 HISTFILESIZE=5000
 SAVEHIST=5000
@@ -101,3 +91,9 @@ setopt share_history
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor,node_modules,.git,public}/*"'
 
 export BAT_THEME="gruvbox-dark"
+
+# Source zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Source zsh-syntax-highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

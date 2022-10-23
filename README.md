@@ -59,15 +59,6 @@ Yabai
 1. Copy `sublime/Installed Packages/Boxy Theme.sublime-package` file to `~/Library/Application Support/Sublime Text/Installed Packages`.
 1. Edit `~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings` and add `Boxy Theme` to `installed_packages` array.
 
-## Custom scripts
-
-For more custom workstation-specific scripts/configs, create a `.custom` file in the home directory. This is automatically included in `.zshrc`.
-
-```
-$ touch ~/.custom
-$ vim ~/.custom
-```
-
 ## TODO
 
 - Ansible

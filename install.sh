@@ -1,30 +1,12 @@
 echo "⚡ Running AlfonzM's dotfiles..."
 echo "⚡ http://github.com/alfonzm/dotfiles"
 
-# Stow dotfiles
-echo "\n⚡ Stowing git..."
-stow git
-
-echo "\n⚡ Stowing zsh..."
-stow zsh
-
-echo "\n⚡ Stowing nvim..."
-stow nvim
-
-echo "\n⚡ Stowing tmux..."
-stow tmux
-
-echo "\n⚡ Stowing yabai..."
-stow yabai
-
-echo "\n⚡ Stowing lf..."
-stow lf
-
-echo "\n⚡ Stowing lazygit..."
-stow lazygit
-
-echo "\n⚡ Stowing alacritty..."
-stow alacritty
+for stow_dir in git zsh nvim tmux yabai lazygit alacritty;
+do
+  echo "\n⚡ Stowing $stow_dir..."
+  stow -D $stow_dir
+  stow $stow_dir
+done
 
 echo "\n⚡ Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -41,20 +23,21 @@ echo "\n⚡️ Installing Homebrew"
 
 # Install brew formulas
 echo "\n⚡ Installing brew formulas"
-echo "    sh ./homebrew/brew.sh"
+echo "sh ./homebrew/brew.sh"
 sh ./homebrew/brew.sh
 
 # Brew cask installs
 echo "\n⚡ Installing brew casks"
-echo "    sh ./homebrew/brew-cask.sh"
+echo "sh ./homebrew/brew-cask.sh"
 sh ./homebrew/brew-cask.sh
 
-# Mac App Store installs
-echo "\n⚡ Installing Mac App Store apps"
-echo "    sh ./mas/mas.sh"
-sh ./mas/mas.sh
+# Run macOS defaults commands
+echo "\n⚡ Running macOS defaults commands"
+echo "sh ./macos/.osx"
+sh ./macos/.osx
 
 # Download Powerline fonts for coding and terminal
+echo "⚡ Downloading Powerline fonts"
 curl -L https://github.com/powerline/fonts/archive/refs/heads/master.zip -o ~/Downloads/Powerline\ Fonts.zip
 
 # Test truecolor
@@ -63,4 +46,4 @@ curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e6229
 
 # Done!
 echo "\n"
-echo "DONE! One last thing, run: \n\n $ source ~/.zshrc " | cowsay | lolcat
+echo "DONE! One last thing, run: \n\n $ src-zsh " | cowsay | lolcat

@@ -79,10 +79,10 @@ source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 source ~/.functions
 source ~/.aliases
 
-# Include custom scripts if exists
-if [ -f ~/.custom ]; then
-	source ~/.custom
-fi
+# # Include custom scripts if exists
+# if [ -f ~/.custom ]; then
+# 	source ~/.custom
+# fi
 
 # Love2D
 # alias love="/Applications/love.app/Contents/MacOS/love"

@@ -9,17 +9,7 @@ echo "\n⚡ Symlinking .gitconfig..."
 echo "ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig"
 ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
 
-echo "\n⚡ Symlinking .aliases..."
-echo "ln -sf ~/.dotfiles/system/.aliases ~/.aliases"
-ln -sf ~/.dotfiles/system/.aliases ~/.aliases
-
-echo "\n⚡ Symlinking .functions..."
-echo "ln -sf ~/.dotfiles/system/.functions ~/.functions"
-ln -sf ~/.dotfiles/system/.functions ~/.functions
-
-echo "\n⚡ Symlinking .zshrc..."
-echo "ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"
-ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
+stow zsh
 
 echo "\n⚡ Symlinking alacritty.yml..."
 echo "ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc"

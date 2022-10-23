@@ -22,6 +22,7 @@ brew install prettierd
 brew install rbenv ruby-build
 brew install tmux
 brew install tmuxinator
+brew install stow
 brew install yarn
 
 # Productivity

@@ -54,19 +54,8 @@ echo "\n⚡ Installing Mac App Store apps"
 echo "    sh ./mas/mas.sh"
 sh ./mas/mas.sh
 
-# Symlink subl command
-echo "\n⚡ Symlinking subl command"
-echo "ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl"
-ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-
 # Download Powerline fonts for coding and terminal
 curl -L https://github.com/powerline/fonts/archive/refs/heads/master.zip -o ~/Downloads/Powerline\ Fonts.zip
-
-# Symlink Alacritty config
-echo "\n⚡ Symlinking Alacritty config"
-echo "ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml"
-ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-
 
 # Test truecolor
 echo "⚡ Truecolor test:"

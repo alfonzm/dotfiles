@@ -5,10 +5,10 @@ echo "⚡ Running AlfonzM's dotfiles..."
 echo "⚡ http://github.com/AlfonzM/dotfiles"
 
 # Symlink dotfiles
-echo "\n⚡ Symlinking .gitconfig..."
-echo "ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig"
-ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
+echo "\n⚡ Stowing git..."
+stow git
 
+echo "\n⚡ Stowing zsh..."
 stow zsh
 
 echo "\n⚡ Symlinking alacritty.yml..."

@@ -1,8 +1,28 @@
+# Common aliases
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
+
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias ll='ls -l'      #long list
+alias ldot='ls -ld .*'
+alias grep='grep --color'
+alias t='tail -f'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
 # Restart zshrc config
 alias src-zsh='source ~/.zshrc'
 alias sz='source ~/.zshrc'
 
 # Tmux
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
 alias mux='tmuxinator'
 
 # Vim
@@ -30,8 +50,76 @@ alias prc="gh pr create --web"
 alias prv="gh pr view --web"
 
 # Git
-alias lg="lazygit"
-alias grsh="git reset --soft HEAD~1"
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
+alias g='git'
+alias lg='lazygit'
+
+alias ga='git add'
+alias gaa='git add --all'
+alias grm='git rm'
+alias grmc='git rm --cached'
+
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gcb='git checkout -b'
+alias gcm='git checkout $(git_main_branch)'
+alias gco='git checkout'
+alias gcl='git clone --recurse-submodules'
+
+alias gc='git commit -v'
+alias gc!='git commit -v --amend'
+alias gcam='git commit -a -m'
+alias gcmsg='git commit -m'
+
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gds='git diff --staged'
+alias gst='git status'
+
+alias grsh='git reset --soft HEAD~1'
+alias grhh='git reset --hard'
+alias glo='git log --oneline --decorate'
+
+alias gm='git merge'
+alias gma='git merge --abort'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+
+alias gp='git push'
+alias gpu='git push upstream'
+alias gl='git pull'
+alias grv='git remote -v'
+
+alias gsta='git stash push'
+alias gstaa='git stash apply'
+alias gstc='git stash clear'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+
+function ggl() {
+  if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+    git pull origin "${*}"
+  else
+    [[ "$#" == 0 ]] && local b="$(git_current_branch)"
+    git pull origin "${b:=$1}"
+  fi
+}
+
+compdef _git ggl=git-checkout
+
+function ggp() {
+  if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+    git push origin "${*}"
+  else
+    [[ "$#" == 0 ]] && local b="$(git_current_branch)"
+    git push origin "${b:=$1}"
+  fi
+}
+compdef _git ggp=git-checkout
 
 # Diskspace report
 alias diskspace_report="df -P -kHl"

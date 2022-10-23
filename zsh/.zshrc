@@ -1,11 +1,17 @@
+# Load compinit
+autoload -Uz compinit
+compinit
+
+# load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Include other dotfiles
+source ~/.functions
+source ~/.aliases
+
 # Simulate XDG_CONFIG_HOME path
 export XDG_CONFIG_HOME="$HOME/.config"
-
-# Path to your oh-my-zsh installation.
-# export ZSH=~/.oh-my-zsh
-
-# Themes located in ~/.oh-my-zsh/themes/
-# ZSH_THEME="simple"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -13,43 +19,11 @@ DISABLE_AUTO_UPDATE="true"
 # How often to auto-update (in days)
 export UPDATE_ZSH_DAYS=13
 
-# zsh-nvm settings https://github.com/lukechilds/zsh-nvm
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-
-# Plugins found in ~/.oh-my-zsh/plugins/
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(
-  zsh-nvm
-	brew
-	common-aliases
-	copydir
-	git
-	github
-	gitignore
-	tmux
-	vi-mode
-	# zsh-autosuggestions
-	# zsh-syntax-highlighting
-  globalias
-)
-
-# Enable oh my zsh
-# source $ZSH/oh-my-zsh.sh
-
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
-# ZSH Highlighters
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
-
 # Editor
 export EDITOR='nvim'
-
-# load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
 
 # format vcs_info variable
 zstyle ':vcs_info:git:*' formats '(%b)'
@@ -73,10 +47,6 @@ export CLICOLOR=1
 # Fix Gruvbox palette for vim
 source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
-# Include other dotfiles
-source ~/.functions
-source ~/.aliases
-
 # History
 HISTFILESIZE=5000
 SAVEHIST=5000
@@ -92,8 +62,19 @@ export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor,node_mo
 
 export BAT_THEME="gruvbox-dark"
 
-# Source zsh-autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Disable the cursor style feature
+ZVM_CURSOR_STYLE_ENABLED=false
 
-# Source zsh-syntax-highlighting
+# zsh-nvm settings https://github.com/lukechilds/zsh-nvm
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+
+# zsh highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
+
+# Source zsh plugins
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source ~/.zsh/zsh-nvm/zsh-nvm.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

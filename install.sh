@@ -1,16 +1,6 @@
 echo "⚡ Running AlfonzM's dotfiles..."
 echo "⚡ http://github.com/alfonzm/dotfiles"
 
-for stow_dir in git zsh nvim tmux yabai lazygit alacritty;
-do
-  echo "\n⚡ Stowing $stow_dir..."
-  stow -D $stow_dir
-  stow $stow_dir
-done
-
-echo "\n⚡ Installing tmux plugin manager..."
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 echo "\n⚡ Setting up zsh and oh-my-zsh"
 # chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -31,8 +21,19 @@ echo "\n⚡ Installing brew casks"
 echo "sh ./homebrew/brew-cask.sh"
 sh ./homebrew/brew-cask.sh
 
+# Stow config directories
+for stow_dir in git zsh nvim tmux yabai lazygit alacritty;
+do
+  echo "\n⚡ Stowing $stow_dir..."
+  stow -D $stow_dir
+  stow $stow_dir
+done
+
+echo "\n⚡ Installing tmux plugin manager..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Run macOS defaults commands
-echo "\n⚡ Running macOS defaults commands"
+echo "\n⚡ Setting up default macOS settings"
 echo "sh ./macos/.osx"
 sh ./macos/.osx
 

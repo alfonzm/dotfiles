@@ -25,6 +25,7 @@ brew install stow
 brew install yarn
 
 # Productivity
+brew install fzf
 brew install koekeishiya/formulae/yabai
 brew install lf
 

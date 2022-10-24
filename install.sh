@@ -16,13 +16,7 @@ echo "\n⚡️ Installing Homebrew"
 
 # Install brew formulas
 echo "\n⚡ Installing brew formulas"
-echo "sh ./homebrew/brew.sh"
-sh ./homebrew/brew.sh
-
-# Brew cask installs
-echo "\n⚡ Installing brew casks"
-echo "sh ./homebrew/brew-cask.sh"
-sh ./homebrew/brew-cask.sh
+brew bundle --file ~/.dotfiles/homebrew/Brewfile
 
 # Stow config directories
 for stow_dir in git zsh nvim tmux yabai lazygit alacritty;

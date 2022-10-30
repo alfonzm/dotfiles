@@ -53,9 +53,10 @@
 				<key>script</key>
 				<string>open "/Applications/Time Doctor 2.app"
 open "/Applications/Docker.app"
-open "/Applications/Sequel Ace.app"
 open "/Applications/Slack.app"
 open "/Applications/Google Chrome.app"
+open "/Applications/Alacritty.app"
+# open "/Applications/Sequel Ace.app"
 # open "/Applications/Sublime Text.app"
 # open "/Applications/Sublime Merge.app"
 

@@ -94,6 +94,10 @@ map('n', '<Leader>s', ':source ~/.config/nvim/init.lua<CR>')
 -- map('n', '<Leader>p', ':PackerCompile<CR>')
 map('n', '<Leader>pi', ':PackerInstall<CR>')
 
+-- Format JSON
+map('n', '<Leader>j', ":'<,'>!jq<CR>")
+map('v', '<Leader>j', ":'<,'>!jq<CR>")
+
 -- Add line below
 -- nmap <S-Enter> O<Esc>j
 -- nmap <CR> o<Esc>k

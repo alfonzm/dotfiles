@@ -15,6 +15,7 @@ local colors = {
 }
 
 local default_color = {bg = colors.black, fg = colors.inactivegray}
+local highlighted_color = {bg = colors.darkgray, fg = colors.gray}
 
 local gruvbox = {
   normal = {
@@ -26,44 +27,44 @@ local gruvbox = {
     z = default_color
   },
   insert = {
-    a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
-    b = default_color,
-    c = default_color,
-    x = default_color,
-    y = default_color,
-    z = default_color
+    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
+    b = highlighted_color,
+    c = highlighted_color,
+    x = highlighted_color,
+    y = highlighted_color,
+    z = highlighted_color
   },
   visual = {
     a = {bg = colors.yellow, fg = colors.black, gui = 'bold'},
-    b = default_color,
-    c = default_color,
-    x = default_color,
-    y = default_color,
-    z = default_color
+    b = highlighted_color,
+    c = highlighted_color,
+    x = highlighted_color,
+    y = highlighted_color,
+    z = highlighted_color
   },
   replace = {
     a = {bg = colors.red, fg = colors.black, gui = 'bold'},
-    b = default_color,
-    c = default_color,
-    x = default_color,
-    y = default_color,
-    z = default_color
+    b = highlighted_color,
+    c = highlighted_color,
+    x = highlighted_color,
+    y = highlighted_color,
+    z = highlighted_color
   },
   command = {
     a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = default_color,
-    c = default_color,
-    x = default_color,
-    y = default_color,
-    z = default_color
+    b = highlighted_color,
+    c = highlighted_color,
+    x = highlighted_color,
+    y = highlighted_color,
+    z = highlighted_color
   },
   inactive = {
     a = {bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
-    b = default_color,
-    c = default_color,
-    x = default_color,
-    y = default_color,
-    z = default_color
+    b = highlighted_color,
+    c = highlighted_color,
+    x = highlighted_color,
+    y = highlighted_color,
+    z = highlighted_color
   }
 }
 

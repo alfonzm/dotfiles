@@ -42,7 +42,7 @@ o.writebackup = false
 o.swapfile = false
 
 -- Enable undofile
-o.undodir = '~/.nvim/undodir'
+o.undodir = '/Users/alfonzm/.nvim/undodir'
 o.undofile = true
 
 -- Smart case insensitive searching

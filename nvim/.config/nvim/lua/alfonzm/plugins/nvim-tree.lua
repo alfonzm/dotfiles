@@ -3,7 +3,7 @@ require("nvim-tree").setup({
     auto_reload_on_write = false,
     update_focused_file = {
         -- Expand focused file in tree
-        enable = false
+        enable = true
     },
     -- hijack_directories = {
     --     auto_open = false,
@@ -12,6 +12,9 @@ require("nvim-tree").setup({
     --   enable = false,
     --   timeout = 1000
     -- },
+    view = {
+        adaptive_size = true
+    },
     filters = {
         custom = {
             '^\\.git$', 'node_modules', 'vendor'

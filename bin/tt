@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Written by Josh Medeski
+# https://www.youtube.com/watch?v=l_TTxc0AcCw
+#
+# Ideally, bind this script to tmux-prefix t
+
 # if not currently in tmux
 if [ -z "$TMUX" ]; then
   # tmux is not active

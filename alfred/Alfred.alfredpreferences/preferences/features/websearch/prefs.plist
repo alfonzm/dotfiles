@@ -4,6 +4,21 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>257F33E4-44A5-480D-8216-1BC1E6F0CB1E</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tpb</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>The Pirate Bay</string>
+			<key>url</key>
+			<string>https://thepiratebay.org/search.php?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>7FCF1BF0-6CE3-4498-AE11-0B088092F721</key>
 		<dict>
 			<key>enabled</key>
@@ -27,6 +42,19 @@
 			<string>Search Cht.sh</string>
 			<key>url</key>
 			<string>https://cht.sh/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>B6CA9544-201C-491B-99B1-E99D72735717</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jira</string>
+			<key>text</key>
+			<string>ContactOut JIRA Card</string>
+			<key>url</key>
+			<string>https://contactout.atlassian.net/browse/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

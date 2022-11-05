@@ -24,6 +24,7 @@ return require('packer').startup({ function(use)
     use 'tpope/vim-surround'
     use 'moll/vim-bbye'
     use 'mbbill/undotree'
+    use 'christoomey/vim-tmux-navigator'
 
     -- Comments
     use {

@@ -25,6 +25,12 @@ return require('packer').startup({ function(use)
     use 'moll/vim-bbye'
     use 'mbbill/undotree'
     use 'christoomey/vim-tmux-navigator'
+    use {
+        'voldikss/vim-floaterm',
+        config = function()
+            require('alfonzm.plugins.vim-floaterm')
+        end
+    }
 
     -- Comments
     use {

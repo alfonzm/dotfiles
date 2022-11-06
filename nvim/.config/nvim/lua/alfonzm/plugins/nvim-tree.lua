@@ -43,7 +43,7 @@ require("nvim-tree").setup({
 
 -- Toggle NvimTree sidebar
 vim.cmd [[nnoremap <C-t> :NvimTreeToggle<CR>]]
-vim.cmd [[nnoremap <Leader>t :NvimTreeToggle<CR>]]
+-- vim.cmd [[nnoremap <Leader>t :NvimTreeToggle<CR>]]
 
 -- Reveal current file in NvimTree
 vim.cmd [[nnoremap <Leader>F :NvimTreeFindFile<CR>]]

@@ -5,7 +5,7 @@ name: contactout
 windows:
     - server:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
-        layout: even-vertical
+        layout: even-horizontal
         panes:
             -
             - nvm use 14
@@ -13,13 +13,13 @@ windows:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
     - extension_app:
         root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
-        layout: even-vertical
+        layout: even-horizontal
         panes:
             -
             - nvm use 14
     - chrome_extension:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
-        layout: even-vertical
+        layout: even-horizontal
         panes:
             -
             - nvm use 14

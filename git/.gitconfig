@@ -4,6 +4,7 @@
 [core]
 	editor = nvim
 	excludesfile = /Users/alfonzm/.gitignore_global
+  pager = delta
 [push]
 	default = matching
 [commit]
@@ -15,5 +16,42 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+; https://github.com/dandavison/delta
+[include]
+  path = ~/Downloads/themes.gitconfig
 [init]
 	defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true # use n and N to move between diff sections
+  light = false
+  side-by-side = true
+  line-numbers = true
+  features = line-numbers decorations
+  plus-style = syntax "#12261E"
+  minus-style = syntax "#301A1F"
+  plus-emph-style = syntax "#1D572D"
+  minus-emph-pstyle = syntax "#542426"
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+  line-numbers-minus-style = auto "#542426"
+  line-numbers-plus-style = auto "#1C4428"
+
+  ; line-numbers-zero-style = 239
+  ; line-numbers-minus-style = 239
+  ; line-numbers-plus-style = 239
+
+  line-numbers-right-format = "{np:^4}"
+  line-numbers-left-format = "{nm:^4}"

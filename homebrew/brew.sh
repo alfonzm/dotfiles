@@ -11,6 +11,7 @@ brew upgrade
 # Development
 brew install alacritty
 brew install git
+brew install git-delta
 brew install lazydocker
 brew install lazygit
 brew install lua

@@ -82,6 +82,7 @@ export NVM_COMPLETION=true
 # zsh highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
+ZSH_HIGHLIGHT_PATTERNS+=('\rm -i -rf *' 'fg=white,bold,bg=red,bold')
 
 # Source zsh plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

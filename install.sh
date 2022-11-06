@@ -19,7 +19,7 @@ echo "\n⚡ Installing brew formulas"
 brew bundle --file ~/.dotfiles/homebrew/Brewfile
 
 # Stow config directories
-for stow_dir in git zsh nvim tmux yabai lazygit alacritty;
+for stow_dir in git zsh nvim tmux yabai lazygit alacritty karabiner;
 do
   echo "\n⚡ Stowing $stow_dir..."
   stow -D $stow_dir

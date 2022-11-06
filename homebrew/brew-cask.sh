@@ -10,6 +10,7 @@ brew install --cask figma
 brew install --cask firefox
 brew install --cask franz
 brew install --cask google-chrome
+brew install --cask karabiner-elements
 brew install --cask meetingbar
 brew install --cask slack
 brew install --cask steam

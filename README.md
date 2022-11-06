@@ -50,6 +50,11 @@ Yabai
 1. Setup [Logi Options](/mouse) for MX Master 3
 1. Setup [Anne Pro 2](/keyboards/annepro2) keyboard
 
+#### Karabiner
+
+1. Go to Complex Modifications, add "caps_lock to Esc and Control"
+1. Go to Parameters, set `to_if_alone_timeout_milliseconds` to 500
+
 #### Sublime Text
 1. Setup Sublime Text [SyncSettings](https://packagecontrol.io/packages/Sync%20Settings) and download settings from Gist
 

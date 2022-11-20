@@ -5,7 +5,7 @@ name: co_build
 windows:
     - server:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
-        layout: main-vertical
+        layout: even-vertical
         panes:
             - npm run watch
             - cd /Users/alfonzm/Work/ContactOut/Dev/extension_app/ && yarn start

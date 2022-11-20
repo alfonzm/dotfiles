@@ -72,3 +72,4 @@ Yabai
 - Script for installing pip plugins. For now, manually install the ff:
   - `python3 -m pip install pynvim` — required for some nvim plugins
   - `pip install lookatme`
+- [Fix for git-delta PHP syntax highlighting](https://github.com/dandavison/delta/issues/162#issuecomment-625952288)

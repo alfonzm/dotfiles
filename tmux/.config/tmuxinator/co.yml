@@ -3,25 +3,19 @@
 name: contactout
 
 windows:
-    - server:
+    - zsh:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
-        layout: even-horizontal
         panes:
-            -
             - nvm use 14
-    - vim:
+    - contactout_website:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
+        panes:
+            - nvm use 14
     - extension_app:
         root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
-        layout: even-horizontal
         panes:
-            -
             - nvm use 14
     - chrome_extension:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
-        layout: even-horizontal
         panes:
-            -
             - nvm use 14
-    - zsh:
-        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/

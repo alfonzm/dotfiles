@@ -34,7 +34,7 @@ alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 
 # Vim dotfiles
-alias dot="cd ~/.dotfiles && nvim ."
+alias dot="nvim ~/.dotfiles"
 
 # Subl
 alias s='subl'
@@ -176,6 +176,10 @@ alias yw="yarn watch"
 alias yb="yarn build"
 alias ys="yarn start"
 alias yt="yarn test"
+
+# Composer shortcuts
+alias ci="composer install"
+alias clf="composer lint-fix"
 
 # Vapor
 alias vapor="php vendor/bin/vapor"

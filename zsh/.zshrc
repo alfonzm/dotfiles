@@ -29,11 +29,11 @@ source ~/.aliases
 # Simulate XDG_CONFIG_HOME path
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# Use ripgrep for FZF, including hidden files
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{**/vendor/*,**/node_modules/*,**/.git/*,**/public/*}"'
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Use ripgrep for FZF, including hidden files
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!{vendor,node_modules,.git,public}/*"'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"

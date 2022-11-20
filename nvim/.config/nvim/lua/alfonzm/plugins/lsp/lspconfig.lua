@@ -33,7 +33,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    -- vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
     -- Not yet sure how these work so commenting them out for now
     -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
@@ -52,10 +52,10 @@ end
 -- other than on_attach and capabilities.
 -- TODO: Refactor to allow servers with custom config
 local servers = {
-    'emmet_ls',
+    -- 'emmet_ls',
     'html',
-    'volar',
-    'tailwindcss',
+    -- 'volar',
+    -- 'tailwindcss',
     'intelephense',
 }
 

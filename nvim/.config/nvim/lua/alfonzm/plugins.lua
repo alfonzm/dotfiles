@@ -22,6 +22,10 @@ return require('packer').startup({ function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-unimpaired'
+    use 'tpope/vim-speeddating'
+    use 'tpope/vim-abolish'
     use 'moll/vim-bbye'
     use 'mbbill/undotree'
     use 'christoomey/vim-tmux-navigator'
@@ -29,6 +33,13 @@ return require('packer').startup({ function(use)
         'voldikss/vim-floaterm',
         config = function()
             require('alfonzm.plugins.vim-floaterm')
+        end
+    }
+
+    use {
+        'junegunn/vim-easy-align',
+        config = function ()
+            require('alfonzm.plugins.vim-easy-align')
         end
     }
 
@@ -41,13 +52,16 @@ return require('packer').startup({ function(use)
     }
 
     -- Editorconfig (order is impt here, sleuth is only fallback)
-    use 'tpope/vim-sleuth'
+    -- use 'tpope/vim-sleuth'
     use 'editorconfig/editorconfig-vim'
 
     -- Git Fugitive
     use({
         'tpope/vim-fugitive',
         requires = 'tpope/vim-rhubarb',
+        config = function()
+            require('alfonzm.plugins.vim-fugitive')
+        end
     })
 
     -- Git commit browser (:GV)
@@ -80,6 +94,15 @@ return require('packer').startup({ function(use)
         'sindrets/diffview.nvim',
         config = function()
             require('alfonzm.plugins.diffview')
+        end
+    })
+
+    -- Open Browser
+    use({
+        'tyru/open-browser-github.vim',
+        requires = 'tyru/open-browser.vim',
+        config = function()
+            require('alfonzm.plugins.open-browser')
         end
     })
 
@@ -262,7 +285,9 @@ return require('packer').startup({ function(use)
     use({
         'norcalli/nvim-colorizer.lua',
         config = function()
-            require('colorizer').setup()
+            require('colorizer').setup {
+                '!md',
+            }
         end
     })
 
@@ -273,6 +298,7 @@ return require('packer').startup({ function(use)
         config = function()
             vim.g.vim_markdown_folding_disabled = 1
             vim.g.vim_markdown_auto_insert_bullets = 1
+            vim.g.vim_markdown_new_list_item_indent = 0
         end
     })
     use({

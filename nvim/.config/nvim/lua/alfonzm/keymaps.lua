@@ -41,14 +41,17 @@ map('n', '<C-u>', '<C-u>z.')
 map('n', '{', '{zz')
 map('n', '}', '}zz')
 
--- Paste/Yank without overriding register
-map('x', '<Leader>p', '_dP')
-map('n', '<leader>y', '\"+y')
-map('v', '<leader>y', '\"+y')
-map('n', '<leader>Y', '\"+Y')
-map('n', '<leader>d', '\"_d')
-map('v', '<leader>d', '\"_d')
-map('v', '<leader>d', '\"_d')
+-- Paste from yank register
+-- i.e. after yanking, succeeding d/D's won't overwrite the yank
+-- See :h quote0
+map('n', '<Leader>p', '\"0p')
+map('n', '<Leader>P', '\"0P')
+
+-- Pressing <Leader> before any delete motion (d/D)
+-- will delete to blackhole register "_ so it doesn't overwrite yank
+-- See :h quote_
+map('n', '<Leader>d', '\"_d')
+map('v', '<Leader>d', '\"_d')
 
 -- Indent right away after pasting
 map('n', 'p', 'p==')
@@ -88,15 +91,17 @@ map('n', '<Leader>q', ':Bdelete<CR>')
 map('n', '<Leader>Q', ':q<CR>')
 
 -- Source nvim config
-map('n', '<Leader>s', ':source ~/.config/nvim/init.lua<CR>')
+map('n', '<Leader>s', ':source % | source ~/.config/nvim/init.lua<CR>')
 
 -- PackerCompile shortcut
 -- map('n', '<Leader>p', ':PackerCompile<CR>')
-map('n', '<Leader>pi', ':PackerInstall<CR>')
+-- map('n', '<Leader>pi', ':PackerInstall<CR>')
 
 -- Format JSON
 map('n', '<Leader>j', ":'<,'>!jq<CR>")
 map('v', '<Leader>j', ":'<,'>!jq<CR>")
+
+map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
 
 -- Add line below
 -- nmap <S-Enter> O<Esc>j

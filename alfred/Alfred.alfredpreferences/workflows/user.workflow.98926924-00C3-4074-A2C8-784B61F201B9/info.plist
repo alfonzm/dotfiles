@@ -34,7 +34,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Alfonz Montelibano</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
@@ -137,6 +137,8 @@ killall "Slack"
 killall "Google Chrome"
 killall "Sublime Merge"
 killall "Sublime Text"
+killall "QuickTime Player"
+killall "Insomnia"
 
 quit "Time Doctor 2"
 

@@ -19,6 +19,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>74545B59-BCEF-495C-9B3D-5F036ED7451F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sear</string>
+			<key>text</key>
+			<string>JIRA SEAR Ticket</string>
+			<key>url</key>
+			<string>https://contactout.atlassian.net/browse/SEAR-{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>7FCF1BF0-6CE3-4498-AE11-0B088092F721</key>
 		<dict>
 			<key>enabled</key>
@@ -55,6 +68,19 @@
 			<string>ContactOut JIRA Card</string>
 			<key>url</key>
 			<string>https://contactout.atlassian.net/browse/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E9DDBC94-68EF-44D2-A4EF-2CFE2BB8BFA7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ath</string>
+			<key>text</key>
+			<string>JIRA ATH Ticket</string>
+			<key>url</key>
+			<string>https://contactout.atlassian.net/browse/ATH-{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

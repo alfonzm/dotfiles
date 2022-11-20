@@ -18,5 +18,5 @@ os:
     editCommand: 'nvim'
 git:
     paging:
-        colorArg: always
+        colorArg: never
         pager: delta --dark --paging=never

@@ -36,6 +36,10 @@ alias vimorig='/usr/bin/vim'
 # Vim dotfiles
 alias dot="nvim ~/.dotfiles"
 
+# Nota
+alias notes="nvim ~/Documents/Notes/Nota"
+alias nota="nvim ~/Documents/Notes/Nota"
+
 # Subl
 alias s='subl'
 

@@ -16,12 +16,13 @@ map('v', '<C-l>', '<C-w>l')
 map('v', '$', '$h')
 
 -- Move buffers left/right with Shift+h or Shift+l
--- Ideally, use <Leader>l (see below)
+-- Ideally, use :Buffers or <Leader>b (see below)
 map('n', 'H', ':bp<CR>')
 map('n', 'L', ':bn<CR>')
 
 -- See buffer list + go to buffer id
-map('n', '<Leader>l', ':ls<CR>:b<space>')
+-- NOTE: This is moved to fzf :Buffers
+-- map('n', '<Leader>b', ':ls<CR>:b<space>')
 
 -- When joining lines, dont move cursor position
 map('n', 'J', 'mzJ`z')
@@ -41,11 +42,17 @@ map('n', '<C-u>', '<C-u>z.')
 map('n', '{', '{zz')
 map('n', '}', '}zz')
 
+-- Keep cursor centered when doing [[ or ]]
+map('n', '[[', '[[zz')
+map('n', ']]', ']]zz')
+
 -- Paste from yank register
 -- i.e. after yanking, succeeding d/D's won't overwrite the yank
 -- See :h quote0
 map('n', '<Leader>p', '\"0p')
 map('n', '<Leader>P', '\"0P')
+map('v', '<Leader>p', '\"0p')
+map('v', '<Leader>P', '\"0P')
 
 -- Pressing <Leader> before any delete motion (d/D)
 -- will delete to blackhole register "_ so it doesn't overwrite yank
@@ -110,3 +117,6 @@ map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
 -- Move up/down quick fix list
 -- map('n', '<C-j>', '<cmd>cnext<CR>zz')
 -- map('n', '<C-k>', '<cmd>cprev<CR>zz')
+
+-- Love2D
+map('n', '<Leader>l', ':!/Applications/love.app/Contents/MacOS/love .<CR><CR>')

@@ -16,14 +16,23 @@ vim.api.nvim_exec(
         autocmd ColorScheme gruvbox-material highlight Folded cterm=italic gui=italic
         autocmd ColorScheme gruvbox-material highlight SignColumn ctermbg=NONE guibg=NONE
         autocmd ColorScheme gruvbox-material highlight DiagnosticSign ctermbg=235 guibg=NONE
+
+        " NvimTree
+        autocmd ColorScheme gruvbox-material highlight NvimTreeNormal guifg=Normal guibg=NONE
+        autocmd ColorScheme gruvbox-material highlight NvimTreeEndOfBuffer guifg=#7c6f64 guibg=NONE
+        " autocmd ColorScheme gruvbox-material highlight NvimTreeFolderName guifg=#7c6f64
+        " autocmd ColorScheme gruvbox-material highlight NvimTreeOpenedFolderName guifg=#ebdbb2
+        " autocmd ColorScheme gruvbox-material highlight NvimTreeEmptyFolderName guifg=#ebdbb2
+        autocmd ColorScheme gruvbox-material highlight NvimTreeOpenedFile guifg=#ebdbb2
     augroup END
     let g:gruvbox_material_diagnostic_text_highlight = 1
     let g:gruvbox_material_diagnostic_line_highlight = 1
     let g:gruvbox_material_diagnostic_virtual_text   = 1
-]]   , false)
+]], false)
 
 -- Color scheme
-vim.cmd('colorscheme gruvbox-material')
+vim.cmd [[ colorscheme gruvbox-material ]]
+-- vim.cmd('colorscheme gruvbox')
 
 -- Custom highlights
 vim.cmd [[highlight IndentBlanklineChar guifg=#333333]]
@@ -37,6 +46,7 @@ vim.cmd [[highlight StatusLine guibg=#282828]]
 vim.cmd [[highlight StatusLineNC guibg=#282828]]
 
 -- Change NvimTree folder colors, not yet working (TODO)
--- vim.cmd [[highlight  NvimTreeFolderName guifg=#fabd2f]]
--- vim.cmd [[highlight  NvimTreeOpenedFolderName guifg=#fabd2f]]
--- vim.cmd [[highlight  NvimTreeEmptyFolderName guifg=#fabd2f]]
+vim.cmd [[highlight NvimTreeNormal guifg=Normal guibg=NONE]]
+vim.cmd [[highlight NvimTreeEndOfBuffer guifg=#7c6f64 guibg=NONE]]
+-- vim.cmd [[highlight NvimTreeOpenedFolderName guifg=#7c6f64]]
+-- vim.cmd [[highlight NvimTreeEmptyFolderName guifg=#7c6f64]]

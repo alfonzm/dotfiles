@@ -25,7 +25,6 @@ return require('packer').startup({ function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-unimpaired'
     use 'tpope/vim-speeddating'
-    use 'tpope/vim-abolish'
     use 'moll/vim-bbye'
     use 'mbbill/undotree'
     use 'christoomey/vim-tmux-navigator'
@@ -35,6 +34,9 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.vim-floaterm')
         end
     }
+
+    -- Change case, etc
+    use 'tpope/vim-abolish'
 
     use {
         'junegunn/vim-easy-align',
@@ -142,7 +144,7 @@ return require('packer').startup({ function(use)
     use 'kyazdani42/nvim-web-devicons'
 
     -- Color schemes
-    use 'morhetz/gruvbox'
+    -- use 'morhetz/gruvbox'
     use 'sainnhe/gruvbox-material'
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
@@ -248,12 +250,12 @@ return require('packer').startup({ function(use)
     })
 
     -- Indent blankline
-    use({
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('alfonzm.plugins.indent-blankline')
-        end,
-    })
+    -- use({
+    --     'lukas-reineke/indent-blankline.nvim',
+    --     config = function()
+    --         require('alfonzm.plugins.indent-blankline')
+    --     end,
+    -- })
 
     -- Autopairs
     use({

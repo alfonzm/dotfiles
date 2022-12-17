@@ -1,4 +1,4 @@
-local lsp_status = require('lsp-status')
+-- local lsp_status = require('lsp-status')
 
 -- Gruvbox
 local colors = {
@@ -69,7 +69,7 @@ local gruvbox = {
 }
 
 -- Register the progress handler
-lsp_status.register_progress()
+-- lsp_status.register_progress()
 
 -- local default_color = { bg = colors.black, fg = colors.inactivegray }
 
@@ -88,7 +88,8 @@ require('lualine').setup({
         lualine_c = {},
         lualine_x = {},
         lualine_y = { 'branch' },
-        lualine_z = { "require'lsp-status'.status()" },
+        -- lualine_z = { "require'lsp-status'.status()" },
+        lualine_z = {},
     },
     inactive_sections = {
         lualine_a = {},

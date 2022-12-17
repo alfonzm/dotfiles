@@ -1,6 +1,16 @@
 local g = vim.g
 local o = vim.o
 
+-- Possible options to improve Vim + tmux performance
+vim.opt.cursorline = false
+vim.opt.lazyredraw = true
+vim.opt.ttyfast = true
+vim.opt.showmatch = false
+vim.opt.showcmd = false
+vim.opt.ruler = false
+vim.opt.cursorcolumn = false
+vim.cmd[[hi NonText cterm=NONE ctermfg=NONE]]
+
 -- Map <leader> to space
 g.mapleader = ' '
 g.maplocalleader = ' '
@@ -54,7 +64,7 @@ o.incsearch = true
 o.hlsearch = false
 
 -- Highlight current line
-o.cursorline = true
+-- o.cursorline = true
 
 -- Utf8 standard encoding and en_US as the standard language
 o.encoding = 'utf-8'

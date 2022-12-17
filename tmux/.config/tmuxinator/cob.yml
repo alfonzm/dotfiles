@@ -1,6 +1,6 @@
-# ~/.tmuxinator/co_build.yml
+# ~/.tmuxinator/contactout_build.yml
 
-name: co_build
+name: contactout_build
 
 windows:
     - server:

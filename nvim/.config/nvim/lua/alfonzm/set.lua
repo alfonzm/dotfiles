@@ -1,6 +1,3 @@
-local g = vim.g
-local o = vim.o
-
 -- Possible options to improve Vim + tmux performance
 vim.opt.cursorline = false
 vim.opt.lazyredraw = true
@@ -12,76 +9,76 @@ vim.opt.cursorcolumn = false
 vim.cmd[[hi NonText cterm=NONE ctermfg=NONE]]
 
 -- Map <leader> to space
-g.mapleader = ' '
-g.maplocalleader = ' '
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Syntax highlighting
-vim.cmd('syntax on')
+vim.cmd[[syntax on]]
 
 -- Single global status line
-o.laststatus = 3
+vim.o.laststatus = 3
 
 -- Set cursor to always be block
-o.guicursor = ""
+vim.o.guicursor = ""
 
 -- Show line numbers + relative
-o.nu = true
-o.relativenumber = true
+vim.o.nu = true
+vim.o.relativenumber = true
 
 -- Allow switching of unsaved buffers
-o.hidden = true
+vim.o.hidden = true
 
 -- No sound on errors
-o.belloff = 'all'
+vim.o.belloff = 'all'
 
 -- Use spaces instead of tabs
-o.expandtab = true
+vim.o.expandtab = true
 
 -- 1 tab == 2 spaces
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 
 -- Better indents
-o.autoindent = true
-o.smartindent = true
+vim.o.autoindent = true
+vim.o.smartindent = true
 
 -- Turn backup and swap file off
-o.backup = false
-o.writebackup = false
-o.swapfile = false
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
 
 -- Enable undofile
-o.undodir = '/Users/alfonzm/.nvim/undodir'
-o.undofile = true
+vim.o.undodir = '/Users/alfonzm/.nvim/undodir'
+vim.o.undofile = true
 
 -- Smart case insensitive searching
-o.smartcase = true
-o.ignorecase = true
+vim.o.smartcase = true
+vim.o.ignorecase = true
 
 -- Highlighted + incremental search (jump while typing)
-o.incsearch = true
-o.hlsearch = false
+vim.o.incsearch = true
+vim.o.hlsearch = false
 
 -- Highlight current line
 -- o.cursorline = true
 
 -- Utf8 standard encoding and en_US as the standard language
-o.encoding = 'utf-8'
+vim.o.encoding = 'utf-8'
 
 -- Use Unix as the standard file type
 -- o.ffs = 'unix,dos,mac'
 
 -- When splitting panes, move cursor to new pane
-o.splitbelow = true
-o.splitright = true
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 -- # of lines padding when scrolling
-o.scrolloff = 12
+vim.o.scrolloff = 12
 
 -- Add marker at column position to prevent long lines of code
-o.colorcolumn = 80
-o.signcolumn = 'yes'
+vim.o.colorcolumn = 80
+vim.o.signcolumn = 'yes'
 
 -- Remove vertical split character
 vim.opt.fillchars = {
@@ -94,16 +91,16 @@ vim.opt.fillchars = {
 }
 
 -- Set 256 color
-o.t_Co = 256
+vim.o.t_Co = 256
 
 -- Enable vimrc for specific projects
 -- https://akrabat.com/using-vimrc-for-project-specific-settings/
-o.exrc = true
-o.secure = true
+vim.o.exrc = true
+vim.o.secure = true
 
 -- Enable true colors
-o.background = 'dark'
-o.termguicolors = true
+vim.o.background = 'dark'
+vim.o.termguicolors = true
 
 -- Enable italics, make sure this is immediately after colorscheme
 -- https://stackoverflow.com/questions/3494435/vimrc-make-comments-italic
@@ -111,20 +108,20 @@ o.termguicolors = true
 -- highlight
 -- highlight Comment cterm = italic gui = italic
 
-o.t_ZH = '[3m'
-o.t_ZR = '[23m'
+vim.o.t_ZH = '[3m'
+vim.o.t_ZR = '[23m'
 
 -- Disable continuation of comment on next line
 vim.cmd[[autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro]]
 
 -- Sync system and vim clipboard
-o.clipboard = "unnamedplus"
+vim.o.clipboard = "unnamedplus"
 
 -- Read file updates automatically, can undo with u
-o.autoread = true
+vim.o.autoread = true
 
 -- Highlight yanked selection for 60ms
 vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]
 
 -- Disable fold
-o.foldenable = false
+vim.o.foldenable = false

@@ -1,5 +1,8 @@
 **/*.DS_Store
 
 lazygit/state.yml
+
+# Alfred configs that contain sensitive details
 alfred/Alfred.alfredpreferences/workflows/user.workflow.D91E5586-57CD-4049-A774-8EE3C09E840A/
 alfred/Alfred.alfredpreferences/workflows/user.workflow.E7A8C51C-BDB5-4121-ABD9-53BE0BB1C607/
+alfred/Alfred.alfredpreferences/snippets/info/*Address*

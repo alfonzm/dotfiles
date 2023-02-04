@@ -6,11 +6,11 @@ windows:
     - zsh:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
         panes:
-            - nvm use 14
+            - nvm use 16
     - contactout_website:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
         panes:
-            - nvm use 14
+            - nvm use 16
     - extension_app:
         root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
         panes:

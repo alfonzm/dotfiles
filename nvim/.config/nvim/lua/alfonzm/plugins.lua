@@ -287,9 +287,7 @@ return require('packer').startup({ function(use)
     use({
         'norcalli/nvim-colorizer.lua',
         config = function()
-            require('colorizer').setup {
-                '!md',
-            }
+            require 'colorizer'.setup()
         end
     })
 

@@ -2,17 +2,18 @@ vim.g.gruvbox_material_background = 'medium'
 vim.g.gruvbox_material_foreground = 'original'
 vim.g.gruvbox_material_better_performance = 1
 
-vim.fn.sign_define("DiagnosticSignError", { text = '•', texthl = 'red', linehl = '', numhl = '' })
-vim.fn.sign_define("DiagnosticSignWarn", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
-vim.fn.sign_define("DiagnosticSignHint", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
-vim.fn.sign_define("DiagnosticSignInfo", { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignError', { text = '•', texthl = 'red', linehl = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '•', texthl = 'yellow', linehl = '', numhl = '' })
 
 -- Temporary fix for Nvim-Tree bg color
 vim.api.nvim_exec(
 [[
-augroup MyColors
+augroup CustomNvimTreeColors
 autocmd!
 autocmd BufNewFile,BufRead * hi NvimTreeNormal guifg=NONE guibg=NONE
+autocmd BufNewFile,BufRead * hi NvimTreeEndOfBuffer guifg=NONE guibg=NONE
 augroup END
 ]], false)
 
@@ -55,7 +56,7 @@ vim.cmd [[highlight StatusLine guibg=#282828]]
 vim.cmd [[highlight StatusLineNC guibg=#282828]]
 
 -- Change NvimTree folder colors, not yet working, needs to re-source (TODO)
--- vim.cmd [[highlight NvimTreeNormal guifg=NONE guibg=NONE]]
--- vim.cmd [[highlight NvimTreeEndOfBuffer guifg=#7c6f64 guibg=NONE]]
+vim.cmd [[highlight NvimTreeNormal guifg=NONE guibg=NONE]]
+vim.cmd [[highlight NvimTreeEndOfBuffer guifg=#7c6f64 guibg=NONE]]
 -- vim.cmd [[highlight NvimTreeOpenedFolderName guifg=#7c6f64]]
 -- vim.cmd [[highlight NvimTreeEmptyFolderName guifg=#7c6f64]]

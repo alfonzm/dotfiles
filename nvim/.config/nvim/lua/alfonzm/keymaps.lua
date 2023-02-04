@@ -120,3 +120,6 @@ map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
 
 -- Love2D
 map('n', '<Leader>l', ':!/Applications/love.app/Contents/MacOS/love .<CR><CR>')
+
+-- Clear search highlights
+map('n', '<Leader>h', ':nohlsearch<CR>')

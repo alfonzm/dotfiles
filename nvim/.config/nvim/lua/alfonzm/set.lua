@@ -6,6 +6,8 @@ vim.opt.showmatch = false
 vim.opt.showcmd = false
 vim.opt.ruler = false
 vim.opt.cursorcolumn = false
+
+-- No BG for NonText
 vim.cmd[[hi NonText cterm=NONE ctermfg=NONE]]
 
 -- Map <leader> to space
@@ -56,18 +58,20 @@ vim.o.undofile = true
 vim.o.smartcase = true
 vim.o.ignorecase = true
 
--- Highlighted + incremental search (jump while typing)
-vim.o.incsearch = true
+-- Disable highlight of search results
 vim.o.hlsearch = false
 
+-- Incremental search (jump while typing)
+vim.o.incsearch = true
+
 -- Highlight current line
--- o.cursorline = true
+vim.o.cursorline = true
 
 -- Utf8 standard encoding and en_US as the standard language
 vim.o.encoding = 'utf-8'
 
 -- Use Unix as the standard file type
--- o.ffs = 'unix,dos,mac'
+-- vim.o.ffs = 'unix,dos,mac'
 
 -- When splitting panes, move cursor to new pane
 vim.o.splitbelow = true

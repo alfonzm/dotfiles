@@ -149,7 +149,7 @@ return require('packer').startup({ function(use)
     -- use 'eddyekofo94/gruvbox-flat.nvim'
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
-    -- LSP
+    -- LSP servers
     use {
         'williamboman/mason.nvim',
         requires = {
@@ -160,7 +160,7 @@ return require('packer').startup({ function(use)
         end
     }
 
-
+    -- LSP
     use({
         'neovim/nvim-lspconfig',
         -- event = 'BufRead',

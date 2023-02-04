@@ -90,10 +90,12 @@ alias grhh='git reset --hard'
 alias glo='git log --oneline --decorate'
 
 alias gm='git merge'
+alias gmm='git merge master'
 alias gma='git merge --abort'
 alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
+alias grbm='git rebase master'
 
 alias gp='git push'
 alias gpu='git push upstream'

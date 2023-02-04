@@ -32,6 +32,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>791B3C3F-B8A7-4B91-9C66-E13F18A528E7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>shopee</string>
+			<key>text</key>
+			<string>Shopee</string>
+			<key>url</key>
+			<string>https://shopee.ph/search?keyword={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>7FCF1BF0-6CE3-4498-AE11-0B088092F721</key>
 		<dict>
 			<key>enabled</key>
@@ -81,6 +94,19 @@
 			<string>JIRA ATH Ticket</string>
 			<key>url</key>
 			<string>https://contactout.atlassian.net/browse/ATH-{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>F4507A5E-9B97-493C-A8AB-ED0369FD3058</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>r</string>
+			<key>text</key>
+			<string>Subreddit</string>
+			<key>url</key>
+			<string>https://reddit.com/r/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

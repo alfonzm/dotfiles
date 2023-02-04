@@ -52,11 +52,12 @@ end
 -- other than on_attach and capabilities.
 -- TODO: Refactor to allow servers with custom config
 local servers = {
-    -- 'emmet_ls',
     'html',
+    'intelephense',
+    'tsserver',
+    'emmet_ls',
     -- 'volar',
     -- 'tailwindcss',
-    'intelephense',
 }
 
 for _, lsp in ipairs(servers) do
@@ -66,11 +67,13 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-lspconfig.tsserver.setup {
-    on_attach = on_attach,
-    filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
-    cmd = { 'typescript-language-server', '--stdio' }
-}
+-- Custom configurations (make sure to call on_attach and capabilities on each)
+-- lspconfig.tsserver.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     -- filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+--     -- cmd = { 'typescript-language-server', '--stdio' }
+-- }
 
 lspconfig.sumneko_lua.setup {
     on_attach = on_attach,

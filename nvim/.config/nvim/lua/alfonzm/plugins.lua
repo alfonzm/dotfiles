@@ -150,6 +150,17 @@ return require('packer').startup({ function(use)
     -- use 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
     -- LSP
+    use {
+        'williamboman/mason.nvim',
+        requires = {
+            'williamboman/mason-lspconfig.nvim',
+        },
+        config = function()
+            require('alfonzm.plugins.lsp.mason')
+        end
+    }
+
+
     use({
         'neovim/nvim-lspconfig',
         -- event = 'BufRead',
@@ -157,9 +168,7 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.lsp.lspconfig')
         end,
         requires = {
-            {
-                'folke/lsp-colors.nvim'
-            },
+            { 'folke/lsp-colors.nvim' },
         },
     })
 
@@ -178,10 +187,10 @@ return require('packer').startup({ function(use)
     })
 
     -- Code Action Menu
-    use({
-        'weilbith/nvim-code-action-menu',
-        cmd = 'CodeActionMenu',
-    })
+    -- use({
+    --     'weilbith/nvim-code-action-menu',
+    --     cmd = 'CodeActionMenu',
+    -- })
 
     -- LSP Snippets
     use({

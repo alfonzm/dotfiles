@@ -6,7 +6,7 @@ vim.cmd[[let $FZF_DEFAULT_OPTS="--margin=1,4 --preview \'bat --color=always --st
 -- Don't include filename in ag
 -- vim.cmd[[command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)]]
 
-vim.keymap.set('n', '<C-p>', ':Files<CR>')
-vim.keymap.set('n', '<C-f>', ':Ag<CR>')
-vim.keymap.set('n', '<Leader>H', ':History<CR>')
-vim.keymap.set('n', '<Leader>b', ':Buffers<CR>')
+-- vim.keymap.set('n', '<C-p>', ':Files<CR>')
+-- vim.keymap.set('n', '<C-f>', ':Ag<CR>')
+-- vim.keymap.set('n', '<Leader>H', ':History<CR>')
+-- vim.keymap.set('n', '<Leader>b', ':Buffers<CR>')

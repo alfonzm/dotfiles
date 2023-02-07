@@ -35,6 +35,14 @@ return require('packer').startup({ function(use)
         end
     }
 
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        config = function ()
+            require('alfonzm.plugins.telescope')
+        end
+    }
+
     -- Change case, etc
     use 'tpope/vim-abolish'
 

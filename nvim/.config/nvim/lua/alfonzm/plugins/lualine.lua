@@ -89,7 +89,7 @@ require('lualine').setup({
         lualine_x = {},
         lualine_y = { 'branch' },
         -- lualine_z = { "require'lsp-status'.status()" },
-        lualine_z = {},
+        lualine_z = { 'progress', 'location', 'diff', 'diagnostics' },
     },
     inactive_sections = {
         lualine_a = {},

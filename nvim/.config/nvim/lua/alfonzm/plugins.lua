@@ -38,6 +38,10 @@ return require('packer').startup({ function(use)
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        requires = {
+            'nvim-telescope/telescope-live-grep-args.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+        },
         config = function ()
             require('alfonzm.plugins.telescope')
         end
@@ -181,18 +185,18 @@ return require('packer').startup({ function(use)
     })
 
     -- Null LS
-    use({
-        'jose-elias-alvarez/null-ls.nvim',
-        config = function()
-            require('alfonzm.plugins.null-ls')
-        end
-    })
-    use({
-        'MunifTanjim/prettier.nvim',
-        config = function()
-            require('alfonzm.plugins.prettier')
-        end
-    })
+    -- use({
+    --     'jose-elias-alvarez/null-ls.nvim',
+    --     config = function()
+    --         require('alfonzm.plugins.null-ls')
+    --     end
+    -- })
+    -- use({
+    --     'MunifTanjim/prettier.nvim',
+    --     config = function()
+    --         require('alfonzm.plugins.prettier')
+    --     end
+    -- })
 
     -- Code Action Menu
     -- use({
@@ -245,8 +249,9 @@ return require('packer').startup({ function(use)
         requires = {
             'windwp/nvim-ts-autotag',
             'nvim-treesitter/playground',
-            -- 'nvim-treesitter/nvim-treesitter-textobjects',
+            'nvim-treesitter/nvim-treesitter-textobjects',
             'JoosepAlviste/nvim-ts-context-commentstring',
+            -- 'nvim-treesitter/nvim-treesitter-context',
         },
         config = function()
             require('alfonzm.plugins.treesitter')

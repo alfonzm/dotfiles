@@ -1,6 +1,7 @@
 require("nvim-tree").setup({
     hijack_cursor = true,
     auto_reload_on_write = false,
+    open_on_setup = true,
     update_focused_file = {
         -- Expand focused file in tree
         enable = true
@@ -42,7 +43,7 @@ require("nvim-tree").setup({
 })
 
 -- Toggle NvimTree sidebar
-vim.cmd [[nnoremap <C-t> :NvimTreeToggle<CR>]]
+vim.cmd [[nnoremap <C-t> :NvimTreeFindFileToggle<CR>]]
 -- vim.cmd [[nnoremap <Leader>t :NvimTreeToggle<CR>]]
 
 -- Reveal current file in NvimTree

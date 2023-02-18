@@ -118,8 +118,8 @@ map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
 -- map('n', '<C-j>', '<cmd>cnext<CR>zz')
 -- map('n', '<C-k>', '<cmd>cprev<CR>zz')
 
--- Love2D
-map('n', '<Leader>l', ':!/Applications/love.app/Contents/MacOS/love .<CR><CR>')
-
 -- Clear search highlights
 map('n', '<Leader>h', ':nohlsearch<CR>')
+
+-- Close all other buffers
+map('n', '<Leader>c', ':%bd|e#<CR>')

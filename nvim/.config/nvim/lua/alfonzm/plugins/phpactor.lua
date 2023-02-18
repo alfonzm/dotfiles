@@ -1,13 +1,15 @@
 vim.cmd([[
 augroup PhpactorMappings
     au!
+    au FileType php nmap <buffer> <Leader>pm :PhpactorContextMenu<CR>
     au FileType php nmap <buffer> <Leader>pu :PhpactorImportClass<CR>
     au FileType php nmap <buffer> <Leader>pe :PhpactorClassExpand<CR>
     au FileType php nmap <buffer> <Leader>pn :PhpactorClassNew<CR>
+    au FileType php nmap <buffer> <Leader>pt :PhpactorGotoType<CR>
+
 augroup END
 ]])
 -- au FileType php nmap <buffer> <Leader>ua :PhpactorImportMissingClasses<CR>
--- au FileType php nmap <buffer> <Leader>mm :PhpactorContextMenu<CR>
 -- au FileType php nmap <buffer> <Leader>nn :PhpactorNavigate<CR>
 -- au FileType php,cucumber nmap <buffer> <Leader>o
 -- \ :PhpactorGotoDefinition edit<CR>

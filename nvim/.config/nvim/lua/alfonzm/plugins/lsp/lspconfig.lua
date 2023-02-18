@@ -9,7 +9,7 @@ capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilitie
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>ca', ':CodeActionMenu<CR>')
 vim.keymap.set('v', '<leader>ca', ':CodeActionMenu<CR>')
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
@@ -29,7 +29,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>', bufopts)
     vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
@@ -55,7 +56,7 @@ local servers = {
     'html',
     'intelephense',
     'tsserver',
-    'emmet_ls',
+    -- 'emmet_ls',
     -- 'volar',
     -- 'tailwindcss',
 }
@@ -68,14 +69,14 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Custom configurations (make sure to call on_attach and capabilities on each)
--- lspconfig.tsserver.setup {
---     on_attach = on_attach,
---     capabilities = capabilities,
---     -- filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
---     -- cmd = { 'typescript-language-server', '--stdio' }
--- }
+lspconfig.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+    -- cmd = { 'typescript-language-server', '--stdio' }
+}
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
@@ -88,3 +89,9 @@ lspconfig.sumneko_lua.setup {
 }
 
 -- lspconfig.eslint.setup {}
+
+vim.diagnostic.config({
+    float = {
+        source = true,
+    }
+})

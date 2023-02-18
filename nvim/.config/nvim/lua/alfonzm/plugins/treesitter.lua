@@ -3,7 +3,6 @@ require('nvim-treesitter.configs').setup {
     ensure_installed = {
         'php',
         'tsx',
-        'tsx',
         'json',
         'javascript',
         'typescript',
@@ -26,7 +25,21 @@ require('nvim-treesitter.configs').setup {
     context_commentstring = {
         enable = true
     },
-    playground = { enable = true }
+    playground = { enable = true },
+    textobjects = {
+        select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+                ["if"] = "@function.inner",
+                ["af"] = "@function.outer",
+                ['ia'] = '@parameter.inner',
+                ['aa'] = '@parameter.outer',
+                ["ic"] = "@class.inner",
+                ["ac"] = "@class.outer",
+            },
+        },
+    },
 }
 
 -- jessarcher

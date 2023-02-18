@@ -4,6 +4,9 @@
 # General
 alias c='clear'
 
+# Use bat
+alias cat='bat'
+
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
@@ -153,6 +156,7 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 # alias la="php artisan"
 # alias pa="php artisan"
 alias a="php artisan"
+alias at="php artisan tinker"
 
 # PNG2jpg
 alias png2jpg="mogrify -format jpg *.png; mogrify -format jpg *.PNG; trash *.png; trash *.PNG"

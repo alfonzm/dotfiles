@@ -1,0 +1,46 @@
+snippet pf 'public method (no return type)'
+    public function $1($2)
+    {
+        ${0}
+    }
+
+snippet pubf 'public method (with return type)'
+    public function $1($2): $3
+    {
+        ${0}
+    }
+
+snippet prif 'private method'
+    private function $1($2)
+    {
+        ${0}
+    }
+
+snippet prof 'protected method'
+    protected function $1($2)
+    {
+        ${0}
+    }
+
+snippet testt 'test method'
+    public function test_$1()
+    {
+        $0
+    }
+
+snippet testa 'test method (annotated)'
+    /** @test */
+    public function it_$1()
+    {
+        $0
+    }
+
+snippet testd 'test method with data provider'
+    /**
+     * @test
+     * @dataProvider $1
+     */
+    public function it_$2()
+    {
+        $0
+    }

@@ -5,6 +5,8 @@ local cmp = require('cmp')
 -- better autocompletion experience
 -- vim.o.completeopt = 'menuone,noselect'
 
+require('luasnip/loaders/from_snipmate').lazy_load()
+
 cmp.setup {
     -- Format the autocomplete menu
     formatting = {

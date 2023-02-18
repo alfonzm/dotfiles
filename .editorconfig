@@ -29,5 +29,8 @@ indent_size = 4
 [docker-compose.yml]
 indent_size = 4
 
+[*.snippets]
+indent_size = 4
+
 [*.vim]
 trim_trailing_whitespace = unset

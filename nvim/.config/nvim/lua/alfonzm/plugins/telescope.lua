@@ -42,6 +42,8 @@ require('telescope').setup({
                 '--line-number',
                 '--column',
                 '--smart-case',
+                '-g',
+                '!{**/vendor/*,**/node_modules/*,**/.git/*,**/public/*,**/tmp/*,**/Alfred.alfredpreferences/*}',
             }
         },
     },
@@ -56,7 +58,7 @@ require('telescope').setup({
                 '--no-ignore-vcs',
                 '--hidden',
                 '-g',
-                '!{**/vendor/*,**/node_modules/*,**/.git/*,**/public/*,**/tmp/*}',
+                '!{**/vendor/*,**/node_modules/*,**/.git/*,**/public/*,**/tmp/*,**/Alfred.alfredpreferences/*}',
             },
         },
         buffers = {

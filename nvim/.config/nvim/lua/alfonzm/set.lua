@@ -45,6 +45,9 @@ vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+-- For autocomplete, show menu always even if one item only, show preview if possible
+vim.opt.completeopt = 'menuone,longest,preview'
+
 -- Turn backup and swap file off
 vim.o.backup = false
 vim.o.writebackup = false

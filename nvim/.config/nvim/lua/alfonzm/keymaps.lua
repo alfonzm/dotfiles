@@ -108,7 +108,11 @@ map('n', '<Leader>s', ':source % | source ~/.config/nvim/init.lua<CR>')
 map('n', '<Leader>j', ":'<,'>!jq<CR>")
 map('v', '<Leader>j', ":'<,'>!jq<CR>")
 
+-- Find/replace all instances of visually highlighted text
 map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
+
+-- Interactive find/replace for visually highlighted text
+map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
 -- Add line below
 -- nmap <S-Enter> O<Esc>j

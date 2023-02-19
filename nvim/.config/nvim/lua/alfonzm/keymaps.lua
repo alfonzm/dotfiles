@@ -97,8 +97,8 @@ map('n', '<Leader>q', ':Bdelete<CR>')
 -- Quick close window
 map('n', '<Leader>Q', ':q<CR>')
 
--- Source nvim config
-map('n', '<Leader>s', ':source % | source ~/.config/nvim/init.lua<CR>')
+-- Close all other buffers except current one
+map('n', '<Leader>c', ':%bd|e#<CR>')
 
 -- PackerCompile shortcut
 -- map('n', '<Leader>p', ':PackerCompile<CR>')
@@ -114,6 +114,9 @@ map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')
 -- Interactive find/replace for visually highlighted text
 map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
+-- Substitute highlighted text on visual mode
+map('v', '<Leader>s', ":s//g<left><left>")
+
 -- Add line below
 -- nmap <S-Enter> O<Esc>j
 -- nmap <CR> o<Esc>k
@@ -124,6 +127,3 @@ map('v', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
 -- Clear search highlights
 map('n', '<Leader>h', ':nohlsearch<CR>')
-
--- Close all other buffers
-map('n', '<Leader>c', ':%bd|e#<CR>')

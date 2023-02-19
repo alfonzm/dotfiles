@@ -355,6 +355,15 @@ return require('packer').startup({ function(use)
     if packer_bootstrap then
         require('packer').sync()
     end
+
+    -- Project Configuration.
+    use({
+        'tpope/vim-projectionist',
+        requires = 'tpope/vim-dispatch',
+        config = function()
+            require('alfonzm.plugins.projectionist')
+        end,
+    })
 end,
     config = {
         display = {

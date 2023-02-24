@@ -7,6 +7,6 @@ windows:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website
         layout: even-vertical
         panes:
-            - npm run dev:vite
+            - nvm use 16 && npm run dev:vite
             - cd /Users/alfonzm/Work/ContactOut/Dev/extension_app/ && yarn start
             - cd /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension/ && yarn watch

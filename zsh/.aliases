@@ -174,6 +174,7 @@ alias nrw="npm run watch"
 alias nrb="npm run build"
 alias nrs="npm run serve"
 alias nrt="npm run test"
+alias nrdv="npm run dev:vite"
 
 # NVM shortcuts
 alias nu="nvm use"

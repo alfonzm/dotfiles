@@ -4,5 +4,5 @@ vim.keymap.set('n', '<Leader>a', ':FloatermNew php artisan tinker<CR>')
 vim.keymap.set('n', '<Leader>f', ':FloatermToggle<CR>')
 vim.keymap.set('t', '<C-c>', '<C-\\><C-n>:FloatermToggle<CR>')
 
-vim.g.floaterm_width = 0.6
-vim.g.floaterm_height = 0.8
+vim.g.floaterm_width = 0.9
+vim.g.floaterm_height = 0.9

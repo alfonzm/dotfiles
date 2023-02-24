@@ -86,10 +86,14 @@ require('lualine').setup({
             { 'filename', file_status = false, path = 1 },
         },
         lualine_c = {},
-        lualine_x = {},
+        lualine_x = { 'diagnostics' },
         lualine_y = { 'branch' },
         -- lualine_z = { "require'lsp-status'.status()" },
-        lualine_z = { 'progress', 'location', 'diff' },
+        lualine_z = {
+            'progress',
+            'location',
+            'diff',
+        },
     },
     inactive_sections = {
         lualine_a = {},

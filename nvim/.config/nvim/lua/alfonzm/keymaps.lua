@@ -98,7 +98,10 @@ map('n', '<Leader>q', ':Bdelete<CR>')
 map('n', '<Leader>Q', ':q<CR>')
 
 -- Close all other buffers except current one
-map('n', '<Leader>c', ':%bd|e#<CR>')
+map('n', '<Leader>cb', ':%bd|e#<CR>')
+
+-- Close quickfix list
+map('n', '<Leader>cq', ':cclose<CR>')
 
 -- PackerCompile shortcut
 -- map('n', '<Leader>p', ':PackerCompile<CR>')

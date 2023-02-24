@@ -144,6 +144,7 @@ colors: *gruvbox256
 
 key_bindings:
   # Tmux Keybindings using hex codes
+  - { key: N, mods: Command, action: CreateNewWindow }
   # Cmd+T - new tmux window
   - { key: T, mods: Command, chars: "\x01\x63" }
   # Cmd+W - close current tmux window

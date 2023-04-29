@@ -195,27 +195,27 @@ return require('packer').startup({ function(use)
     })
 
     -- Prettier
-    use {
-        'prettier/vim-prettier',
-        run = 'npm install',
+    -- use {
+    --     'prettier/vim-prettier',
+    --     run = 'npm install',
+    --     config = function()
+    --         require('alfonzm.plugins.vim-prettier')
+    --     end
+    -- }
+
+    -- Null LS
+    use({
+        'jose-elias-alvarez/null-ls.nvim',
+        config = function()
+            require('alfonzm.plugins.null_ls')
+        end
+    })
+    use({
+        'MunifTanjim/prettier.nvim',
         config = function()
             require('alfonzm.plugins.prettier')
         end
-    }
-
-    -- Null LS
-    -- use({
-    --     'jose-elias-alvarez/null-ls.nvim',
-    --     config = function()
-    --         require('alfonzm.plugins.null-ls')
-    --     end
-    -- })
-    -- use({
-    --     'MunifTanjim/prettier.nvim',
-    --     config = function()
-    --         require('alfonzm.plugins.prettier')
-    --     end
-    -- })
+    })
 
     -- Code Action Menu
     -- use({
@@ -388,7 +388,8 @@ end,
         display = {
             open_fn = require('packer.util').float,
         }
-    } })
+    }
+})
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated
 -- vim.cmd([[

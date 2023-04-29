@@ -16,10 +16,10 @@ null_ls.setup({
         --     vim.cmd('xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>')
         -- end
     end,
-    -- sources = {
-        -- null_ls.builtins.formatting.prettierd,
+    sources = {
+        null_ls.builtins.formatting.prettierd
         -- null_ls.builtins.diagnostics.eslint_d.with({
         --     diagnostics_format = '[eslint] #{m} (#{c})'
         -- }),
-    -- }
+    }
 })

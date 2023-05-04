@@ -9,7 +9,7 @@ null_ls.setup({
             vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
             -- format on save
-            vim.cmd('autocmd BufWritePost <buffer> lua vim.lsp.buf.format()')
+            -- vim.cmd('autocmd BufWritePost <buffer> lua vim.lsp.buf.format()')
         end
 
         -- if client.server_capabilities.documentRangeFormattingProvider then

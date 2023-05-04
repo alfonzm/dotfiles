@@ -85,14 +85,15 @@ require('lualine').setup({
         lualine_b = {
             { 'filename', file_status = false, path = 1 },
         },
-        lualine_c = {},
+        -- lualine_c = { "os.date('%H:%M:%S')"},
+        lualine_c = { '' },
         lualine_x = { 'diagnostics' },
         lualine_y = { 'branch' },
         -- lualine_z = { "require'lsp-status'.status()" },
         lualine_z = {
-            'progress',
+            -- 'progress',
             'location',
-            'diff',
+            -- 'diff',
         },
     },
     inactive_sections = {

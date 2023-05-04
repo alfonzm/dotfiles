@@ -13,3 +13,5 @@ prettier.setup {
         'less',
     }
 }
+
+vim.g['prettier#autoformat_ignore_filetypes'] = {'markdown', 'md'}

@@ -1,15 +1,13 @@
 require("nvim-tree").setup({
     hijack_cursor = true,
     auto_reload_on_write = false,
-    open_on_setup = true,
     update_focused_file = {
         -- Expand focused file in tree
         enable = true
     },
     -- hijack_directories = {
     --     auto_open = false,
-    -- },
-    -- git = {
+    -- }, git = {
     --   enable = false,
     --   timeout = 1000
     -- },
@@ -48,3 +46,10 @@ vim.cmd [[nnoremap <C-t> :NvimTreeFindFileToggle<CR>]]
 
 -- Reveal current file in NvimTree
 vim.cmd [[nnoremap <Leader>F :NvimTreeFindFile<CR>]]
+
+-- local function open_nvim_tree()
+--   -- open the tree
+--   require("nvim-tree.api").tree.open()
+-- end
+--
+-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })

@@ -25,6 +25,7 @@ precmd() {
 # Include other dotfiles
 source ~/.functions
 source ~/.aliases
+source ~/.env
 
 # Simulate XDG_CONFIG_HOME path
 export XDG_CONFIG_HOME="$HOME/.config"

@@ -62,11 +62,11 @@ require('telescope').setup({
             },
         },
         buffers = {
-            previewer = false,
-            layout_config = {
-                width = 80,
-                height = 30,
-            },
+            -- previewer = false,
+            -- layout_config = {
+            --     width = 80,
+            --     height = 30,
+            -- },
         },
         live_grep = {
             hidden = true,

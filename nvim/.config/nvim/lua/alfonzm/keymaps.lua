@@ -130,3 +130,15 @@ map('v', '<Leader>s', ":s//g<left><left>")
 
 -- Clear search highlights
 map('n', '<Leader>h', ':nohlsearch<CR>')
+
+-- Map Enter and Backspace to change inside
+map('n', '<CR>', 'ciw')
+map('n', '<BS>', 'ci')
+
+-- Better indenting - reselect highlighted text after indenting
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- Paste over currently selected text without yanking it
+map("v", "p", '"_dp')
+map("v", "P", '"_dP')

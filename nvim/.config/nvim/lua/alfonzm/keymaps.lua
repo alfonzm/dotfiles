@@ -140,5 +140,8 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Paste over currently selected text without yanking it
-map("v", "p", '"_dp')
-map("v", "P", '"_dP')
+-- map("v", "p", '"_dp')
+-- map("v", "P", '"_dP')
+
+-- Open scratchpad
+map('n', '<Leader>s', ':e ~/.alfonz_vim_scratchpad<CR>')

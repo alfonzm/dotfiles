@@ -29,6 +29,14 @@ $ sh install.sh
 
 ### Other Steps
 
+#### Activate Intelephense License Key
+
+```
+$ echo 'LICENSE-KEY' > ~/intelephense/licence.txt
+```
+
+(Look for email with subject 'Intelephense licence purchase' for the license key.)
+
 #### MySQL
 1. Setup MySQL servers on Docker
 

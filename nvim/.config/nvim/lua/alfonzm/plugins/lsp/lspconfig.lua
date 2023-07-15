@@ -7,8 +7,8 @@ capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilitie
 
 -- Keymaps
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<leader>ca', ':CodeActionMenu<CR>')
-vim.keymap.set('v', '<leader>ca', ':CodeActionMenu<CR>')
+-- vim.keymap.set('n', '<leader>ca', ':CodeActionMenu<CR>')
+-- vim.keymap.set('v', '<leader>ca', ':CodeActionMenu<CR>')
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -45,7 +45,7 @@ local on_attach = function(client, bufnr)
     -- end, bufopts)
     -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
     -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-    -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
 end
 
 -- List of LSP servers
@@ -54,7 +54,7 @@ end
 -- TODO: Refactor to allow servers with custom config
 local servers = {
     'html',
-    'intelephense',
+    -- 'intelephense',
     'tsserver',
     -- 'emmet_ls',
     -- 'volar',
@@ -83,6 +83,18 @@ lspconfig.lua_ls.setup {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
+            }
+        }
+    }
+}
+
+lspconfig.intelephense.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        intelephense = {
+            files = {
+                maxSize  = 1000000
             }
         }
     }

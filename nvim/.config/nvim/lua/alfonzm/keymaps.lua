@@ -144,4 +144,4 @@ map("v", ">", ">gv")
 -- map("v", "P", '"_dP')
 
 -- Open scratchpad
-map('n', '<Leader>s', ':e ~/.alfonz_vim_scratchpad<CR>')
+map('n', '<Leader>s', ':e ~/.alfonz_vim_scratchpad.md<CR>')

@@ -3,8 +3,6 @@
 # Update May 2021: Cask is now built-in in Homebrew.
 
 # Essentials / Daily use
-brew install --cask bettertouchtool
-brew install --cask brave-browser
 brew install --cask itsycal
 brew install --cask figma
 brew install --cask firefox

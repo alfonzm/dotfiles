@@ -1,0 +1,9 @@
+# ~/.tmuxinator/spot.yml
+
+name: spotify
+
+windows:
+    - spotify:
+        root: ~/
+        panes:
+            - ncspot

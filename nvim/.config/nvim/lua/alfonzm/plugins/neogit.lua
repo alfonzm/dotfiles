@@ -18,9 +18,11 @@ neogit.setup {
             folded = true
         },
         unpulled = {
+            hidden = true,
             folded = true
         },
         unmerged = {
+            hidden = true,
             folded = true
         },
         recent = {

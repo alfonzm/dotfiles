@@ -14,7 +14,7 @@ gui:
     showRandomTip: false
     showBottomLine: false
     showIcons: false
-    skipUnstageLineWarning: true
+    skipDiscardChangeWarning: true
 os:
     editCommand: 'nvim'
 git:

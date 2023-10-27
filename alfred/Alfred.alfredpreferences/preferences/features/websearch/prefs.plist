@@ -84,6 +84,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>D6B1225C-5EF0-45EE-88A2-BE44F8F10C75</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>com</string>
+			<key>text</key>
+			<string>JIRA COM Ticket</string>
+			<key>url</key>
+			<string>https://contactout.atlassian.net/browse/COM-{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E9DDBC94-68EF-44D2-A4EF-2CFE2BB8BFA7</key>
 		<dict>
 			<key>enabled</key>

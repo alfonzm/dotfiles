@@ -63,7 +63,9 @@ open "/Applications/Alacritty.app"
 killall iCanHazShortcut
 quit "Parallels Desktop"
 
-/usr/local/bin/defaultbrowser chrome</string>
+/usr/local/bin/defaultbrowser chrome
+
+docker restart es01 mysql8</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -134,7 +136,7 @@ killall "Docker Desktop"
 killall "Sequel Ace"
 killall "Brave Browser"
 killall "Slack"
-killall "Google Chrome"
+# killall "Google Chrome"
 killall "Sublime Merge"
 killall "Sublime Text"
 killall "QuickTime Player"
@@ -142,7 +144,10 @@ killall "Insomnia"
 
 quit "Time Doctor 2"
 
-/usr/local/bin/defaultbrowser safari</string>
+# /usr/local/bin/defaultbrowser safari
+
+tmux kill-session -t contactout
+tmux kill-session -t contactout_build</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

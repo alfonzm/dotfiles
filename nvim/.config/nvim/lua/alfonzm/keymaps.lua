@@ -1,3 +1,5 @@
+require('alfonzm.scripts.alternate')
+
 local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true })
 end
@@ -20,10 +22,6 @@ map('v', '$', '$h')
 map('n', 'H', ':bp<CR>')
 map('n', 'L', ':bn<CR>')
 
--- See buffer list + go to buffer id
--- NOTE: This is moved to fzf :Buffers
--- map('n', '<Leader>b', ':ls<CR>:b<space>')
-
 -- When joining lines, dont move cursor position
 map('n', 'J', 'mzJ`z')
 
@@ -38,9 +36,9 @@ map('n', 'N', 'Nzzzv')
 map('n', '<C-d>', '<C-d>z.')
 map('n', '<C-u>', '<C-u>z.')
 
--- Keep cursor centered when doing { or }
-map('n', '{', '{zz')
-map('n', '}', '}zz')
+-- -- Keep cursor centered when doing { or }
+-- map('n', '{', '{zz')
+-- map('n', '}', '}zz')
 
 -- Keep cursor centered when doing [[ or ]]
 map('n', '[[', '[[zz')
@@ -98,7 +96,12 @@ map('n', '<Leader>q', ':Bdelete<CR>')
 map('n', '<Leader>Q', ':q<CR>')
 
 -- Close all other buffers except current one
-map('n', '<Leader>cb', ':%bd|e#<CR>')
+-- %bd! - force delete all buffers
+-- <C-o> - reopen latest active buffer
+-- bd# - close the [No name] buffer that gets created
+-- NvimTreeOpen - reopen NvimTree
+-- <C-o> - move to the latest active buffer
+map('n', '<Leader>cb', ':%bd!<CR><C-o>:bd#|NvimTreeOpen<CR><C-o>')
 
 -- Close quickfix list
 map('n', '<Leader>cq', ':cclose<CR>')
@@ -145,3 +148,6 @@ map("v", ">", ">gv")
 
 -- Open scratchpad
 map('n', '<Leader>s', ':e ~/.alfonz_vim_scratchpad.md<CR>')
+
+-- Toggle between alternate XXXTest.php and XXX.php files
+vim.api.nvim_set_keymap('n', '<Leader>a', [[:lua require('alfonzm.scripts.alternate').toggle_test_file()<CR>]], { noremap = true, silent = true })

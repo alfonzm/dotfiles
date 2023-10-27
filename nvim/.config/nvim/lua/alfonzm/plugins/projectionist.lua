@@ -4,6 +4,8 @@ vim.g.projectionist_heuristics = {
             start = 'php artisan serve',
             console = 'php artisan tinker',
         },
+
+        -- Regular Laravel convention
         ['app/*.php'] = {
             type = 'source',
             alternate = {
@@ -33,6 +35,36 @@ vim.g.projectionist_heuristics = {
         },
         ['database/migrations/*.php'] = {
             type = 'migration',
+        },
+
+        -- Domain-Driven Design Laravel
+        ['app/Domain/*.php'] = {
+            type = 'source',
+            alternate = {
+                'tests/Domain/{}Test.php',
+                'tests/Domains/{}Test.php',
+            },
+        },
+        ['tests/Domains/*Test.php'] = {
+            type = 'test',
+            alternate = {
+                'app/Domains/{}.php',
+                'app/Domain/{}.php',
+            }
+        },
+
+        -- Work
+        ['app/Http/*.php'] = {
+            type = 'source',
+            alternate = {
+                'tests/{}Test.php',
+            },
+        },
+        ['tests/*.php'] = {
+            type = 'source',
+            alternate = {
+                'app/Http/{}.php',
+            },
         },
     },
 }

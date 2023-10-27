@@ -1,14 +1,26 @@
 local actions = require('telescope.actions')
 local lga_actions = require('telescope-live-grep-args.actions')
 
+local wide_layout_config = {
+    horizontal = {
+        width = 0.95,
+        preview_width = 0.4,
+    }
+}
+
 require('telescope').setup({
     defaults = {
+        layout_config = wide_layout_config,
+        wrap_results = true,
         mappings = {
             n = {
                 -- close Telescope in one Esc keypress
                 ['<esc>'] = actions.close,
                 ['<C-c>'] = actions.close,
             },
+            i = {
+                ['<C-d>'] = actions.delete_buffer
+            }
         },
         file_ignore_patterns = {
             '.git/',
@@ -60,13 +72,12 @@ require('telescope').setup({
                 '-g',
                 '!{**/vendor/*,**/node_modules/*,**/.git/*,**/public/*,**/tmp/*,**/Alfred.alfredpreferences/*}',
             },
+            layout_config = wide_layout_config,
         },
         buffers = {
             -- previewer = false,
-            -- layout_config = {
-            --     width = 80,
-            --     height = 30,
-            -- },
+            -- theme = "dropdown",
+            layout_config = wide_layout_config,
         },
         live_grep = {
             hidden = true,

@@ -90,6 +90,7 @@ export NVM_COMPLETION=true
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red,bold')
 ZSH_HIGHLIGHT_PATTERNS+=('\rm -i -rf *' 'fg=white,bold,bg=red,bold')
+ZSH_HIGHLIGHT_PATTERNS+=('git reset --hard' 'fg=white,bold,bg=red,bold')
 
 # Source zsh plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -100,3 +101,11 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# pnpm
+export PNPM_HOME="/Users/alfonzm/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

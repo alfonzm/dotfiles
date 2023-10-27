@@ -47,7 +47,7 @@ return require('packer').startup({ function(use)
 
     -- Telescope
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.3',
         requires = {
             'nvim-telescope/telescope-live-grep-args.nvim',
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },

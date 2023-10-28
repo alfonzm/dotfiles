@@ -1,0 +1,147 @@
+# List of all commands here
+# https://github.com/hrkfdn/ncspot/blob/main/src/command.rs
+
+# Basic options
+default_keybindings = false
+# use_nerdfont = true
+gapless = true
+library_tabs = ["playlists", "artists", "tracks", "albums", "browse"]
+hide_display_names = true
+# notify = true
+# flip_status_indicators=true
+# shuffle = false
+# repeat = 'off'
+
+[keybindings]
+##################
+# Fast forward / rewind
+##################
+"b" = "seek -1000"
+"f" = "seek +1000"
+"B" = "seek -10000"
+"F" = "seek +10000"
+
+##################
+# Play / pause
+##################
+"p" = "playpause"
+"Enter" = "play"
+"s" = "stop"
+"Shift+s" = "stop"
+
+##################
+# Track manipulation
+##################
+"H" = "previous"
+"L" = "next"
+"r" = "repeat"
+"z" = "shuffle"
+"D" = "delete"
+"S" = "save"
+
+# Open context menu
+"O" = "open current"
+"o" = "open selected"
+"A" = "goto artist"
+"a" = "goto album"
+
+##################
+# Queue
+##################
+# Add to queue
+" " = "playpause"
+"Ctrl+s" = "save queue"
+# Move selected song up/down in the queue
+# "J" = "shift down 1"
+# "K" = "shift up 1"
+"C" = "clear"
+# Open the context menu for a Spotify link in the clipboard
+"Ctrl+v" = "insert"
+
+######################################
+# Sound
+######################################
+"=" = "volup 1"
+"-" = "voldown 1"
+"[" = "volup 5"
+"]" = "voldown 5"
+
+
+######################################
+# Movements
+######################################
+# "F1" = "focus queue"
+# "F2" = "focus library"
+# "F3" = "focus search"
+"1" = "focus queue"
+"2" = "focus library"
+"3" = "focus search"
+
+# Navigation
+"Down" = "move down 1"
+"Up" = "move up 1"
+"Z" = "move playing"
+
+"G" = "move bottom"
+"g" = "move top"
+
+"Left" = "move left 1"
+"Right" = "move right 1"
+
+"h" = "move left 1"
+"j" = "move down 1"
+"k" = "move up 1"
+"l" = "move right 1"
+
+"Ctrl+d" = "move down 5"
+"Ctrl+u" = "move up 5"
+
+"Ctrl+e" = "move down 1"
+"Ctrl+y" = "move up 1"
+"Esc" = "back"
+"q" = "back"
+"Backspace" = "back"
+
+"n" = "jumpnext"
+"N" = "jumpprevious"
+
+######################################
+# Sorting
+######################################
+# "t" = "sort added d"
+# "T" = "sort title a"
+
+######################################
+# Sharing
+######################################
+# "Y" = "share selected"
+# "y" = "share current"
+
+######################################
+# Other
+######################################
+"Q" = "quit"
+"?" = "help"
+"U" = "update"
+"R" = "reload"
+
+
+# Gruvbox dark [ originally based on base16 by Dawid Kurek (dawikur@gmail.com) ]
+[theme]
+background = "default"
+primary = "#d5c4a1"
+secondary = "#d5c4a1"
+title = "#d79921"
+playing = "#d79921"
+playing_bg = "#383838"
+playing_selected = "#665c54"
+highlight = "#282828"
+highlight_bg = "#d5c4a1"
+error = "#fbf1c7"
+error_bg = "#cc241d"
+statusbar_progress = "#689d6a"
+statusbar_bg = "#d79921"
+statusbar = "#282828"
+cmdline = "#d5c4a1"
+cmdline_bg = "#383838"
+search_match = "#d65d0e"

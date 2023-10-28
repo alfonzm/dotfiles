@@ -65,7 +65,13 @@ require('bufferline').setup {
         numbers = 'buffer_id',
         separator_style = { "", "" },
         offsets = {
-            { filetype = "NvimTree", text = "File Explorer", text_align = "left", offset = 0 }
+            {
+                highlight = "Normal",
+                filetype   = "NvimTree",
+                text       = "",
+                text_align = "left",
+                offset     = 0,
+            }
         },
     },
 }

@@ -1,6 +1,7 @@
 require("nvim-tree").setup({
     hijack_cursor = true,
     auto_reload_on_write = false,
+    disable_netrw = true,
     update_focused_file = {
         -- Expand focused file in tree
         enable = true
@@ -12,7 +13,12 @@ require("nvim-tree").setup({
     --   timeout = 1000
     -- },
     view = {
-        adaptive_size = true
+        width = {
+            min = 30,
+            max = -1,
+        },
+        cursorline = true,
+        centralize_selection = true,
     },
     filters = {
         custom = {

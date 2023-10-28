@@ -15,6 +15,8 @@ augroup CustomNvimTreeColors
 autocmd!
 autocmd BufEnter * hi NvimTreeNormal guifg=NONE guibg=NONE
 autocmd BufEnter * hi NvimTreeEndOfBuffer guifg=NONE guibg=NONE
+autocmd BufEnter * hi NvimTreeOpenedFile guifg=NONE guibg=#504945
+autocmd BufEnter * hi NvimTreeCursorLine guifg=NONE guibg=#32302f
 augroup END
 ]], false)
 

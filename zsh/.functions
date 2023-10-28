@@ -72,3 +72,17 @@ function git_main_branch() {
   done
   echo master
 }
+
+# Ctrl+P/Ctrl+N = Up/Down arrows
+zle -N zsh-up-history
+zle -N zsh-down-history
+bindkey '^P' zsh-up-history  # Ctrl+P
+bindkey '^N' zsh-down-history  # Ctrl+N
+
+# Functions to simulate Up and Down arrow key presses
+zsh-up-history() {
+  zle .up-line-or-history
+}
+zsh-down-history() {
+  zle .down-line-or-history
+}

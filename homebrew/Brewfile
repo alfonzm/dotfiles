@@ -13,207 +13,106 @@ tap "ngrok/ngrok"
 tap "shivammathur/php"
 tap "smudge/smudge"
 tap "stripe/stripe-cli"
-# New file format for still image compression
 brew "jpeg-xl"
-# Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Automatic configure script builder
 brew "autoconf"
-# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Core application library for C
 brew "glib"
-# Manage compile and link flags for libraries
 brew "pkg-config"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Library for dealing with Microsoft ITSS/CHM files
 brew "chmlib"
-# GNU File, Shell, and Text utilities
 brew "coreutils"
-# Configurable talking characters in ASCII art
 brew "cowsay"
-# Lightweight DNS forwarder and DHCP server
 brew "dnsmasq"
-# C/C++ and Java libraries for Unicode and globalization
 brew "icu4c"
-# OpenType text shaping engine
 brew "harfbuzz"
-# Framework for layout and rendering of i18n text
 brew "pango"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
-# Command-line outline and bitmap font editor/converter
 brew "fontforge"
-# Command-line fuzzy finder written in Go
 brew "fzf"
-# GitHub command-line tool
 brew "gh"
-# Color management engine supporting ICC profiles
 brew "little-cms2"
-# Library for JPEG-2000 image manipulation
 brew "openjpeg"
-# Interpreter for PostScript and PDF
 brew "ghostscript"
-# Distributed revision control system
 brew "git"
-# GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
-# Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
-# Validating, recursive, caching DNS resolver
 brew "unbound"
-# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Generate introspection data for GObject libraries
 brew "gobject-introspection"
-# Apache HTTP server
 brew "httpd", restart_service: true
-# Database of common MIME types
 brew "shared-mime-info"
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Lazier way to manage everything docker
 brew "lazydocker"
-# Simple terminal UI for git commands
 brew "lazygit"
-# Image processing and image analysis library
 brew "leptonica"
-# Terminal file manager
 brew "lf"
-# Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
-# Blu-Ray disc playback library for media players like VLC
 brew "libbluray"
-# Rainbows and unicorns in your console!
 brew "lolcat"
-# Powerful, lightweight programming language
 brew "lua"
-# Language Server for the Lua language
 brew "lua-language-server"
-# Web and API based SMTP testing tool
 brew "mailhog"
-# Open source relational database management system
 brew "mysql"
-# Fast, highly customisable system info script
 brew "neofetch"
-# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
-# Platform built on V8 to build network applications
 brew "node"
-# Manage multiple Node.js versions
 brew "nvm"
-# Simplistic interactive filtering tool
 brew "peco"
-# General-purpose scripting language
 brew "php"
-# General-purpose scripting language
 brew "php@7.2"
-# General-purpose scripting language
 brew "php@7.3"
-# General-purpose scripting language
 brew "php@8.0"
-# Display the PID number for a given process name
 brew "pidof"
-# Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Monitor data's progress through a pipe
 brew "pv"
-# Install various Ruby versions and implementations
 brew "ruby-build"
-# Ruby version manager
 brew "rbenv"
-# Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
-# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Generate ASCII art with terminal, shell, and OS info
 brew "screenfetch"
-# Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
-# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Send macOS User Notifications from the command-line
 brew "terminal-notifier"
-# OCR (Optical Character Recognition) engine
 brew "tesseract"
-# Code-search similar to ack
 brew "the_silver_searcher"
-# Terminal multiplexer
 brew "tmux"
-# Manage complex tmux sessions easily
 brew "tmuxinator"
-# CLI tool that moves files or folder to the trash
 brew "trash"
-# Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Google's JavaScript engine
 brew "v8"
-# Internet file retriever
 brew "wget"
-# JavaScript package manager
 brew "yarn"
-# Download YouTube videos from the command-line
 brew "youtube-dl"
-# Tracks most-used directories to make cd smarter
 brew "z"
-# Shell extension to navigate your filesystem faster
 brew "zoxide"
-# prettier, on SPEED!
 brew "fsouza/prettierd/prettierd"
-# Play, record, convert, and stream audio and video
 brew "homebrew-ffmpeg/ffmpeg/ffmpeg", args: ["with-fdk-aac"]
-# A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# Mac App Store command-line interface
 brew "mas-cli/tap/mas"
-# General-purpose scripting language
 brew "shivammathur/php/php@7.4"
-# Stripe CLI utility
 brew "stripe/stripe-cli/stripe"
-# GPU-accelerated terminal emulator
 cask "alacritty"
-# Application launcher and productivity software
 cask "alfred"
-# Utility that prevents the system from going to sleep
 cask "caffeine"
-# Disk usage utility
 cask "disk-inventory-x"
-# Collaborative team software
 cask "figma"
-# Web browser
 cask "firefox"
-# Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more
 cask "franz"
-# Web browser
 cask "google-chrome"
-# Shortcut manager
 cask "icanhazshortcut"
-# Menu bar calendar
 cask "itsycal"
-# Shows the next meeting in the menu bar
 cask "meetingbar"
-# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# App to write, plan, collaborate, and get organized
 cask "notion"
-# Team communication and collaboration software
 cask "slack"
-# Music streaming service
 cask "spotify"
-# System monitor for the menu bar
 cask "stats"
-# Open-source BitTorrent client
 cask "transmission"
-# Multimedia player
 cask "vlc"
-# Video communication and virtual meeting platform
 cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694

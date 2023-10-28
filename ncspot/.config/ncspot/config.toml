@@ -63,8 +63,8 @@ hide_display_names = true
 ######################################
 "=" = "volup 1"
 "-" = "voldown 1"
-"[" = "volup 5"
-"]" = "voldown 5"
+"]" = "volup 5"
+"[" = "voldown 5"
 
 
 ######################################
@@ -76,6 +76,7 @@ hide_display_names = true
 "1" = "focus queue"
 "2" = "focus library"
 "3" = "focus search"
+"Ctrl+p" = "focus search"
 
 # Navigation
 "Down" = "move down 1"

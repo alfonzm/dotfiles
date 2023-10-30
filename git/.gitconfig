@@ -28,7 +28,7 @@
   syntax-theme = gruvbox-dark
   navigate = true # use n and N to move between diff sections
   light = false
-  side-by-side = true
+  ; side-by-side = true
   line-numbers = true
   features = line-numbers decorations
   plus-style = syntax "#12261E"

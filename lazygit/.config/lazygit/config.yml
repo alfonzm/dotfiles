@@ -1,4 +1,6 @@
 gui:
+    expandFocusedSidePanel: true
+    mainPanelSplitMode: 'vertical'
     scrollPastBottom: true
     theme:
         selectedLineBgColor:

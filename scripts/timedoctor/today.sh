@@ -2,6 +2,8 @@
 
 source ~/.dotfiles/env/.env
 
+# TODO: If CACHE_FILE does not exist, create it with value '{ "daily": 0, "weekly": 0 }'
+
 # Set API parameters
 TOKEN="$TIMEDOCTOR_API_TOKEN"
 # FROM="2023-05-03T00%3A00%3A00.00"

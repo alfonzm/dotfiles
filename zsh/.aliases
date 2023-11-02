@@ -37,13 +37,11 @@ alias mux='tmuxinator'
 alias v='nvim'
 alias vim='nvim'
 alias vimorig='/usr/bin/vim'
-
-# Vim dotfiles
-alias dot="nvim ~/.dotfiles"
-
-# Nota
+alias dot="cd ~/.dotfiles && nvim"
+alias rest="cd ~/.rest-nvim && nvim"
 alias notes="nvim ~/Documents/Notes/Nota"
 alias nota="nvim ~/Documents/Notes/Nota"
+alias tinker="z contactout_website; php artisan tinker"
 
 # Subl
 alias s='subl'

@@ -401,6 +401,13 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.rest-nvim')
         end,
     }
+
+    use {
+        'folke/flash.nvim',
+        config = function()
+            require('alfonzm.plugins.flash')
+        end,
+    }
 end,
     config = {
         display = {

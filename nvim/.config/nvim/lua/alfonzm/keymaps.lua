@@ -111,8 +111,8 @@ map('n', '<Leader>cq', ':cclose<CR>')
 -- map('n', '<Leader>pi', ':PackerInstall<CR>')
 
 -- Format JSON
-map('n', '<Leader>j', ":'<,'>!jq<CR>")
-map('v', '<Leader>j', ":'<,'>!jq<CR>")
+-- map('n', '<Leader>j', ":'<,'>!jq<CR>")
+-- map('v', '<Leader>j', ":'<,'>!jq<CR>")
 
 -- Find/replace all instances of visually highlighted text
 map('v', '<C-g>', '"hy:%s/<C-r>h//g<left><left>')

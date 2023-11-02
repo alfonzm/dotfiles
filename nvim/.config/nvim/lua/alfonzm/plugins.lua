@@ -383,6 +383,24 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.projectionist')
         end,
     })
+
+    -- Rest NVIM
+    use({
+        'diepm/vim-rest-console',
+        config = function()
+            require('alfonzm.plugins.vim-rest-console')
+        end,
+    })
+
+    -- Rest.nvim
+    use {
+        "rest-nvim/rest.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        commit = '8b62563',
+        config = function()
+            require('alfonzm.plugins.rest-nvim')
+        end,
+    }
 end,
     config = {
         display = {

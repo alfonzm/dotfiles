@@ -16,3 +16,8 @@ ls.add_snippets('javascript', {
     ls.parser.parse_snippet('cl', 'console.log($0)'),
     ls.parser.parse_snippet('cll', "console.log('$1', $0)"),
 })
+
+ls.add_snippets('lua', {
+    ls.parser.parse_snippet('cl', 'print($0)'),
+    ls.parser.parse_snippet('cll', "print('$1', $0)"),
+})

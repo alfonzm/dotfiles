@@ -227,7 +227,7 @@ return require('packer').startup({ function(use)
     use({
         'L3MON4D3/LuaSnip',
         config = function()
-            require('alfonzm.plugins.luasnip')
+            require('alfonzm.plugins.luasnips')
         end,
     })
 
@@ -402,6 +402,7 @@ return require('packer').startup({ function(use)
         end,
     }
 
+    -- Flash
     use {
         'folke/flash.nvim',
         config = function()
@@ -409,11 +410,20 @@ return require('packer').startup({ function(use)
         end,
     }
 
+    -- Which-key
     use {
         'folke/which-key.nvim',
         config = function()
             require('alfonzm.plugins.which-key')
         end
+    }
+
+    -- Github Copilot
+    use {
+        'github/copilot.vim',
+        config = function()
+            require('alfonzm.plugins.copilot')
+        end,
     }
 end,
     config = {

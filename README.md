@@ -37,6 +37,12 @@ $ echo 'LICENSE-KEY' > ~/intelephense/licence.txt
 
 (Look for email with subject 'Intelephense licence purchase' for the license key.)
 
+#### Neovim
+
+#### Copilot
+
+Run `:Copilot setup` to authorize Github Copilot account.
+
 #### MySQL
 1. Setup MySQL servers on Docker
 

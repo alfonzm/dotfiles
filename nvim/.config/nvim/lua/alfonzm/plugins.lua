@@ -425,6 +425,19 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.copilot')
         end,
     }
+
+    -- CodeGPT
+    use { 'MunifTanjim/nui.nvim' }
+    use {
+        "dpayne/CodeGPT.nvim",
+        reqruies = {
+            'nvim-lua/plenary.nvim',
+            'MunifTanjim/nui.nvim',
+        },
+        config = function()
+            require('alfonzm.plugins.codegpt')
+        end,
+    }
 end,
     config = {
         display = {

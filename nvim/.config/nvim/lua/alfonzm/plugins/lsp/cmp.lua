@@ -64,6 +64,8 @@ cmp.setup {
         { name = 'path' },
     },
     experimental = {
-        ghost_text = true,
+        -- Set to false so that it won't interfere with Github Copilot
+        -- Can set to true if not using Copilot 
+        ghost_text = false,
     }
 }

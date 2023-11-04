@@ -41,3 +41,8 @@ vim.cmd [[highlight IncSearch guifg=#282828 guibg=#fabd2f]]
 -- Removes 1 cell to the left of lualine
 vim.cmd [[highlight StatusLine guibg=#282828]]
 vim.cmd [[highlight StatusLineNC guibg=#282828]]
+
+-- Which Key
+vim.cmd [[highlight WhichKey guifg=#d5c4a1]]
+vim.cmd [[highlight WhichKeyFloat guibg=#282828]]
+vim.cmd [[highlight WhichKeySeparator guifg=#7c6f64]]

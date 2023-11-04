@@ -408,6 +408,13 @@ return require('packer').startup({ function(use)
             require('alfonzm.plugins.flash')
         end,
     }
+
+    use {
+        'folke/which-key.nvim',
+        config = function()
+            require('alfonzm.plugins.which-key')
+        end
+    }
 end,
     config = {
         display = {

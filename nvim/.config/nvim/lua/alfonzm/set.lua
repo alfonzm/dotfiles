@@ -21,7 +21,7 @@ vim.cmd[[syntax on]]
 vim.o.laststatus = 3
 
 -- Set cursor to always be block
-vim.o.guicursor = ''
+vim.o.guicursor = 'a:block'
 
 -- Show line numbers + relative
 vim.o.nu = true

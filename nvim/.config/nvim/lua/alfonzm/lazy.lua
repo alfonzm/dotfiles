@@ -135,26 +135,11 @@ local plugins = {
             require('alfonzm.plugins.neogit')
         end
     },
-    {
-        'sindrets/diffview.nvim',
-        config = function()
-            require('alfonzm.plugins.diffview')
-        end
-    },
-
-    -- Open Browser
-    {
-        'tyru/open-browser-github.vim',
-        dependencies = 'tyru/open-browser.vim',
-        config = function()
-            require('alfonzm.plugins.open-browser')
-        end
-    },
 
     -- Session
     {
         'rmagatti/auto-session',
-        config =function ()
+        config = function ()
             require('alfonzm.plugins.auto-session')
         end
     },
@@ -289,7 +274,6 @@ local plugins = {
         },
         config = function()
             require('alfonzm.plugins.treesitter')
-            -- require('nvim-treesitter').setup()
         end,
     },
 
@@ -305,20 +289,12 @@ local plugins = {
         end,
     },
 
-    -- Indent blankline
-    -- {
-    --     'lukas-reineke/indent-blankline.nvim',
-    --     config = function()
-    --         require('alfonzm.plugins.indent-blankline')
-    --     end,
-    -- }
-
     -- Autopairs
     {
         'windwp/nvim-autopairs',
-        config = function()
-            require('nvim-autopairs').setup()
-        end,
+        opts = {
+            map_cr = true,
+        }
     },
 
     -- Bufferline
@@ -342,9 +318,7 @@ local plugins = {
     -- -- Color Highlighter
     -- {
     --     'norcalli/nvim-colorizer.lua',
-    --     config = function()
-    --         require 'colorizer'.setup()
-    --     end
+    --     config = true,
     -- },
 
     -- Markdown
@@ -367,24 +341,7 @@ local plugins = {
     { 'MaxMEllon/vim-jsx-pretty' },
     { 'styled-components/vim-styled-components' },
 
-    -- Goyo (focus mode)
-    {
-        'junegunn/goyo.vim',
-        config = function()
-            require('alfonzm.plugins.goyo')
-        end
-    },
-
-    -- ({
-    --     'glepnir/dashboard-nvim',
-    --     config = function ()
-    --         require('alfonzm.plugins.dashboard-nvim')
-    --     end
-    -- })
-
-    --  'mhinz/vim-startify'
-
-    -- Project Configuration.
+    -- Project Configuration
     {
         'tpope/vim-projectionist',
         dependencies = 'tpope/vim-dispatch',
@@ -438,7 +395,7 @@ local plugins = {
     -- CodeGPT
     { 'MunifTanjim/nui.nvim' },
     {
-        "dpayne/CodeGPT.nvim",
+        'dpayne/CodeGPT.nvim',
         reqruies = {
             'nvim-lua/plenary.nvim',
             'MunifTanjim/nui.nvim',
@@ -449,6 +406,4 @@ local plugins = {
     },
 }
 
-local opts = {}
-
-require('lazy').setup(plugins, opts)
+require('lazy').setup(plugins, {})

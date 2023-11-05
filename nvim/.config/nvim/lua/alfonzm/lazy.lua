@@ -104,12 +104,9 @@ local plugins = {
     {
         'tpope/vim-fugitive',
         dependencies = 'tpope/vim-rhubarb',
-        keys = {
-            { '<Leader>G', '<cmd>GBrowse<CR>', desc = 'Github browse' }
-        },
-        -- config = function()
-        --     require('alfonzm.plugins.vim-fugitive')
-        -- end
+        config = function()
+            require('alfonzm.plugins.vim-fugitive')
+        end
     },
 
     -- Git commit browser (:GV)

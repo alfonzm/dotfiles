@@ -1,7 +1,7 @@
 require("nvim-tree").setup({
     hijack_cursor = true,
     auto_reload_on_write = false,
-    disable_netrw = true,
+    disable_netrw = false,
     update_focused_file = {
         -- Expand focused file in tree
         enable = true

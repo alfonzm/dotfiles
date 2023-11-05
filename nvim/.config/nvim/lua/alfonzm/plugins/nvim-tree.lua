@@ -1,7 +1,7 @@
 require("nvim-tree").setup({
     hijack_cursor = true,
     auto_reload_on_write = false,
-    disable_netrw = false,
+    disable_netrw = false, -- required to be false for GBrowse/vim-rhubarb
     update_focused_file = {
         -- Expand focused file in tree
         enable = true

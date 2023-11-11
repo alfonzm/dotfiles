@@ -4,16 +4,6 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true })
 end
 
--- Move through panes with Ctrl+hjkl
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
-map('v', '<C-h>', '<C-w>h')
-map('v', '<C-j>', '<C-w>j')
-map('v', '<C-k>', '<C-w>k')
-map('v', '<C-l>', '<C-w>l')
-
 -- Exclude whitespace when doing $
 map('v', '$', '$h')
 

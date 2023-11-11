@@ -405,11 +405,20 @@ local plugins = {
         end,
     },
 
+    -- Oil
     {
         'stevearc/oil.nvim',
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons" },
-    }
+    },
+
+    -- Harpoon
+    {
+        'ThePrimeagen/harpoon',
+        config = function()
+            require('alfonzm.plugins.harpoon')
+        end,
+    },
 }
 
 require('lazy').setup(plugins, {})

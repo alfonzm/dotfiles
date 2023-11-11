@@ -20,7 +20,6 @@ local plugins = {
     { 'tpope/vim-speeddating'  },
     { 'tpope/vim-eunuch'       },
     { 'moll/vim-bbye'          },
-    { 'mbbill/undotree'        },
     { 'christoomey/vim-tmux-navigator' },
     { 'nelstrom/vim-visual-star-search' },
 
@@ -46,6 +45,14 @@ local plugins = {
             vim.g.gruvbox_material_foreground = 'original'
             vim.g.gruvbox_material_better_performance = 1
             vim.cmd([[colorscheme gruvbox-material]])
+        end
+    },
+
+    -- Undotree
+    {
+        'mbbill/undotree',
+        config = function()
+            require('alfonzm.plugins.undotree')
         end
     },
 

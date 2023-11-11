@@ -28,9 +28,11 @@ require('harpoon').setup ({
     }
 })
 
-vim.keymap.set('n', '<Leader>e', ui.toggle_quick_menu)
-vim.keymap.set('n', '<Leader>E', function() mark.add_file() print("Mark added to Harpoon: " .. vim.fn.expand("%")) end)
+vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
+vim.keymap.set('n', '<Leader>e', function() mark.add_file() print("Mark added to Harpoon: " .. vim.fn.expand("%")) end)
 vim.keymap.set('n', '<Leader>1', function() ui.nav_file(1) end, { desc = "Jump to 1st Harpoon mark" })
 vim.keymap.set('n', '<Leader>2', function() ui.nav_file(2) end, { desc = "Jump to 2nd Harpoon mark" })
 vim.keymap.set('n', '<Leader>3', function() ui.nav_file(3) end, { desc = "Jump to 3rd Harpoon mark" })
 vim.keymap.set('n', '<Leader>4', function() ui.nav_file(4) end, { desc = "Jump to 4th Harpoon mark" })
+vim.keymap.set('n', '<Leader>[', function() ui.nav_prev() end, { desc = "Jump to previous Harpoon mark" })
+vim.keymap.set('n', '<Leader>]', function() ui.nav_next() end, { desc = "Jump to next Harpoon mark" })

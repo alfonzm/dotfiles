@@ -40,7 +40,7 @@ require('telescope').setup({
             mappings = { -- extend mappings
                 i = {
                     ["<C-k>"]  = lga_actions.quote_prompt(),
-                    ["<C-i>"]  = lga_actions.quote_prompt({ postfix = " --iglob " }),
+                    ["<C-i>"]  = lga_actions.quote_prompt({ postfix = " --iglob **/" }),
                 },
             },
             -- Add hidden so live_grep includes hidden files, see:

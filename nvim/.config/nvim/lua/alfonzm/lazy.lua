@@ -22,6 +22,7 @@ local plugins = {
     { 'moll/vim-bbye'          },
     { 'christoomey/vim-tmux-navigator' },
     { 'nelstrom/vim-visual-star-search' },
+    { 'mg979/vim-visual-multi' },
 
     -- Color schemes
     {

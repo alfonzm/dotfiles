@@ -404,6 +404,12 @@ local plugins = {
             require('alfonzm.plugins.codegpt')
         end,
     },
+
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    }
 }
 
 require('lazy').setup(plugins, {})

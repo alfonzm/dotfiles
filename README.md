@@ -43,6 +43,14 @@ $ echo 'LICENSE-KEY' > ~/intelephense/licence.txt
 
 Run `:Copilot setup` to authorize Github Copilot account.
 
+#### Environment Variables
+
+Add necessary env variables to .zshenv:
+
+```
+cp ~/.dotfiles/zsh/.zshenv.example ~/.zshenv
+```
+
 #### MySQL
 1. Setup MySQL servers on Docker
 

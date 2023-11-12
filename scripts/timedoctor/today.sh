@@ -1,11 +1,13 @@
 #!/bin/bash
 
-source ~/.dotfiles/env/.env
-
 # TODO: If CACHE_FILE does not exist, create it with value '{ "daily": 0, "weekly": 0 }'
 
-# Set API parameters
+source ~/.zshenv
+
+# To retrieve a token: https://timedoctor.redoc.ly/#operation/authorizationLogin
 TOKEN="$TIMEDOCTOR_API_TOKEN"
+
+# Set API parameters
 # FROM="2023-05-03T00%3A00%3A00.00"
 # TO="2023-05-04T00%3A00%3A00.00"
 FROM=$(date "+%Y-%m-%dT00:00:00.00") # today 12am
@@ -16,14 +18,14 @@ SORT="date"
 PERIOD="days"
 TIMEZONE="Asia%2FManila"
 CACHE_FILE="/tmp/today.sh.txt"
-CACHE_DURATION_MIN=2
+CACHE_DURATION_MIN=0
 
 CURRENT_DATE=$(date "+%Y-%m-%dT%H:%M:%S")
 WEEK_START=$(date -j -v-Sun -v0H -v0M -v0S -f "%Y-%m-%dT%H:%M:%S" "$CURRENT_DATE" "+%Y-%m-%dT%H:%M:%S")
 WEEK_END=$(date -j -v+1w -v-Sun -v0H -v0M -v0S -f "%Y-%m-%dT%H:%M:%S" "$CURRENT_DATE" "+%Y-%m-%dT%H:%M:%S")
 
 if [[ -z "$TOKEN" ]]; then
-    echo "Invalid Timedoctor API token"
+    echo "No TIMEDOCTOR_API_TOKEN found"
     exit 1
 fi
 
@@ -36,6 +38,14 @@ else
     # Daily
     # Make API request and extract total seconds
     DAILY_JSON=$(curl -sX GET "https://api2.timedoctor.com/api/1.1/stats/total?token=$TOKEN&from=$FROM&to=$TO&user=$USER&company=$COMPANY&sort=$SORT&period=$PERIOD&timezone=$TIMEZONE" -H "Content-Type: application/json")
+
+    # check if response property "error" is equal to "invalidToken"
+    ERROR=$(echo "$DAILY_JSON" | jq -r '.error')
+    if [[ "$ERROR" == "invalidToken" ]]; then
+        echo "Invalid Timedoctor API token"
+        exit 1
+    fi
+
     # Get the daily total or default to 0
     TOTAL_SECS_DAY=$(echo "$DAILY_JSON" | jq -r '.data[0].total // "0"')
 

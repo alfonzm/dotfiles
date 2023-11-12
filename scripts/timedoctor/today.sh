@@ -18,7 +18,7 @@ SORT="date"
 PERIOD="days"
 TIMEZONE="Asia%2FManila"
 CACHE_FILE="/tmp/today.sh.txt"
-CACHE_DURATION_MIN=0
+CACHE_DURATION_MIN=2
 
 CURRENT_DATE=$(date "+%Y-%m-%dT%H:%M:%S")
 WEEK_START=$(date -j -v-Sun -v0H -v0M -v0S -f "%Y-%m-%dT%H:%M:%S" "$CURRENT_DATE" "+%Y-%m-%dT%H:%M:%S")

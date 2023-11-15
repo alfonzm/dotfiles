@@ -144,13 +144,13 @@ local plugins = {
         end
     },
 
-    -- Session
-    {
-        'rmagatti/auto-session',
-        config = function ()
-            require('alfonzm.plugins.auto-session')
-        end
-    },
+    -- -- Session
+    -- {
+    --     'rmagatti/auto-session',
+    --     config = function ()
+    --         require('alfonzm.plugins.auto-session')
+    --     end
+    -- },
 
     -- Vim Test
     {
@@ -404,7 +404,7 @@ local plugins = {
     { 'MunifTanjim/nui.nvim' },
     {
         'dpayne/CodeGPT.nvim',
-        reqruies = {
+        dependencies = {
             'nvim-lua/plenary.nvim',
             'MunifTanjim/nui.nvim',
         },

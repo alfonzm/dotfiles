@@ -55,6 +55,7 @@
 open "/Applications/Slack.app"
 open "/Applications/Google Chrome.app"
 open "/Applications/Alacritty.app"
+open "/Applications/MeetingBar.app"
 # open "/Applications/Docker.app"
 # open "/Applications/Sequel Ace.app"
 # open "/Applications/Sublime Text.app"

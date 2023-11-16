@@ -5,6 +5,7 @@
 source ~/.zshenv
 
 # To retrieve a token: https://timedoctor.redoc.ly/#operation/authorizationLogin
+# Add it to ~/.zshenv
 TOKEN="$TIMEDOCTOR_API_TOKEN"
 
 # Set API parameters

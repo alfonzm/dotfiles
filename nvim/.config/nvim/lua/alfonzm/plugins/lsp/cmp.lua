@@ -65,7 +65,11 @@ cmp.setup {
     },
     experimental = {
         -- Set to false so that it won't interfere with Github Copilot
-        -- Can set to true if not using Copilot 
+        -- Can set to true if not using Copilot
         ghost_text = false,
     }
 }
+
+-- Setup buffer completion for sql
+-- Source: https://github.com/kristijanhusak/vim-dadbod-completion
+vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })]]

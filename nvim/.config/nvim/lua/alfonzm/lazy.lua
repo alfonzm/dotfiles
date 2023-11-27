@@ -440,6 +440,23 @@ local plugins = {
             require('alfonzm.plugins.harpoon')
         end,
     },
+
+    {
+        'kristijanhusak/vim-dadbod-ui',
+        dependencies = {
+            { 'tpope/vim-dadbod', lazy = true },
+            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+        },
+        -- cmd = {
+        --     'DBUI',
+        --     'DBUIToggle',
+        --     'DBUIAddConnection',
+        --     'DBUIFindBuffer',
+        -- },
+        config = function()
+            require('alfonzm.plugins.vim-dadbod')
+        end,
+    }
 }
 
 require('lazy').setup(plugins, {})

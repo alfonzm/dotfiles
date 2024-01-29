@@ -17,3 +17,8 @@ windows:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
         panes:
             - nvm use 14
+    - tinker:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
+        panes:
+            - php artisan tinker
+

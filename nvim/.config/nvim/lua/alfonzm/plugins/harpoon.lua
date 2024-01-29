@@ -2,6 +2,9 @@ local ui = require('harpoon.ui')
 local mark = require('harpoon.mark')
 
 require('harpoon').setup ({
+    menu = {
+        width = 150
+    },
     global_settings = {
         -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
         save_on_toggle = false,
@@ -29,10 +32,13 @@ require('harpoon').setup ({
 })
 
 vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
-vim.keymap.set('n', '<Leader>e', function() mark.add_file() print("Mark added to Harpoon: " .. vim.fn.expand("%")) end)
+vim.keymap.set('n', '<Leader>e', function() mark.add_file() print("Mark added to Harpoon: " .. vim.fn.expand("%")) end, { desc = "Add current file to Harpoon" })
 vim.keymap.set('n', '<Leader>1', function() ui.nav_file(1) end, { desc = "Jump to 1st Harpoon mark" })
 vim.keymap.set('n', '<Leader>2', function() ui.nav_file(2) end, { desc = "Jump to 2nd Harpoon mark" })
 vim.keymap.set('n', '<Leader>3', function() ui.nav_file(3) end, { desc = "Jump to 3rd Harpoon mark" })
 vim.keymap.set('n', '<Leader>4', function() ui.nav_file(4) end, { desc = "Jump to 4th Harpoon mark" })
+vim.keymap.set('n', '<Leader>5', function() ui.nav_file(5) end, { desc = "Jump to 5th Harpoon mark" })
+vim.keymap.set('n', '<Leader>6', function() ui.nav_file(6) end, { desc = "Jump to 6th Harpoon mark" })
+
 vim.keymap.set('n', '<Leader>[', function() ui.nav_prev() end, { desc = "Jump to previous Harpoon mark" })
 vim.keymap.set('n', '<Leader>]', function() ui.nav_next() end, { desc = "Jump to next Harpoon mark" })

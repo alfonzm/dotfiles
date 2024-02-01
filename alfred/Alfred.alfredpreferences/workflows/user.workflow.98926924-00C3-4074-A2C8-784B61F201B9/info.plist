@@ -32,6 +32,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>34BC6F8A-7BFA-4B61-B18C-A7E09E8EB34D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BA8A92E6-7AB4-4008-BB90-A7E72A2331D4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Alfonz Montelibano</string>
@@ -131,7 +144,7 @@ docker restart es01 mysql8</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>killall "Time Doctor 2"
+				<string># killall "Time Doctor 2"
 killall "Docker"
 killall "Docker Desktop"
 killall "Sequel Ace"
@@ -143,7 +156,7 @@ killall "Sublime Text"
 killall "QuickTime Player"
 killall "Insomnia"
 
-quit "Time Doctor 2"
+pkill -f "Time Doctor 2"
 
 # /usr/local/bin/defaultbrowser safari
 
@@ -162,6 +175,27 @@ tmux kill-session -t contactout_build</string>
 			<string>BA8A92E6-7AB4-4008-BB90-A7E72A2331D4</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>wd</string>
+				<key>subtext</key>
+				<string>Tear down work environment, close all work-related apps.</string>
+				<key>text</key>
+				<string>Work Done</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>34BC6F8A-7BFA-4B61-B18C-A7E09E8EB34D</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -188,6 +222,13 @@ tmux kill-session -t contactout_build</string>
 			<integer>45</integer>
 			<key>ypos</key>
 			<integer>180</integer>
+		</dict>
+		<key>34BC6F8A-7BFA-4B61-B18C-A7E09E8EB34D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 		<key>BA8A92E6-7AB4-4008-BB90-A7E72A2331D4</key>
 		<dict>

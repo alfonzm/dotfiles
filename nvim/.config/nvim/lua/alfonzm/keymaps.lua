@@ -19,8 +19,8 @@ map('n', 'J', 'mzJ`z')
 map('n', 'Y', 'y$')
 
 -- Keep cursor centered when going next/prev
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
+-- map('n', 'n', 'nzzzv')
+-- map('n', 'N', 'Nzzzv')
 
 -- Keep cursor centered when going next/prev
 map('n', '<C-d>', '<C-d>z.')

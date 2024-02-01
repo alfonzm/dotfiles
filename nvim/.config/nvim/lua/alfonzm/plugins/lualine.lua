@@ -73,6 +73,21 @@ local gruvbox = {
 
 -- local default_color = { bg = colors.black, fg = colors.inactivegray }
 
+-- temporary because lualine branch shows \ at the start of the branch name
+local function current_git_branch()
+    local git_command = "git -C " .. vim.fn.getcwd() .. " branch --show-current 2>&1"  -- Run the Git command and redirect stderr to stdout
+    local handle = io.popen(git_command)
+    local result = handle:read("*a")  -- Read the command's output
+    handle:close()
+
+    -- Check if the result contains 'fatal: not a git repository' or similar error message
+    if result:match("fatal: not a git repository") then
+        return ""  -- Return empty if it's not a git repo
+    else
+        return result:gsub("\n$", "")  -- Remove trailing newline and return the branch name
+    end
+end
+
 require('lualine').setup({
     options = {
         theme = gruvbox,
@@ -88,7 +103,7 @@ require('lualine').setup({
         -- lualine_c = { "os.date('%H:%M:%S')"},
         lualine_c = { '' },
         lualine_x = { 'diagnostics' },
-        lualine_y = { 'branch' },
+        lualine_y = { { current_git_branch } },
         -- lualine_z = { "require'lsp-status'.status()" },
         lualine_z = {
             -- 'progress',

@@ -45,6 +45,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D2218F62-2036-43B2-97AD-5F6423D46DFA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Alfonz Montelibano</string>
@@ -69,7 +82,7 @@ open "/Applications/Slack.app"
 open "/Applications/Google Chrome.app"
 open "/Applications/Alacritty.app"
 open "/Applications/MeetingBar.app"
-# open "/Applications/Docker.app"
+open "/Applications/Docker.app"
 # open "/Applications/Sequel Ace.app"
 # open "/Applications/Sublime Text.app"
 # open "/Applications/Sublime Merge.app"
@@ -112,6 +125,27 @@ docker restart es01 mysql8</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>ws</string>
+				<key>subtext</key>
+				<string>Setup work environment, open work-related apps.</string>
+				<key>text</key>
+				<string>Work Start</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D2218F62-2036-43B2-97AD-5F6423D46DFA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -219,23 +253,30 @@ tmux kill-session -t contactout_build</string>
 		<key>2D1EFFEE-D4C9-4B32-89EA-0250A7B87D9A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>315</integer>
 		</dict>
 		<key>34BC6F8A-7BFA-4B61-B18C-A7E09E8EB34D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>460</integer>
 		</dict>
 		<key>BA8A92E6-7AB4-4008-BB90-A7E72A2331D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>265</integer>
+			<integer>270</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>315</integer>
+		</dict>
+		<key>D2218F62-2036-43B2-97AD-5F6423D46DFA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

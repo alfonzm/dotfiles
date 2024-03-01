@@ -6,9 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
+    lazypath, }) end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
@@ -151,9 +149,9 @@ local plugins = {
         opts = { options = vim.opt.sessionoptions:get() },
         -- stylua: ignore
         keys = {
-            { "<leader>qs", function() require("persistence").load() end, desc = "Restore Session" },
-            { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Restore Last Session" },
-            { "<leader>qd", function() require("persistence").stop() end, desc = "Don't Save Current Session" },
+            -- { "<leader>qs", function() require("persistence").load() end, desc = "Restore Session" },
+            -- { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Restore Last Session" },
+            -- { "<leader>qd", function() require("persistence").stop() end, desc = "Don't Save Current Session" },
         },
     },
 
@@ -426,12 +424,12 @@ local plugins = {
         end,
     },
 
-    -- Oil
-    {
-        'stevearc/oil.nvim',
-        opts = {},
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
+    -- -- Oil
+    -- {
+    --     'stevearc/oil.nvim',
+    --     opts = {},
+    --     dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- },
 
     -- Harpoon
     {
@@ -456,6 +454,15 @@ local plugins = {
         config = function()
             require('alfonzm.plugins.vim-dadbod')
         end,
+    },
+
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
     }
 }
 

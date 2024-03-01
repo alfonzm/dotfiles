@@ -1,7 +1,9 @@
 require('alfonzm.scripts.alternate')
 
-local function map(m, k, v)
-    vim.keymap.set(m, k, v, { silent = true })
+local function map(m, k, v, opts)
+    opts = opts or {}
+    opts['silent'] = true
+    vim.keymap.set(m, k, v, opts)
 end
 
 -- Exclude whitespace when doing $
@@ -83,7 +85,10 @@ map('n', '<Leader>w', ':update<CR>')
 map('n', '<Leader>q', ':Bdelete<CR>')
 
 -- Quick close window
-map('n', '<Leader>Q', ':q<CR>')
+map('n', '<Leader>Q', ':Bdelete!<CR>')
+
+-- Open new empty buffer
+map('n', '<Leader>n', ':enew<CR>')
 
 -- Close all other buffers except current one
 -- %bd! - force delete all buffers
@@ -91,7 +96,7 @@ map('n', '<Leader>Q', ':q<CR>')
 -- bd# - close the [No name] buffer that gets created
 -- NvimTreeOpen - reopen NvimTree
 -- <C-o> - move to the latest active buffer
-map('n', '<Leader>cb', ':%bd!<CR><C-o>:bd#|NvimTreeOpen<CR><C-o>')
+map('n', '<Leader>cb', ':%bd!<CR><C-o>:bd#|NvimTreeOpen<CR><C-o>', { desc = 'Close all other buffers except current one' })
 
 -- Close quickfix list
 map('n', '<Leader>cq', ':cclose<CR>')
@@ -138,6 +143,9 @@ map("v", ">", ">gv")
 
 -- Open scratchpad
 map('n', '<Leader>s', ':e ~/.alfonz_vim_scratchpad.md<CR>')
+
+-- Leader J sets syntax to JSON and formats the file with jq
+map('n', '<Leader>J', ':setf json<CR>:%!jq<CR>', { desc = 'Set syntax=json and format with jq' })
 
 -- Toggle between alternate XXXTest.php and XXX.php files
 vim.api.nvim_set_keymap('n', '<Leader>a', [[:lua require('alfonzm.scripts.alternate').toggle_test_file()<CR>]], { noremap = true, silent = true })

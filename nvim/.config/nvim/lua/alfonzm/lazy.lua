@@ -424,6 +424,21 @@ local plugins = {
         end,
     },
 
+    -- ChatGPT
+    {
+        "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        config = function()
+            require('alfonzm.plugins.chatgpt')
+        end,
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    },
+
     -- -- Oil
     -- {
     --     'stevearc/oil.nvim',
@@ -463,7 +478,27 @@ local plugins = {
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
         }
-    }
+    },
+
+    -- Nvim-jqx
+    {
+        "gennaro-tedesco/nvim-jqx",
+        ft = { "json", "yaml" },
+    },
+
+    -- Aerial
+    {
+        'stevearc/aerial.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons"
+        },
+        config = function()
+            require('alfonzm.plugins.aerial')
+        end,
+    },
 }
 
 require('lazy').setup(plugins, {})

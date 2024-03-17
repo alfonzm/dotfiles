@@ -44,6 +44,7 @@ brew install ffmpeg
 brew install imagemagick
 brew install mas-cli/tap/mas
 brew install peco
+brew install pngpaste
 brew install pv
 brew install ranger
 brew install ripgrep

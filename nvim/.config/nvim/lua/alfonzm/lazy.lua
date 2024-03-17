@@ -499,6 +499,24 @@ local plugins = {
             require('alfonzm.plugins.aerial')
         end,
     },
+
+    -- Obsidian
+    {
+        "epwalsh/obsidian.nvim",
+        version = "*",-- latest
+        lazy = true,
+        ft = "markdown",
+        event = {
+          "BufReadPre " .. vim.fn.expand "~" .. "/Obsidian/**.md"
+        },
+        dependencies = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require('alfonzm.plugins.obsidian')
+        end,
+    }
 }
 
 require('lazy').setup(plugins, {})

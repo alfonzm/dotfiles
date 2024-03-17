@@ -1,2 +1,7 @@
 export OPENAI_API_KEY=
 export TIMEDOCTOR_API_TOKEN=
+
+# For vim-dadbod-ui
+# Replace NAME with the connection name
+# https://github.com/kristijanhusak/vim-dadbod-ui?tab=readme-ov-file#through-environment-variables
+export DB_UI_NAME=mysql://user:password@localhost:3306/database_name

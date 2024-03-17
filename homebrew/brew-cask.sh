@@ -30,9 +30,10 @@ brew install --cask disk-inventory-x
 brew install --cask dropbox
 brew install --cask flux
 brew install --cask notion
+brew install --cask obsidian
 brew install --cask stats
-brew install --cask trash
 brew install --cask transmission
+brew install --cask trash
 brew install --cask vlc
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

@@ -10,6 +10,7 @@ brew upgrade
 
 # Development
 brew install alacritty
+brew install eza
 brew install git
 brew install git-delta
 brew install lazydocker

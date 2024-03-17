@@ -1,0 +1,16 @@
+# ~/.tmuxinator/co.yml
+
+name: finance
+
+windows:
+    - zsh:
+        root: /Users/alfonzm/Documents/Dev/Web/finance-2024
+    - server:
+        root: /Users/alfonzm/Documents/Dev/Web/finance-2024
+        panes:
+            - npm run dev
+            - php artisan serve
+    - finance-2024:
+        root: /Users/alfonzm/Documents/Dev/Web/finance-2024
+        panes:
+            - nvim

@@ -211,3 +211,6 @@ alias p="ping google.com"
 
 # Spotify
 alias spotify="tmuxinator spot"
+
+# LazySql
+alias lsq="lazysql"

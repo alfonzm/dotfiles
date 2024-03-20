@@ -12,10 +12,12 @@ cmp.setup {
     formatting = {
         format = lspkind.cmp_format({
             with_text = true,
+            show_labelDetails = true,
             menu = {
                 nvim_lsp = '[LSP]',
                 nvim_lua = '[Lua]',
-                buffer = '[Buf]'
+                buffer = '[Buf]',
+                ['vim-dadbod-completion'] = '[DB]',
             }
         })
     },

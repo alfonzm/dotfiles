@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>1FB9A8C1-CB8C-4DAD-8BEC-80480C1B07C3</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gh</string>
+			<key>text</key>
+			<string>GitHub User or Repo</string>
+			<key>url</key>
+			<string>https://github.com/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>257F33E4-44A5-480D-8216-1BC1E6F0CB1E</key>
 		<dict>
 			<key>enabled</key>
@@ -94,6 +107,19 @@
 			<string>ContactOut JIRA Card</string>
 			<key>url</key>
 			<string>https://contactout.atlassian.net/browse/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>BD6C9873-48A4-4CCE-8D48-769A8168B600</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>l</string>
+			<key>text</key>
+			<string>Google I'm Feeling Lucky</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q={query}&amp;btnI=&amp;sourceid=navclient&amp;gfns=1</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

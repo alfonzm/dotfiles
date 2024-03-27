@@ -80,6 +80,7 @@
   "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" },
   "vim-visual-multi": { "branch": "master", "commit": "aec289a9fdabaa0ee6087d044d75b32e12084344" },
   "vim-visual-star-search": { "branch": "master", "commit": "37259722f45996733fd309add61385a4ad88bdb9" },
+  "vimux": { "branch": "master", "commit": "f7c41607d9246ec4b6cc28587cce84d75d106e3e" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
   "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }

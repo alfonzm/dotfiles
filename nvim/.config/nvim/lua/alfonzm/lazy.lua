@@ -166,6 +166,9 @@ local plugins = {
     -- Vim Test
     {
         'vim-test/vim-test',
+        dependencies = {
+            'preservim/vimux',
+        },
         config = function()
             require('alfonzm.plugins.vim-test')
         end,

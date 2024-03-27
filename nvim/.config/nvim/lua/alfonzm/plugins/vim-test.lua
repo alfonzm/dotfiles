@@ -6,4 +6,7 @@ vim.keymap.set('n', '<Leader>tv', ':TestVisit<CR>')
 
 vim.g['test#neovim#term_position'] = 'vert'
 vim.g['test#php#phpunit#executable'] = 'vendor/bin/phpunit'
-vim.g['test#strategy'] = 'floaterm'
+vim.g['test#strategy'] = 'vimux'
+
+vim.g.VimuxOrientation = 'h'
+vim.g.VimuxWidth = '30'

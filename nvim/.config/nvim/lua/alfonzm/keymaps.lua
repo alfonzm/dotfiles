@@ -87,6 +87,10 @@ map('n', '<Leader>q', ':Bdelete<CR>')
 -- Quick close window
 map('n', '<Leader>Q', ':Bdelete!<CR>')
 
+-- Quick close neovim
+map('n', '<Leader>x', ':qa<CR>')
+map('n', '<Leader>X', ':qa!<CR>')
+
 -- Open new empty buffer
 map('n', '<Leader>n', ':enew<CR>')
 

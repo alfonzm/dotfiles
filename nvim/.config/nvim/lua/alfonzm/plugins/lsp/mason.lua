@@ -6,5 +6,6 @@ require('mason-lspconfig').setup({
         'tsserver',
         'html',
         'emmet_ls',
+        'gopls',
     }
 })

@@ -149,3 +149,13 @@ map('n', '<Leader>J', ':setf json<CR>:%!jq<CR>', { desc = 'Set syntax=json and f
 
 -- Toggle between alternate XXXTest.php and XXX.php files
 vim.api.nvim_set_keymap('n', '<Leader>a', [[:lua require('alfonzm.scripts.alternate').toggle_test_file()<CR>]], { noremap = true, silent = true })
+
+-- Motions on single quotes will also apply to backticks
+-- vim.api.nvim_set_keymap('n', 'ca\'', 'ca`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'ci\'', 'ci`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'vi\'', 'vi`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'va\'', 'va`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'di\'', 'di`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'da\'', 'da`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'yi\'', 'yi`', { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap('n', 'ya\'', 'ya`', { noremap = false, silent = true })

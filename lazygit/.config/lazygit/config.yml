@@ -17,9 +17,17 @@ gui:
     showBottomLine: false
     showIcons: false
     skipDiscardChangeWarning: true
-os:
-    editCommand: 'nvim'
 git:
     paging:
         colorArg: never
         pager: delta --dark --paging=never
+
+# This will use neovim as editor when pressing e on a file/hunk.
+# If lazygit was opened via neovim floaterm, it will open using the host neovim instance.
+# Source: https://github.com/jesseduffield/lazygit/issues/996
+# TODO: Fix bug where pressing e on a file while it's open on neovim doesn't close lazygit
+os:
+  edit: 'nvim --server "$NVIM" --remote-tab {{filename}}'
+  editAtLine: 'nvim --server "$NVIM" --remote-tab {{filename}}; [ -z "$NVIM" ] || nvim --server "$NVIM" --remote-send ":{{line}}<CR>"'
+  editAtLineAndWait: 'nvim +{{line}} {{filename}}'
+promptToReturnFromSubprocess: false

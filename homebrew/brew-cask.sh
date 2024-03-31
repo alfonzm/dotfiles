@@ -3,16 +3,17 @@
 # Update May 2021: Cask is now built-in in Homebrew.
 
 # Essentials / Daily use
-brew install --cask itsycal
 brew install --cask figma
 brew install --cask firefox
 brew install --cask franz
 brew install --cask google-chrome
+brew install --cask itsycal
 brew install --cask karabiner-elements
 brew install --cask meetingbar
+brew install --cask nikitabobko/tap/aerospace
 brew install --cask slack
-brew install --cask steam
 brew install --cask spotify
+brew install --cask steam
 brew install --cask zoom
 
 # Development

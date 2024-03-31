@@ -115,3 +115,4 @@ export PATH="$PATH:/Users/alfonzm/.local/bin"
 # Go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin

@@ -95,6 +95,7 @@ vim.keymap.set('n', '<C-g>', ':Telescope git_status<CR>')
 vim.keymap.set('n', '<Leader>H', ':Telescope oldfiles<CR>')
 vim.keymap.set('n', '<Leader>R', ':Telescope treesitter<CR>imethod <Esc>', { desc = 'Search for method in buffer, similar to Sublime Text Cmd+R'})
 vim.keymap.set('n', '<Leader>b', ':Telescope buffers<CR>')
+vim.keymap.set('n', '<Leader>D', ':Telescope diagnostics<CR>')
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('live_grep_args')

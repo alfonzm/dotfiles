@@ -89,7 +89,6 @@ Yabai
 ## TODO
 
 - Ansible
-- Stow bin directory?
 - Script for installing npm default-packages (see nvm directory)
 - Script for installing pip plugins. For now, manually install the ff:
   - `python3 -m pip install pynvim` — required for some nvim plugins

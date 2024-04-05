@@ -191,7 +191,7 @@ local plugins = {
     },
 
     -- Icons
-    { 'kyazdani42/nvim-web-devicons' },
+    { 'nvim-tree/nvim-web-devicons' },
 
     -- LSP servers
     {
@@ -303,7 +303,7 @@ local plugins = {
     {
         'nvim-lualine/lualine.nvim',
         dependencies = {
-            'kyazdani42/nvim-web-devicons',
+            'nvim-tree/nvim-web-devicons',
             'nvim-lua/lsp-status.nvim',
         },
         config = function()
@@ -322,7 +322,7 @@ local plugins = {
     -- Bufferline
     {
         'akinsho/bufferline.nvim',
-        dependencies = 'kyazdani42/nvim-web-devicons',
+        dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('alfonzm.plugins.bufferline')
         end,
@@ -330,8 +330,8 @@ local plugins = {
 
     -- Nvim Tree
     {
-        'kyazdani42/nvim-tree.lua',
-        dependencies = 'kyazdani42/nvim-web-devicons',
+        'nvim-tree/nvim-tree.lua',
+        dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('alfonzm.plugins.nvim-tree')
         end,
@@ -457,40 +457,6 @@ local plugins = {
         end,
     },
 
-    {
-        'kristijanhusak/vim-dadbod-ui',
-        dependencies = {
-            { 'tpope/vim-dadbod', lazy = true },
-            {
-                'kristijanhusak/vim-dadbod-completion',
-                ft = {
-                    'sql',
-                    'mysql',
-                    'plsql',
-                },
-                lazy = true,
-            },
-        },
-        -- cmd = {
-        --     'DBUI',
-        --     'DBUIToggle',
-        --     'DBUIAddConnection',
-        --     'DBUIFindBuffer',
-        -- },
-        config = function()
-            require('alfonzm.plugins.vim-dadbod')
-        end,
-    },
-
-    {
-        "folke/zen-mode.nvim",
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
-    },
-
     -- Nvim-jqx
     {
         "gennaro-tedesco/nvim-jqx",
@@ -510,24 +476,6 @@ local plugins = {
             require('alfonzm.plugins.aerial')
         end,
     },
-
-    -- Obsidian
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*",-- latest
-        lazy = true,
-        ft = "markdown",
-        event = {
-          "BufReadPre " .. vim.fn.expand "~" .. "/Obsidian/**.md"
-        },
-        dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-        },
-        config = function()
-            require('alfonzm.plugins.obsidian')
-        end,
-    }
 }
 
 require('lazy').setup(plugins, {})

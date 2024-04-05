@@ -29,14 +29,30 @@ end, {silent = true, noremap = true})
 
 -- Your existing setup for Aerial
 require("aerial").setup({
-    backends = { "treesitter", "lsp" },
-    -- filter_kind = false,
+    backends = {
+        "treesitter",
+        "lsp",
+        "markdown",
+    },
+    -- show_guides = true,
+    resize_to_content = true,
+    filter_kind = {
+        "Class",
+        "Constructor",
+        "Enum",
+        "Function",
+        "Interface",
+        "Module",
+        "Method",
+        "Struct",
+    },
+    nerd_font = true,
 })
 vim.keymap.set("n", "<leader>A", "<cmd>AerialToggle<CR>")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "aerial",
-  callback = function()
-    vim.opt_local.fillchars = { fold = " ", eob = " " }
-  end,
+    pattern = "aerial",
+    callback = function()
+        vim.opt_local.fillchars = { fold = " ", eob = " " }
+    end,
 })

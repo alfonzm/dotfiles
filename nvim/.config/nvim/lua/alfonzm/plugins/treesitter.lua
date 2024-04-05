@@ -12,6 +12,8 @@ require('nvim-treesitter.configs').setup {
         'yaml',
         'http',
         'sql',
+        'markdown',
+        'markdown_inline',
     },
     highlight = {
         enable = true,
@@ -24,9 +26,9 @@ require('nvim-treesitter.configs').setup {
     autotag = {
         enable = true
     },
-    context_commentstring = {
-        enable = true
-    },
+    -- context_commentstring = {
+    --     enable = true
+    -- },
     playground = { enable = true },
     textobjects = {
         select = {

@@ -99,3 +99,4 @@ vim.keymap.set('n', '<Leader>D', ':Telescope diagnostics<CR>')
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('live_grep_args')
+require('telescope').load_extension('aerial')

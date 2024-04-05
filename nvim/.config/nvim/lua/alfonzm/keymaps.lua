@@ -163,3 +163,6 @@ vim.api.nvim_set_keymap('n', '<Leader>a', [[:lua require('alfonzm.scripts.altern
 -- vim.api.nvim_set_keymap('n', 'da\'', 'da`', { noremap = false, silent = true })
 -- vim.api.nvim_set_keymap('n', 'yi\'', 'yi`', { noremap = false, silent = true })
 -- vim.api.nvim_set_keymap('n', 'ya\'', 'ya`', { noremap = false, silent = true })
+
+map('n', 'Q', '@qj', { desc = 'Replay macro q and move down' })
+map('x', 'Q', ':norm @qj<CR>', { desc = 'Replay macro on selected lines' })

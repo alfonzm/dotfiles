@@ -285,7 +285,7 @@
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Ragna Warps</string>
 	<key>objects</key>

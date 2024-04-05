@@ -15,11 +15,8 @@ local plugins = {
     { 'tpope/vim-surround'     },
     { 'tpope/vim-repeat'       },
     { 'tpope/vim-unimpaired'   },
-    { 'tpope/vim-speeddating'  },
-    { 'tpope/vim-eunuch'       },
     { 'moll/vim-bbye'          },
     { 'christoomey/vim-tmux-navigator' },
-    { 'nelstrom/vim-visual-star-search' },
     { 'mg979/vim-visual-multi' },
 
     -- Color schemes
@@ -62,7 +59,6 @@ local plugins = {
             require('alfonzm.plugins.vim-floaterm')
         end
     },
-
 
     -- gS or gD to smart split/join lines
     {
@@ -123,14 +119,6 @@ local plugins = {
         'lewis6991/gitsigns.nvim',
         config = function()
             require('alfonzm.plugins.gitsigns')
-        end
-    },
-
-    -- Git Blamer
-    {
-        'APZelos/blamer.nvim',
-        config = function()
-            require('alfonzm.plugins.blamer')
         end
     },
 

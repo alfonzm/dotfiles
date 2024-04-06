@@ -14,6 +14,8 @@ require('nvim-treesitter.configs').setup {
         'sql',
         'markdown',
         'markdown_inline',
+        'vim',
+        'vimdoc',
     },
     highlight = {
         enable = true,

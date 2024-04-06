@@ -62,7 +62,10 @@ require('bufferline').setup {
         show_buffer_icons = false,
         show_close_icon = false,
         show_buffer_close_icons = false,
-        numbers = 'buffer_id',
+        numbers = function(opts)
+            -- number only without dot
+            return string.format('%s', opts.id)
+        end,
         separator_style = { "", "" },
         offsets = {
             {

@@ -464,6 +464,16 @@ local plugins = {
             require('alfonzm.plugins.aerial')
         end,
     },
+
+    -- Oil.nvim
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require('alfonzm.plugins.oil')
+        end,
+    }
 }
 
 require('lazy').setup(plugins, {})

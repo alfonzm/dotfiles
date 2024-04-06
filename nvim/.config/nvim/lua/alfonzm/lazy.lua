@@ -143,13 +143,13 @@ local plugins = {
         },
     },
 
-    -- -- Session
-    -- {
-    --     'rmagatti/auto-session',
-    --     config = function ()
-    --         require('alfonzm.plugins.auto-session')
-    --     end
-    -- },
+    -- Session
+    {
+        'rmagatti/auto-session',
+        config = function ()
+            require('alfonzm.plugins.auto-session')
+        end
+    },
 
     -- Vim Test
     {

@@ -149,7 +149,6 @@ function shutup() {
 
 # Docker
 alias dc="docker-compose"
-alias ld="docker-compose"
 
 # Laravel sail
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'

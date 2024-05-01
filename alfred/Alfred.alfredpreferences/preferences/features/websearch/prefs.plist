@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>20743687-AF73-486C-863B-0692699F764F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>pr</string>
+			<key>text</key>
+			<string>ContactOut GitHub PR</string>
+			<key>url</key>
+			<string>https://github.com/contactout/contactout_website/pull/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>257F33E4-44A5-480D-8216-1BC1E6F0CB1E</key>
 		<dict>
 			<key>enabled</key>

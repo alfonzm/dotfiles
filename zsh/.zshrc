@@ -68,8 +68,8 @@ export CLICOLOR=1
 source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 # History
-HISTFILESIZE=5000
-SAVEHIST=5000
+HISTFILESIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt inc_append_history
 setopt share_history
@@ -116,3 +116,5 @@ export PATH="$PATH:/Users/alfonzm/.local/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"

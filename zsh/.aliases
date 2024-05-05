@@ -218,3 +218,6 @@ alias lsq="lazysql"
 
 # LazyDB
 alias ld="lazydb"
+
+# Format JSON into pretty print
+alias jj="pbpaste | jq '.' | pbcopy"

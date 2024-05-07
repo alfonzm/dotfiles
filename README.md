@@ -94,3 +94,4 @@ Yabai
   - `python3 -m pip install pynvim` — required for some nvim plugins
   - `pip install lookatme`
 - [Fix for git-delta PHP syntax highlighting](https://github.com/dandavison/delta/issues/162#issuecomment-625952288)
+- Optimize vim delays [1](https://new.reddit.com/r/neovim/comments/1cjn94h/fully_eliminate_o_delay/) [2](https://new.reddit.com/r/neovim/comments/1cjnf0m/fully_eliminate_gds_delay/)

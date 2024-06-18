@@ -47,6 +47,11 @@ else
         exit 1
     fi
 
+    if [[ "$ERROR" == "expiredToken" ]]; then
+        echo "Timedoctor token expired"
+        exit 1
+    fi
+
     # Get the daily total or default to 0
     TOTAL_SECS_DAY=$(echo "$DAILY_JSON" | jq -r '.data[0].total // "0"')
 

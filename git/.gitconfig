@@ -40,11 +40,11 @@
 [diff]
   colorMoved = default
 
-[delta "decorations"]
-  commit-decoration-style = bold yellow box ul
-  file-style = bold yellow ul
-  file-decoration-style = none
-  hunk-header-decoration-style = cyan box ul
+; [delta "decorations"]
+;   commit-decoration-style = bold yellow box ul
+;   file-style = bold yellow ul
+;   file-decoration-style = none
+;   hunk-header-decoration-style = cyan box ul
 
 [delta "line-numbers"]
   line-numbers-minus-style = auto "#542426"

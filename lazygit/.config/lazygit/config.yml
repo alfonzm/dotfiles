@@ -21,6 +21,7 @@ git:
     paging:
         colorArg: never
         pager: delta --dark --paging=never
+    disableForcePushing: true
 
 # This will use neovim as editor when pressing e on a file/hunk.
 # If lazygit was opened via neovim floaterm, it will open using the host neovim instance.

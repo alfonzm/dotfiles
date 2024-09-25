@@ -9,16 +9,29 @@ windows:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
         panes:
             - nvim
-    - extension_app:
-        root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
-        panes:
-            - nvm use 14
-    - chrome_extension:
-        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
-        panes:
-            - nvm use 14
     - tinker:
         root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
         panes:
             - php artisan tinker
+    - rest:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_rest
+        panes:
+            - nvim
+    - lazydb:
+        root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
+        panes:
+            - lazydb
 
+    # - extension_app:
+    #     root: /Users/alfonzm/Work/ContactOut/Dev/extension_app
+    #     panes:
+    #         - nvm use 14
+    # - chrome_extension:
+    #     root: /Users/alfonzm/Work/ContactOut/Dev/contactout_chrome_extension
+    #     panes:
+    #         - nvm use 14
+    # - tinker:
+    #     root: /Users/alfonzm/Work/ContactOut/Dev/contactout_website/
+    #     panes:
+    #         - php artisan tinker
+    #

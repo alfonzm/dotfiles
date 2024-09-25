@@ -41,7 +41,6 @@ alias vim='nvim'
 alias vimorig='/usr/bin/vim'
 alias dot="cd ~/.dotfiles && nvim"
 alias rest="cd ~/.rest-nvim && nvim"
-alias notes="cd ~/Documents/Notes/Nota && nvim"
 alias nota="cd ~/Documents/Notes/Nota && nvim"
 alias tinker="z contactout_website; php artisan tinker"
 

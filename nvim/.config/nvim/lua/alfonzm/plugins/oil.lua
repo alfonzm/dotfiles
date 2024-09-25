@@ -1,6 +1,6 @@
 require("oil").setup({
     buf_options = {
-        buflisted = true,
+        buflisted = false,
     },
     view_options = {
         show_hidden = true,

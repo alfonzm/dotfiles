@@ -50,6 +50,9 @@ map('v', '<Leader>P', '\"0P')
 map('n', '<Leader>d', '\"_d')
 map('v', '<Leader>d', '\"_d')
 
+-- Select all
+map('n', '<Leader><Leader>', 'ggVG')
+
 -- Indent right away after pasting
 map('n', 'p', 'p==')
 

@@ -45,6 +45,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7562DC37-FD52-48AE-8A0D-690F64EB2BDA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C4C03C0-EDA1-40BB-9FCB-BB63FB5D9EB8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D2218F62-2036-43B2-97AD-5F6423D46DFA</key>
 		<array>
 			<dict>
@@ -69,6 +82,27 @@
 	<string>Work</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>work start</string>
+				<key>subtext</key>
+				<string>Setup work environment, open work-related apps.</string>
+				<key>text</key>
+				<string>Work Start</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -113,20 +147,43 @@ docker restart es01 mysql8</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>work start</string>
+				<string>cw</string>
 				<key>subtext</key>
-				<string>Setup work environment, open work-related apps.</string>
+				<string>Copies https://contactout_website.test/ to clipboard</string>
 				<key>text</key>
-				<string>Work Start</string>
+				<string>Copy Local ContactOut Website URL to Clipboard</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<string>7562DC37-FD52-48AE-8A0D-690F64EB2BDA</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "https://contactout_website.test/" | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1C4C03C0-EDA1-40BB-9FCB-BB63FB5D9EB8</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -179,8 +236,8 @@ docker restart es01 mysql8</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string># killall "Time Doctor 2"
-killall "Docker"
-killall "Docker Desktop"
+# killall "Docker"
+# killall "Docker Desktop"
 killall "Sequel Ace"
 killall "Brave Browser"
 killall "Slack"
@@ -189,6 +246,7 @@ killall "Sublime Merge"
 killall "Sublime Text"
 killall "QuickTime Player"
 killall "Insomnia"
+killall "Ray"
 
 pkill -f "Time Doctor 2"
 
@@ -243,6 +301,13 @@ tmux kill-session -t contactout_build</string>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
+		<key>1C4C03C0-EDA1-40BB-9FCB-BB63FB5D9EB8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>600</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
 			<key>xpos</key>
@@ -263,6 +328,13 @@ tmux kill-session -t contactout_build</string>
 			<integer>50</integer>
 			<key>ypos</key>
 			<integer>460</integer>
+		</dict>
+		<key>7562DC37-FD52-48AE-8A0D-690F64EB2BDA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>450</integer>
+			<key>ypos</key>
+			<integer>115</integer>
 		</dict>
 		<key>BA8A92E6-7AB4-4008-BB90-A7E72A2331D4</key>
 		<dict>

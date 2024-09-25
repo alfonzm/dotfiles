@@ -6,6 +6,19 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>23EB0CF1-41EC-4574-81A1-6FCC2D3CF919</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7A0088FF-45D2-4131-96BD-4F3FE4839C02</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<array>
 			<dict>
@@ -23,34 +36,13 @@
 	<key>createdby</key>
 	<string>Alfonz Montelibano</string>
 	<key>description</key>
-	<string>Get Linkedin URL from clipboard, and copy just the linkedin vanity username</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Linkedin Vanity Parser</string>
+	<string>ContactOut Work Shortcuts</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>vanity</string>
-				<key>subtext</key>
-				<string>Copy Linkedin Vanity from Linkedin URL in clipboar</string>
-				<key>text</key>
-				<string>Linkedin Vanity from URL</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -91,6 +83,77 @@ pbpaste</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>vanity</string>
+				<key>subtext</key>
+				<string>Copy Linkedin Vanity from Linkedin URL in clipboar</string>
+				<key>text</key>
+				<string>Linkedin Vanity from URL</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>#!/bin/bash
+
+# Get the text (LinkedIn URL) from the clipboard
+token=$(pbpaste)
+
+# Put the extracted username into the clipboard
+echo "https://contactout_website.test/profile/activation?code=$token" | tr -d \\n | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7A0088FF-45D2-4131-96BD-4F3FE4839C02</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>activate</string>
+				<key>subtext</key>
+				<string>Copies register activation link to clipboard based on email_activations token from clipboard</string>
+				<key>text</key>
+				<string>Activate ContactOut user</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>23EB0CF1-41EC-4574-81A1-6FCC2D3CF919</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -103,12 +166,26 @@ pbpaste</string>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
+		<key>23EB0CF1-41EC-4574-81A1-6FCC2D3CF919</key>
+		<dict>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>50</integer>
 			<key>ypos</key>
 			<integer>50</integer>
+		</dict>
+		<key>7A0088FF-45D2-4131-96BD-4F3FE4839C02</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>245</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

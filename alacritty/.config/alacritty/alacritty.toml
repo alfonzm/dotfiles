@@ -1,0 +1,228 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001p"
+key = "LBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001p"
+key = "H"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001n"
+key = "RBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001n"
+key = "L"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001,"
+key = "Comma"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00011"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00012"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00013"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00014"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00015"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00016"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00017"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00018"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00019"
+key = "Key9"
+mods = "Command"
+
+[general]
+live_config_reload = true
+
+[colors.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.cursor]
+cursor = "#a89984"
+text = "#fbf1c7"
+
+[colors.dim]
+black = "#32302f"
+blue = "#076678"
+cyan = "#427b58"
+green = "#79740e"
+magenta = "#8f3f71"
+red = "#9d0006"
+white = "#928374"
+yellow = "#b57614"
+
+[colors.normal]
+black = "#282828"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.primary]
+background = "#282828"
+bright_foreground = "#fbf1c7"
+dim_foreground = "#a89984"
+foreground = "#ebdbb2"
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[cursor.style]
+shape = "Block"
+
+[cursor.vi_mode_style]
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "DankMono Nerd Font"
+style = "Regular"
+
+[font.glyph_offset]
+x = 0
+y = 2
+
+[font.italic]
+family = "DankMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "DankMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 7
+
+# [mouse.hints]
+# modifiers = "Command"
+#
+# [mouse.hints.launcher]
+# program = "open"
+
+[schemes.gruvbox256.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[schemes.gruvbox256.cursor]
+cursor = "#a89984"
+text = "#fbf1c7"
+
+[schemes.gruvbox256.dim]
+black = "#32302f"
+blue = "#076678"
+cyan = "#427b58"
+green = "#79740e"
+magenta = "#8f3f71"
+red = "#9d0006"
+white = "#928374"
+yellow = "#b57614"
+
+[schemes.gruvbox256.normal]
+black = "#282828"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[schemes.gruvbox256.primary]
+background = "#282828"
+bright_foreground = "#fbf1c7"
+dim_foreground = "#a89984"
+foreground = "#ebdbb2"
+
+[schemes.gruvbox256.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[schemes.gruvbox256.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ''',│`|:"' ()[]{}<>	'''
+
+[window]
+decorations = "none"
+opacity = 1
+
+[window.padding]
+x = 24
+y = 24
+
+[keyboard]

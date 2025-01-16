@@ -18,6 +18,7 @@ require('nvim-treesitter.configs').setup {
         'vim',
         'vimdoc',
         'graphql',
+        'blade',
     },
     highlight = {
         enable = true,
@@ -48,6 +49,24 @@ require('nvim-treesitter.configs').setup {
             },
         },
     },
+}
+
+-- Blade templates
+vim.filetype.add({
+    pattern = {
+        [".*%.blade%.php"] = "blade",
+    },
+})
+
+-- Blade
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+parser_config.blade = {
+    install_info = {
+        url = "https://github.com/EmranMR/tree-sitter-blade",
+        files = { "src/parser.c" },
+        branch = "main",
+    },
+    filetype = "blade",
 }
 
 -- jessarcher

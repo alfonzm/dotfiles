@@ -476,8 +476,8 @@ local plugins = {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require('alfonzm.plugins.oil')
-        end,
-    }
+        end
+    },
 }
 
 require('lazy').setup(plugins, {})

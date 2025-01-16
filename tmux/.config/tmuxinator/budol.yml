@@ -1,0 +1,22 @@
+# ~/.tmuxinator/budol.yml
+
+name: budol
+
+windows:
+    - zsh:
+        root: /Users/alfonzm/Documents/Dev/Web/budol-2024
+    - budol-2024:
+        root: /Users/alfonzm/Documents/Dev/Web/budol-2024
+        panes:
+            - nvim
+    - shopee-scraper:
+        root: /Users/alfonzm/Documents/Dev/Web/shopee-scraper-extension
+        panes:
+            - nvim
+    - server:
+        root: /Users/alfonzm/Documents/Dev/Web/budol-2024
+        layout: main-horizontal
+        panes:
+        - php artisan serve
+        - npm run dev
+        - cd /Users/alfonzm/Documents/Dev/Web/shopee-scraper-extension && npm run dev

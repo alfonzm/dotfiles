@@ -55,7 +55,7 @@ end
 local servers = {
     'html',
     -- 'intelephense',
-    'tsserver',
+    'ts_ls',
     -- 'emmet_ls',
     -- 'volar',
     -- 'tailwindcss',
@@ -69,7 +69,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Custom configurations (make sure to call on_attach and capabilities on each)
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },

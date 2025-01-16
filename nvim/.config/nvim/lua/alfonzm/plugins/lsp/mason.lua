@@ -3,7 +3,7 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         'lua_ls',
         'intelephense',
-        'tsserver',
+        'ts_ls',
         'html',
         'emmet_ls',
         'gopls',

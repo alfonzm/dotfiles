@@ -86,3 +86,13 @@ zsh-up-history() {
 zsh-down-history() {
   zle .down-line-or-history
 }
+
+csv_to_parquet() {
+    file_path="$1"
+    duckdb -c "COPY (SELECT * FROM read_csv_auto('$file_path')) TO '${file_path%.*}.parquet' (FORMAT PARQUET);"
+}
+
+parquet_to_csv() {
+    file_path="$1"
+    duckdb -c "COPY (SELECT * FROM '$file_path') TO '${file_path%.*}.csv' (HEADER, FORMAT 'csv');"
+}

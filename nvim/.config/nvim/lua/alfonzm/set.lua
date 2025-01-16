@@ -131,3 +131,7 @@ vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch
 
 -- Disable fold
 vim.o.foldenable = false
+
+-- Allows Ctrl+o to reopen closed buffer
+-- https://github.com/neovim/neovim/issues/28968#issuecomment-2136522556
+vim.o.jumpoptions = 'stack'

@@ -84,7 +84,6 @@ vim.o.splitright = true
 vim.o.scrolloff = 12
 
 -- Add marker at column position to prevent long lines of code
-vim.o.colorcolumn = 80
 vim.o.signcolumn = 'yes'
 
 -- Remove vertical split character
@@ -98,7 +97,7 @@ vim.opt.fillchars = {
 }
 
 -- Set 256 color
-vim.o.t_Co = 256
+-- vim.o.t_Co = '256'
 
 -- Enable vimrc for specific projects
 -- https://akrabat.com/using-vimrc-for-project-specific-settings/
@@ -115,8 +114,8 @@ vim.o.termguicolors = true
 -- highlight
 -- highlight Comment cterm = italic gui = italic
 
-vim.o.t_ZH = '[3m'
-vim.o.t_ZR = '[23m'
+-- vim.o.t_ZH = '[3m'
+-- vim.o.t_ZR = '[23m'
 
 -- Disable continuation of comment on next line
 vim.cmd[[autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro]]

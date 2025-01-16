@@ -111,9 +111,6 @@ local plugins = {
         end
     },
 
-    -- Git commit browser (:GV)
-    { 'junegunn/gv.vim' },
-
     -- Git Signs
     {
         'lewis6991/gitsigns.nvim',
@@ -133,14 +130,6 @@ local plugins = {
         },
         config = function ()
             require('octo').setup()
-        end
-    },
-
-    -- Git diffs
-    {
-        'TimUntersberger/neogit',
-        config = function()
-            require('alfonzm.plugins.neogit')
         end
     },
 

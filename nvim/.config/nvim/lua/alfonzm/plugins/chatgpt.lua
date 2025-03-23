@@ -17,4 +17,4 @@ require('chatgpt').setup({
     },
 })
 
-vim.api.nvim_set_keymap('n', '<Leader>C', ':ChatGPT<CR>', { noremap = true, silent = true, desc = 'ChatGPT' })
+-- vim.api.nvim_set_keymap('n', '<Leader>C', ':ChatGPT<CR>', { noremap = true, silent = true, desc = 'ChatGPT' })

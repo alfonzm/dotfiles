@@ -406,17 +406,31 @@ local plugins = {
         end,
     },
 
-    -- CodeGPT
-    { 'MunifTanjim/nui.nvim' },
+    -- -- CodeGPT
+    -- { 'MunifTanjim/nui.nvim' },
+    -- {
+    --     'dpayne/CodeGPT.nvim',
+    --     dependencies = {
+    --         'nvim-lua/plenary.nvim',
+    --         'MunifTanjim/nui.nvim',
+    --     },
+    --     config = function()
+    --         require('alfonzm.plugins.codegpt')
+    --     end,
+    -- },
+
+    -- CopilotChat
     {
-        'dpayne/CodeGPT.nvim',
+        "CopilotC-Nvim/CopilotChat.nvim",
         dependencies = {
-            'nvim-lua/plenary.nvim',
-            'MunifTanjim/nui.nvim',
+            { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
         },
-        config = function()
-            require('alfonzm.plugins.codegpt')
-        end,
+        build = "make tiktoken", -- Only on MacOS or Linux
+        opts = {},
+        keys = {
+            { "<leader>C", ":CopilotChatToggle<CR>", desc = "Toggle Copilot Chat" },
+        },
     },
 
     -- ChatGPT

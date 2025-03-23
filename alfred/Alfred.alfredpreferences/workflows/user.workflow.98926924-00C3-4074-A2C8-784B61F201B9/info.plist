@@ -247,13 +247,13 @@ killall "Sublime Text"
 killall "QuickTime Player"
 killall "Insomnia"
 killall "Ray"
+killall "TablePlus"
+killall "Cursor"
+killall "Sublime Text"
 
 pkill -f "Time Doctor 2"
 
-# /usr/local/bin/defaultbrowser safari
-
-tmux kill-session -t contactout
-tmux kill-session -t contactout_build</string>
+# /usr/local/bin/defaultbrowser safari</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

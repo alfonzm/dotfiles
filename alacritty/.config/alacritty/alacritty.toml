@@ -165,53 +165,53 @@ y = 7
 # [mouse.hints.launcher]
 # program = "open"
 
-[schemes.gruvbox256.bright]
-black = "#928374"
-blue = "#83a598"
-cyan = "#8ec07c"
-green = "#b8bb26"
-magenta = "#d3869b"
-red = "#fb4934"
-white = "#ebdbb2"
-yellow = "#fabd2f"
-
-[schemes.gruvbox256.cursor]
-cursor = "#a89984"
-text = "#fbf1c7"
-
-[schemes.gruvbox256.dim]
-black = "#32302f"
-blue = "#076678"
-cyan = "#427b58"
-green = "#79740e"
-magenta = "#8f3f71"
-red = "#9d0006"
-white = "#928374"
-yellow = "#b57614"
-
-[schemes.gruvbox256.normal]
-black = "#282828"
-blue = "#83a598"
-cyan = "#8ec07c"
-green = "#b8bb26"
-magenta = "#d3869b"
-red = "#fb4934"
-white = "#ebdbb2"
-yellow = "#fabd2f"
-
-[schemes.gruvbox256.primary]
-background = "#282828"
-bright_foreground = "#fbf1c7"
-dim_foreground = "#a89984"
-foreground = "#ebdbb2"
-
-[schemes.gruvbox256.selection]
-background = "CellForeground"
-text = "CellBackground"
-
-[schemes.gruvbox256.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
+# [schemes.gruvbox256.bright]
+# black = "#928374"
+# blue = "#83a598"
+# cyan = "#8ec07c"
+# green = "#b8bb26"
+# magenta = "#d3869b"
+# red = "#fb4934"
+# white = "#ebdbb2"
+# yellow = "#fabd2f"
+#
+# [schemes.gruvbox256.cursor]
+# cursor = "#a89984"
+# text = "#fbf1c7"
+#
+# [schemes.gruvbox256.dim]
+# black = "#32302f"
+# blue = "#076678"
+# cyan = "#427b58"
+# green = "#79740e"
+# magenta = "#8f3f71"
+# red = "#9d0006"
+# white = "#928374"
+# yellow = "#b57614"
+#
+# [schemes.gruvbox256.normal]
+# black = "#282828"
+# blue = "#83a598"
+# cyan = "#8ec07c"
+# green = "#b8bb26"
+# magenta = "#d3869b"
+# red = "#fb4934"
+# white = "#ebdbb2"
+# yellow = "#fabd2f"
+#
+# [schemes.gruvbox256.primary]
+# background = "#282828"
+# bright_foreground = "#fbf1c7"
+# dim_foreground = "#a89984"
+# foreground = "#ebdbb2"
+#
+# [schemes.gruvbox256.selection]
+# background = "CellForeground"
+# text = "CellBackground"
+#
+# [schemes.gruvbox256.vi_mode_cursor]
+# cursor = "CellForeground"
+# text = "CellBackground"
 
 [selection]
 save_to_clipboard = true

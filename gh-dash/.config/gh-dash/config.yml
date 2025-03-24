@@ -1,0 +1,107 @@
+prSections:
+- title: My Pull Requests
+  filters: is:open author:@me
+  type: null
+- title: Needs My Review
+  filters: is:open review-requested:@me
+  type: null
+- title: Involved
+  filters: is:open involves:@me -author:@me
+  type: null
+issuesSections:
+- title: My Issues
+  filters: is:open author:@me
+- title: Assigned
+  filters: is:open assignee:@me
+- title: Involved
+  filters: is:open involves:@me -author:@me
+repo:
+  branchesRefetchIntervalSeconds: 30
+  prsRefetchIntervalSeconds: 60
+defaults:
+  preview:
+    open: true
+    width: 100
+  prsLimit: 20
+  issuesLimit: 20
+  view: prs
+  layout:
+    prs:
+      updatedAt:
+        width: 5
+      createdAt:
+        width: 5
+      repo:
+        width: 20
+        hidden: true
+      author:
+        width: 15
+      authorIcon:
+        hidden: true
+      assignees:
+        width: 20
+        hidden: true
+      base:
+        width: 15
+        hidden: true
+      lines:
+        width: 15
+      reviewStatus:
+        width: 5
+        hidden: false
+      ci:
+        width: 5
+        hidden: false
+    issues:
+      updatedAt:
+        width: 5
+      createdAt:
+        width: 5
+      repo:
+        width: 15
+      creator:
+        width: 10
+      creatorIcon:
+        hidden: false
+      assignees:
+        width: 20
+        hidden: true
+  refetchIntervalMinutes: 30
+keybindings:
+  universal: []
+  issues: []
+  prs: []
+  branches: []
+repoPaths: {}
+theme:
+  colors:
+    text:
+      primary: "#ebdbb2"
+      secondary: "#a89984"
+      inverted: "#282828"
+      faint: "#7c6f64"
+      warning: "#fb4934"
+      success: "#b8bb26"
+    background:
+      selected: "#3c3836"
+    border:
+      primary: "#928374"
+      secondary: "#7c6f64"
+      faint: "#3c3836"
+    icon:
+      newContributor: "#fabd2f"
+      contributor: "#b8bb26"
+      collaborator: "#83a598"
+      member: "#d3869b"
+      owner: "#fe8019"
+      unknownRole: "#fb4934"
+  ui:
+    sectionsShowCount: true
+    table:
+      showSeparator: false
+      compact: true
+pager:
+  diff: "delta"
+confirmQuit: false
+showAuthorIcons: true
+smartFilteringAtLaunch: true

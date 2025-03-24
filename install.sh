@@ -18,13 +18,17 @@ echo "\n⚡️ Installing Homebrew"
 echo "\n⚡ Installing brew formulas"
 brew bundle --file ~/.dotfiles/homebrew/Brewfile
 
+# Install gh extensions
+echo "\n⚡ Installing gh extensions"
+sh ./git/gh.sh
+
 # Silence "Last login" message from zsh
 touch ~/.hushlogin
 
 # Stow config directories - symlink everything in $stow_dir to home directory
 # e.g. stow lazygit will symlink ~/.config/lazygit -> ~/.dotfiles/lazygit/.config/lazygit/
 # e.g. stow zsh will create symlink to ~/.aliases ~/.functions ~/.zshrc, etc.
-for stow_dir in git zsh nvim tmux yabai lazygit alacritty karabiner ncspot editorconfig aerospace;
+for stow_dir in git zsh nvim tmux yabai lazygit alacritty karabiner ncspot editorconfig aerospace gh-dash;
 do
   echo "\n⚡ Stowing $stow_dir..."
   stow -D $stow_dir

@@ -59,6 +59,7 @@ alias ghprv="gh pr view --web"
 alias ghb="gh browse"
 alias prc="gh pr create --web"
 alias prv="gh pr view --web"
+alias ghd='gh dash'
 
 # Git
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh

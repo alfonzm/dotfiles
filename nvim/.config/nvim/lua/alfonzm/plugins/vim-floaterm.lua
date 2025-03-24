@@ -1,4 +1,5 @@
 vim.keymap.set('n', '<Leader>g', ':FloatermNew --wintype=float --width=1.0 --height=1.0 --position=center lazygit<CR>')
+vim.keymap.set('n', '<Leader>G', ':FloatermNew --wintype=float --width=1.0 --height=1.0 --position=center gh dash<CR>')
 -- vim.keymap.set('n', '<Leader>k', ':FloatermNew --wintype=float --width=0.9 --height=0.9 --position=center lazydocker<CR>')
 vim.keymap.set('n', '<Leader>T', ':FloatermToggle terminal<CR>')
 -- vim.keymap.set('n', '<Leader>a', ':FloatermNew php artisan tinker<CR>')
